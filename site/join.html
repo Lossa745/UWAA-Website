@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Join — UWA Aerospace</title>
+<meta name="description" content="Join UWA Aerospace. Open to any UWA student, no experience needed." />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="UWA Aerospace" />
+<meta property="og:title" content="Join — UWA Aerospace" />
+<meta property="og:description" content="Join UWA Aerospace. Open to any UWA student, no experience needed." />
+<meta property="og:url" content="https://uwaaerospace.org/join.html" />
+<meta property="og:image" content="https://uwaaerospace.org/images/site/discover.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="theme-color" content="#111111" />
+<link rel="icon" type="image/png" href="images/site/logo-uwaa-dark.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: oklch(0.12 0 0); color: oklch(0.97 0 0); font-family: Archivo, Helvetica, sans-serif; -webkit-font-smoothing: antialiased; }
+  a { color: oklch(0.82 0.15 80); text-decoration: none; }
+  a:hover { color: oklch(0.9 0.11 84); }
+  img { display: block; max-width: 100%; }
+  input, textarea, select, button { font: inherit; color: inherit; }
+  input::placeholder, textarea::placeholder { color: oklch(0.66 0 0); }
+  input:focus-visible, textarea:focus-visible, select:focus-visible { outline: 2px solid oklch(0.8 0.16 78); outline-offset: 1px }
+  ::selection { background: oklch(0.8 0.16 78); color: oklch(0.12 0 0); }
+  [data-reveal-armed] [data-reveal] { opacity: 0; transform: translateY(70px) scale(0.97); transition: opacity 0.6s ease-out, transform 0.95s cubic-bezier(0.12, 1, 0.24, 1); }
+  [data-reveal-armed] [data-reveal].is-in { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) { [data-reveal-armed] [data-reveal] { opacity: 1; transform: none; transition: none; } }
+  @media (max-width: 720px) {
+    footer a, header > a, header button { min-height: 44px; display: inline-flex; align-items: center; }
+    main a:not([style*="padding"]):not(p a):not(nav a), section a:not([style*="padding"]):not(p a):not(nav a) { min-height: 44px; display: inline-flex; align-items: center; }
+    p > a:only-child[style*="JetBrains"] { min-height: 44px; display: inline-flex; align-items: center; }
+  }
+</style>
+<script src="./site-config.js"></script>
+<script src="./rocketry-fx.js"></script>
+</helmet>
+<div style="background: oklch(0.12 0 0); min-height: 100vh; overflow-x: hidden">
+
+  <header style="position: sticky; top: 0; z-index: 50; display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; padding: 12px clamp(18px, 4vw, 64px); background: oklch(0.12 0 0 / 0.88); backdrop-filter: blur(14px); border-bottom: 1px solid oklch(0.26 0 0)">
+    <a href="index.html" style="display: flex; align-items: center; gap: 11px; color: inherit">
+      <img src="images/site/logo-uwaa-dark.png" alt="UWA Aerospace" style="width: 30px; height: 30px; object-fit: contain" />
+      <span style="font-weight: 700; font-size: 14.5px; letter-spacing: 0.02em; text-transform: uppercase">UWA Aerospace</span>
+    </a>
+    <nav style="display: flex; align-items: center; gap: clamp(10px, 1.5vw, 22px); font-family: 'JetBrains Mono', monospace; font-size: 11.5px; letter-spacing: 0.06em; text-transform: uppercase; flex-wrap: wrap">
+      <a href="missions.html" style="color: oklch(0.68 0 0)" style-hover="color: oklch(0.97 0 0)">Missions</a>
+      <a href="engines.html" style="color: oklch(0.68 0 0)" style-hover="color: oklch(0.97 0 0)">Engines</a>
+      <a href="certifications.html" style="color: oklch(0.68 0 0)" style-hover="color: oklch(0.97 0 0)">Certifications</a>
+      <a href="team.html" style="color: oklch(0.68 0 0)" style-hover="color: oklch(0.97 0 0)">Team</a>
+      <a href="outreach.html" style="color: oklch(0.68 0 0)" style-hover="color: oklch(0.97 0 0)">Outreach</a>
+      <a href="calendar.html" style="color: oklch(0.68 0 0)" style-hover="color: oklch(0.97 0 0)">Calendar</a>
+      <a href="sponsors.html" style="color: oklch(0.68 0 0)" style-hover="color: oklch(0.97 0 0)">Sponsors</a>
+      <a href="contact.html" style="color: oklch(0.68 0 0)" style-hover="color: oklch(0.97 0 0)">Contact</a>
+      <a href="join.html" style="padding: 8px 15px; background: oklch(0.8 0.16 78); color: oklch(0.12 0 0); border-radius: 999px; font-weight: 500" style-hover="background: oklch(0.88 0.13 82); color: oklch(0.12 0 0)">Join</a>
+    </nav>
+  </header>
+
+  <section style="padding: clamp(48px, 7vw, 104px) clamp(18px, 4vw, 64px) clamp(32px, 4vw, 52px); max-width: 1440px; margin: 0 auto">
+    <p data-reveal="" style="margin: 0 0 20px; font-family: 'JetBrains Mono', monospace; font-size: 11.5px; letter-spacing: 0.16em; text-transform: uppercase; color: oklch(0.84 0.14 80)">Join us</p>
+    <h1 data-reveal="" style="margin: 0; font-size: clamp(36px, 7vw, 82px); line-height: 0.98; letter-spacing: -0.035em; font-weight: 800; max-width: 17ch; text-wrap: balance">No experience needed</h1>
+    <p data-reveal="" style="margin: 24px 0 0; font-size: clamp(16px, 1.4vw, 19px); line-height: 1.6; color: oklch(0.8 0 0); max-width: 58ch">We recruit across all six sub-teams at the start of each semester and take any UWA student in any degree — engineering, science, commerce, design. You get a real task on a real vehicle in your first month.</p>
+  </section>
+
+  <section style="padding: 0 clamp(18px, 4vw, 64px) clamp(44px, 6vw, 80px); max-width: 1440px; margin: 0 auto">
+    <div style="display: flex; flex-wrap: wrap; gap: 1px; background: oklch(0.28 0 0); border: 1px solid oklch(0.28 0 0); border-radius: 6px; overflow: hidden">
+      <sc-for list="{{ steps }}" as="st" hint-placeholder-count="3">
+        <div data-reveal="" style="flex: 1 1 240px; min-width: 0; background: oklch(0.175 0 0); padding: clamp(22px, 2.4vw, 30px)">
+          <p style="margin: 0 0 12px; font-family: 'JetBrains Mono', monospace; font-size: 11px; color: oklch(0.82 0.15 80)">{{ st.no }}</p>
+          <h2 style="margin: 0 0 8px; font-size: 18px; font-weight: 600; letter-spacing: -0.01em">{{ st.title }}</h2>
+          <p style="margin: 0; font-size: 14.5px; line-height: 1.6; color: oklch(0.74 0 0)">{{ st.desc }}</p>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <section id="form" style="padding: clamp(44px, 6vw, 92px) clamp(18px, 4vw, 64px); max-width: 1440px; margin: 0 auto; border-top: 1px solid oklch(0.24 0 0)">
+    <div style="display: flex; flex-wrap: wrap; gap: clamp(24px, 4vw, 64px); align-items: flex-start">
+      <div data-reveal="" style="flex: 1 1 260px; min-width: 0">
+        <p style="margin: 0 0 16px; font-family: 'JetBrains Mono', monospace; font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: oklch(0.6 0 0)">Application</p>
+        <h2 style="margin: 0 0 18px; font-size: clamp(26px, 3.2vw, 40px); line-height: 1.1; letter-spacing: -0.025em; font-weight: 700; max-width: 18ch">Tell us about yourself</h2>
+        <p style="margin: 0 0 20px; font-size: 15.5px; line-height: 1.6; color: oklch(0.78 0 0); max-width: 42ch">{{ intro }}</p>
+        <p style="margin: 0; font-size: 14.5px; line-height: 1.6; color: oklch(0.68 0 0); max-width: 42ch">Prefer to email directly? <a href="mailto:executive@uwaaerospace.org">executive@uwaaerospace.org</a></p>
+      </div>
+
+      <form novalidate="" onSubmit="{{ onSubmit }}" style="flex: 1 1 420px; min-width: 0; border: 1px solid oklch(0.26 0 0); border-radius: 6px; padding: clamp(22px, 2.6vw, 34px); background: oklch(0.165 0 0); display: flex; flex-direction: column; gap: 20px">
+        <div style="display: flex; flex-wrap: wrap; gap: 18px">
+          <label style="flex: 1 1 200px; min-width: 0; display: flex; flex-direction: column; gap: 8px">
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 10.5px; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(0.68 0 0)">Name</span>
+            <input type="text" name="name" value="{{ form.name }}" onChange="{{ onChange }}" placeholder="Your full name" style="padding: 12px 14px; background: oklch(0.13 0 0); border: 1px solid oklch(0.3 0 0); border-radius: 4px; font-size: 15px" />
+          </label>
+          <label style="flex: 1 1 200px; min-width: 0; display: flex; flex-direction: column; gap: 8px">
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 10.5px; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(0.68 0 0)">Email</span>
+            <input type="email" name="email" value="{{ form.email }}" onChange="{{ onChange }}" placeholder="you@student.uwa.edu.au" style="padding: 12px 14px; background: oklch(0.13 0 0); border: 1px solid oklch(0.3 0 0); border-radius: 4px; font-size: 15px" />
+          </label>
+        </div>
+
+        <div style="display: flex; flex-wrap: wrap; gap: 18px">
+          <label style="flex: 1 1 200px; min-width: 0; display: flex; flex-direction: column; gap: 8px">
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 10.5px; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(0.68 0 0)">Degree</span>
+            <input type="text" name="degree" value="{{ form.degree }}" onChange="{{ onChange }}" placeholder="e.g. BE Mechanical" style="padding: 12px 14px; background: oklch(0.13 0 0); border: 1px solid oklch(0.3 0 0); border-radius: 4px; font-size: 15px" />
+          </label>
+          <label style="flex: 1 1 140px; min-width: 0; display: flex; flex-direction: column; gap: 8px">
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 10.5px; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(0.68 0 0)">Year</span>
+            <select name="year" value="{{ form.year }}" onChange="{{ onChange }}" style="padding: 12px 14px; background: oklch(0.13 0 0); border: 1px solid oklch(0.3 0 0); border-radius: 4px; font-size: 15px">
+              <sc-for list="{{ years }}" as="y" hint-placeholder-count="5">
+                <option value="{{ y }}">{{ y }}</option>
+              </sc-for>
+            </select>
+          </label>
+        </div>
+
+        <div style="display: flex; flex-wrap: wrap; gap: 18px">
+          <label style="flex: 1 1 200px; min-width: 0; display: flex; flex-direction: column; gap: 8px">
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 10.5px; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(0.68 0 0)">Student number</span>
+            <input type="text" name="studentNo" inputmode="numeric" maxlength="8" autocomplete="off" value="{{ form.studentNo }}" onChange="{{ onChange }}" placeholder="8 digits" style="padding: 12px 14px; background: oklch(0.13 0 0); border: 1px solid oklch(0.3 0 0); border-radius: 4px; font-size: 15px" />
+          </label>
+          <label style="flex: 1 1 200px; min-width: 0; display: flex; flex-direction: column; gap: 8px">
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 10.5px; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(0.68 0 0)">Hours per week you can give</span>
+            <select name="hours" value="{{ form.hours }}" onChange="{{ onChange }}" style="padding: 12px 14px; background: oklch(0.13 0 0); border: 1px solid oklch(0.3 0 0); border-radius: 4px; font-size: 15px">
+              <sc-for list="{{ hoursOpts }}" as="h" hint-placeholder-count="5">
+                <option value="{{ h }}">{{ h }}</option>
+              </sc-for>
+            </select>
+          </label>
+        </div>
+
+        <fieldset style="margin: 0; padding: 0; border: 0; display: flex; flex-direction: column; gap: 12px">
+          <legend style="padding: 0; margin-bottom: 4px; font-family: 'JetBrains Mono', monospace; font-size: 10.5px; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(0.68 0 0)">Prior experience</legend>
+          <div style="display: flex; flex-wrap: wrap; gap: 9px">
+            <sc-for list="{{ expChips }}" as="x" hint-placeholder-count="3">
+              <button type="button" data-exp="{{ x.name }}" aria-pressed="{{ x.pressed }}" onClick="{{ onPickExp }}" style="{{ x.style }}">{{ x.name }}</button>
+            </sc-for>
+          </div>
+        </fieldset>
+
+        <fieldset style="margin: 0; padding: 0; border: 0; display: flex; flex-direction: column; gap: 12px">
+          <legend style="padding: 0; margin-bottom: 4px; font-family: 'JetBrains Mono', monospace; font-size: 10.5px; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(0.68 0 0)">Skills you have or want to learn</legend>
+          <div style="display: flex; flex-wrap: wrap; gap: 9px">
+            <sc-for list="{{ skillChips }}" as="k" hint-placeholder-count="8">
+              <button type="button" data-skill="{{ k.name }}" aria-pressed="{{ k.pressed }}" onClick="{{ onToggleSkill }}" style="{{ k.style }}">{{ k.name }}</button>
+            </sc-for>
+          </div>
+          <input type="text" name="skillsOther" value="{{ form.skillsOther }}" onChange="{{ onChange }}" aria-label="Other skills" placeholder="Other skills (optional)" style="padding: 12px 14px; background: oklch(0.13 0 0); border: 1px solid oklch(0.3 0 0); border-radius: 4px; font-size: 15px" />
+        </fieldset>
+
+        <fieldset style="margin: 0; padding: 0; border: 0; display: flex; flex-direction: column; gap: 12px">
+          <legend style="padding: 0; margin-bottom: 4px; font-family: 'JetBrains Mono', monospace; font-size: 10.5px; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(0.68 0 0)">Sub-teams you are interested in</legend>
+          <div style="display: flex; flex-wrap: wrap; gap: 9px">
+            <sc-for list="{{ teamChips }}" as="t" hint-placeholder-count="6">
+              <button type="button" data-team="{{ t.name }}" aria-pressed="{{ t.pressed }}" onClick="{{ onToggleTeam }}" style="{{ t.style }}">{{ t.name }}</button>
+            </sc-for>
+          </div>
+        </fieldset>
+
+        <label style="display: flex; flex-direction: column; gap: 8px">
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 10.5px; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(0.68 0 0)">Anything you have built or want to build</span>
+          <textarea name="about" value="{{ form.about }}" onChange="{{ onChange }}" rows="4" placeholder="Optional. Projects, coursework, software you know — or just what interests you. No experience is fine." style="padding: 12px 14px; background: oklch(0.13 0 0); border: 1px solid oklch(0.3 0 0); border-radius: 4px; font-size: 15px; line-height: 1.55; resize: vertical"></textarea>
+        </label>
+
+        <input type="text" name="website" value="{{ form.website }}" onChange="{{ onChange }}" tabindex="-1" autocomplete="off" aria-hidden="true" style="position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0" />
+        <sc-if value="{{ sent }}" hint-placeholder-val="{{ false }}">
+          <p role="status" style="margin: 0; padding: 12px 14px; border: 1px solid oklch(0.55 0.12 150); border-radius: 4px; background: oklch(0.2 0.04 150); font-size: 14.5px; color: oklch(0.93 0.05 150)">Thanks, your application has been sent. We will reply to the email you gave us.</p>
+        </sc-if>
+        <sc-if value="{{ error }}" hint-placeholder-val="{{ false }}">
+          <p role="alert" style="margin: 0; padding: 12px 14px; border: 1px solid oklch(0.5 0.14 30); border-radius: 4px; background: oklch(0.2 0.04 30); font-size: 14.5px; color: oklch(0.92 0.05 30)">{{ error }}</p>
+        </sc-if>
+
+        <div style="display: flex; flex-wrap: wrap; gap: 14px; align-items: center; padding-top: 4px">
+          <button type="submit" style="padding: 14px 26px; background: oklch(0.8 0.16 78); color: oklch(0.12 0 0); border: 0; border-radius: 999px; font-weight: 600; font-size: 15px; cursor: pointer" style-hover="background: oklch(0.88 0.13 82)">{{ submitLabel }}</button>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 10.5px; letter-spacing: 0.06em; text-transform: uppercase; color: oklch(0.66 0 0)">{{ hint }}</span>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <section style="padding: clamp(44px, 6vw, 92px) clamp(18px, 4vw, 64px); max-width: 1440px; margin: 0 auto; border-top: 1px solid oklch(0.24 0 0)">
+    <div data-reveal="" style="border: 1px solid oklch(0.26 0 0); border-radius: 6px; padding: clamp(24px, 3vw, 40px); background: oklch(0.165 0 0); display: flex; flex-wrap: wrap; gap: clamp(20px, 3vw, 44px); align-items: center">
+      <div style="flex: 1 1 280px; min-width: 0">
+        <h2 style="margin: 0 0 12px; font-size: clamp(22px, 2.4vw, 30px); font-weight: 700; letter-spacing: -0.02em">Not sure which sub-team?</h2>
+        <p style="margin: 0; font-size: 15.5px; line-height: 1.6; color: oklch(0.78 0 0); max-width: 46ch">Read what each one builds, then rank your interests on the form. Most members try more than one before they settle.</p>
+      </div>
+      <div style="flex: 0 1 auto; display: flex; flex-wrap: wrap; gap: 12px">
+        <a href="team.html" style="padding: 14px 24px; background: oklch(0.8 0.16 78); color: oklch(0.12 0 0); border-radius: 999px; font-weight: 600; font-size: 15px" style-hover="background: oklch(0.88 0.13 82); color: oklch(0.12 0 0)">See the sub-teams</a>
+        <a href="certifications.html" style="padding: 14px 24px; border: 1px solid oklch(0.34 0 0); color: oklch(0.97 0 0); border-radius: 999px; font-weight: 600; font-size: 15px" style-hover="border-color: oklch(0.8 0.16 78); color: oklch(0.97 0 0)">Get certified</a>
+      </div>
+    </div>
+  </section>
+
+  <footer style="border-top: 1px solid oklch(0.24 0 0); padding: clamp(40px, 5vw, 64px) clamp(18px, 4vw, 64px) 40px">
+    <div style="max-width: 1440px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 30px; align-items: start">
+      <div style="flex: 1.4 1 240px; min-width: 0">
+        <p style="margin: 0 0 10px; font-weight: 700; font-size: 15px; text-transform: uppercase; letter-spacing: 0.02em">UWA Aerospace</p>
+        <p style="margin: 0 0 14px; font-size: 14px; line-height: 1.55; color: oklch(0.7 0 0)">The University of Western Australia<br />35 Stirling Highway, Perth WA 6009</p>
+        <a href="mailto:executive@uwaaerospace.org" style="font-size: 14px">executive@uwaaerospace.org</a>
+      </div>
+      <div style="flex: 1 1 180px; min-width: 0; display: flex; flex-direction: column; gap: 9px; font-size: 14px">
+        <p style="margin: 0 0 4px; font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(0.66 0 0)">Club</p>
+        <a href="index.html" style="color: oklch(0.72 0 0)" style-hover="color: oklch(0.97 0 0)">Home</a>
+        <a href="missions.html" style="color: oklch(0.72 0 0)" style-hover="color: oklch(0.97 0 0)">Missions</a>
+        <a href="engines.html" style="color: oklch(0.72 0 0)" style-hover="color: oklch(0.97 0 0)">Engines</a>
+        <a href="team.html" style="color: oklch(0.72 0 0)" style-hover="color: oklch(0.97 0 0)">Team</a>
+      </div>
+      <div style="flex: 1 1 180px; min-width: 0; display: flex; flex-direction: column; gap: 9px; font-size: 14px">
+        <p style="margin: 0 0 4px; font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(0.66 0 0)">Get involved</p>
+        <a href="join.html" style="color: oklch(0.72 0 0)" style-hover="color: oklch(0.97 0 0)">Join</a>
+        <a href="certifications.html" style="color: oklch(0.72 0 0)" style-hover="color: oklch(0.97 0 0)">Certifications</a>
+        <a href="calendar.html" style="color: oklch(0.72 0 0)" style-hover="color: oklch(0.97 0 0)">Calendar</a>
+        <a href="outreach.html" style="color: oklch(0.72 0 0)" style-hover="color: oklch(0.97 0 0)">Outreach</a>
+        <a href="sponsors.html" style="color: oklch(0.72 0 0)" style-hover="color: oklch(0.97 0 0)">Sponsors</a>
+        <a href="contact.html" style="color: oklch(0.72 0 0)" style-hover="color: oklch(0.97 0 0)">Contact</a>
+      </div>
+      <div style="flex: 1 1 180px; min-width: 0; display: flex; flex-direction: column; gap: 9px; font-size: 14px">
+        <p style="margin: 0 0 4px; font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(0.66 0 0)">Follow</p>
+        <a href="https://www.instagram.com/uwa_aerospace/" style="color: oklch(0.72 0 0)" style-hover="color: oklch(0.97 0 0)">Instagram</a>
+        <a href="https://au.linkedin.com/company/uwa-aerospace" style="color: oklch(0.72 0 0)" style-hover="color: oklch(0.97 0 0)">LinkedIn</a>
+        <a href="https://www.facebook.com/UWAAerospace" style="color: oklch(0.72 0 0)" style-hover="color: oklch(0.97 0 0)">Facebook</a>
+        <a href="https://www.youtube.com/channel/UCclC8khZgZnaeF4LLJj9KKg" style="color: oklch(0.72 0 0)" style-hover="color: oklch(0.97 0 0)">YouTube</a>
+      </div>
+    </div>
+    <p style="max-width: 1440px; margin: 36px auto 0; padding-top: 20px; border-top: 1px solid oklch(0.22 0 0); font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.06em; color: oklch(0.6 0 0)">© 2026 UWA Aerospace · A student team at The University of Western Australia</p>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280}}">
+const TEAMS = ["Aerostructures", "Avionics", "Recovery", "Simulations", "Propulsion", "Operations"];
+const INBOX = "executive@uwaaerospace.org";
+// The Budget Manager address is set once in site-config.js (window.UWA_API).
+const apiBase = () => (window.UWA_API || "").replace(/\/$/, "");
+
+const HOURS = ["Under 3", "3–6", "6–10", "10+"];
+const EXPERIENCE = ["None", "Some", "Lots"];
+const SKILLS = ["CAD / SolidWorks", "Coding", "Electronics / PCB", "Machining / fabrication", "Composites", "CFD / simulation", "Design / media", "Finance / sponsorship"];
+
+class Component extends DCLogic {
+  state = {
+    form: { name: "", email: "", degree: "", year: "", studentNo: "", hours: "", skillsOther: "", about: "", website: "" },
+    skills: [],
+    experience: "",
+    teams: [],
+    error: "",
+    sending: false,
+    sent: false
+  };
+
+  canScroll() {
+    const de = document.documentElement;
+    if (de.scrollHeight <= de.clientHeight + 4) return false;
+    const before = de.scrollTop || document.body.scrollTop || 0;
+    de.scrollTop = before + 1;
+    const moved = (de.scrollTop || document.body.scrollTop || 0) !== before;
+    de.scrollTop = before;
+    return moved;
+  }
+  componentDidMount() {
+    this.root = document.querySelector("[data-reveal]")?.closest("body > *") || document.body;
+    this.arm = () => {
+      if (this.armed || !this.canScroll()) return;
+      this.armed = true;
+      this.root.setAttribute("data-reveal-armed", "1");
+      this.catchUp();
+      addEventListener("scroll", this.onScroll, { passive: true });
+      addEventListener("resize", this.onScroll);
+    };
+    const show = (el) => {
+      el.classList.add("is-in");
+      if (this.io) this.io.unobserve(el);
+    };
+    this.io = new IntersectionObserver(
+      (entries) => {
+        for (const e of entries) if (e.isIntersecting) show(e.target);
+      },
+      { rootMargin: "0px 0px -6% 0px", threshold: 0 }
+    );
+    this.catchUp = () => {
+      if (!this.armed) return;
+      const h = window.innerHeight;
+      document.querySelectorAll("[data-reveal]:not(.is-in)").forEach((el, i) => {
+        if (!el.dataset.revealBound) {
+          el.dataset.revealBound = "1";
+          el.style.transitionDelay = (i % 6) * 55 + "ms";
+          this.io.observe(el);
+        }
+        if (el.getBoundingClientRect().top < h) show(el);
+      });
+    };
+    this.onScroll = () => {
+      if (this.raf) return;
+      this.raf = requestAnimationFrame(() => {
+        this.raf = 0;
+        this.catchUp();
+      });
+    };
+    this.arm();
+    let tries = 0;
+    this.poll = setInterval(() => {
+      this.arm();
+      this.catchUp();
+      if (++tries > 20 || (this.armed && !document.querySelector("[data-reveal]:not(.is-in)"))) {
+        clearInterval(this.poll);
+      }
+    }, 150);
+    this.mo = new MutationObserver(this.onScroll);
+    this.mo.observe(document.body, { childList: true, subtree: true });
+  }
+  componentWillUnmount() {
+    if (this.io) this.io.disconnect();
+    if (this.mo) this.mo.disconnect();
+    clearInterval(this.poll);
+    removeEventListener("scroll", this.onScroll);
+    removeEventListener("resize", this.onScroll);
+  }
+
+  chipStyle(on) {
+    return [
+      "padding: 9px 15px",
+      "border-radius: 999px",
+      "font-size: 14px",
+      "font-weight: 500",
+      "cursor: pointer",
+      on
+        ? "background: oklch(0.8 0.16 78); color: oklch(0.12 0 0); border: 1px solid oklch(0.8 0.16 78)"
+        : "background: transparent; color: oklch(0.86 0 0); border: 1px solid oklch(0.32 0 0)"
+    ].join("; ");
+  }
+
+  renderVals() {
+    const { form, teams, skills, experience, error, sending, sent } = this.state;
+    const direct = !!apiBase();
+    return {
+      form,
+      error,
+      sent,
+      intro: direct ? "Fill this in and it goes straight to the executive. We reply by email, usually within a week." : "Fill this in and it opens an email to the executive with your answers ready to send. Nothing is submitted until you press send in your mail app.",
+      submitLabel: direct ? (sending ? "Sending…" : sent ? "Sent" : "Send application") : "Open my application email",
+      years: ["Select…", "1st year", "2nd year", "3rd year", "4th year or later", "Postgraduate"],
+      hint: teams.length ? teams.length + " sub-team(s) selected" : "Pick at least one sub-team",
+      hoursOpts: ["Select…", ...HOURS],
+      expChips: EXPERIENCE.map((name) => ({ name, pressed: String(experience === name), style: this.chipStyle(experience === name) })),
+      skillChips: SKILLS.map((name) => ({ name, pressed: String(skills.includes(name)), style: this.chipStyle(skills.includes(name)) })),
+      onPickExp: (e) => {
+        const name = e.currentTarget.dataset.exp;
+        this.setState((s) => ({ experience: s.experience === name ? "" : name, error: "" }));
+      },
+      onToggleSkill: (e) => {
+        const name = e.currentTarget.dataset.skill;
+        this.setState((s) => ({ skills: s.skills.includes(name) ? s.skills.filter((k) => k !== name) : [...s.skills, name], error: "" }));
+      },
+      teamChips: TEAMS.map((name) => ({ name, pressed: String(teams.includes(name)), style: this.chipStyle(teams.includes(name)) })),
+      steps: [
+        { no: "01", title: "Come to an info night", desc: "We run one in the first two weeks of semester. Dates are on the Calendar page. Meet the sub-team leads and see the current airframe." },
+        { no: "02", title: "Send this form", desc: "Tell us which sub-teams interest you. No experience needed — we teach the tools." },
+        { no: "03", title: "Start building", desc: "You get a real task on a real vehicle in your first month, mentored by a senior member." }
+      ],
+      onChange: (e) => {
+        const { name, value } = e.target;
+        this.setState((s) => ({ form: { ...s.form, [name]: value }, error: "" }));
+      },
+      onToggleTeam: (e) => {
+        const name = e.currentTarget.dataset.team;
+        this.setState((s) => ({
+          teams: s.teams.includes(name) ? s.teams.filter((t) => t !== name) : [...s.teams, name],
+          error: ""
+        }));
+      },
+      onSubmit: (e) => {
+        e.preventDefault();
+        const f = this.state.form;
+        if (!f.name.trim()) return this.setState({ error: "Please add your name." });
+        if (!/^\S+@\S+\.\S+$/.test(f.email.trim())) return this.setState({ error: "Please add a valid email address so we can reply." });
+        if (!/^\d{8}$/.test(f.studentNo.trim())) return this.setState({ error: "Please add your 8-digit student number." });
+        if (!HOURS.includes(f.hours)) return this.setState({ error: "Please choose how many hours a week you can give." });
+        if (!this.state.teams.length) return this.setState({ error: "Pick at least one sub-team you are interested in." });
+        const skillList = [...this.state.skills, ...(f.skillsOther.trim() ? ["Other: " + f.skillsOther.trim()] : [])];
+
+        const year = f.year && f.year !== "Select…" ? f.year : "Not given";
+        const body = [
+          "Name: " + f.name.trim(),
+          "Email: " + f.email.trim(),
+          "Degree: " + (f.degree.trim() || "Not given"),
+          "Year: " + year,
+          "Student number: " + f.studentNo.trim(),
+          "Hours per week: " + f.hours,
+          "Prior experience: " + (this.state.experience || "Not given"),
+          "Skills: " + (skillList.join(", ") || "None given"),
+          "Sub-teams of interest: " + this.state.teams.join(", "),
+          "",
+          "About:",
+          f.about.trim() || "(none given)"
+        ].join("\n");
+
+        const subject = "Membership application — " + f.name.trim();
+        if (apiBase()) {
+          if (this.state.sending || this.state.sent) return;
+          this.setState({ sending: true, error: "" });
+          fetch(apiBase() + "/api/applications", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ name: f.name.trim(), email: f.email.trim(), degree: f.degree.trim(), year: year === "Not given" ? "" : year, studentNumber: f.studentNo.trim(), hours: f.hours, experience: this.state.experience, skills: this.state.skills, skillsOther: f.skillsOther.trim(), teams: this.state.teams, about: f.about.trim(), website: f.website || "" })
+          })
+            .then((r) => r.json().then((d) => ({ ok: r.ok && d.ok, error: d.error })))
+            .then((d) => { if (!d.ok) throw new Error(d.error || ""); this.setState({ sending: false, sent: true }); })
+            .catch((err) => this.setState({ sending: false, error: (err && err.message) || "That didn't send. Please try again, or email " + INBOX + " directly." }));
+          return;
+        }
+        const url =
+          "mailto:" + INBOX +
+          "?subject=" + encodeURIComponent(subject) +
+          "&body=" + encodeURIComponent(body);
+        window.location.href = url;
+      }
+    };
+  }
+}
+</script>
+</body>
+</html>
