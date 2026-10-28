@@ -24,7 +24,7 @@
 <link rel="icon" type="image/png" href="images/site/logo-uwaa-dark.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&display=swap">
 <style>
   * { box-sizing: border-box; }
   html { scroll-behavior: smooth; }
@@ -42,7 +42,7 @@
   @media (max-width: 720px) {
     footer a, header > a, header button { min-height: 44px; display: inline-flex; align-items: center; }
     main a:not([style*="padding"]):not(p a):not(nav a), section a:not([style*="padding"]):not(p a):not(nav a) { min-height: 44px; display: inline-flex; align-items: center; }
-    p > a:only-child[style*="JetBrains"] { min-height: 44px; display: inline-flex; align-items: center; }
+    p > a:only-child[style*="uppercase"] { min-height: 44px; display: inline-flex; align-items: center; }
   }
 </style>
 <script src="./site-config.js"></script>
@@ -55,7 +55,7 @@
       <img src="images/site/logo-uwaa-mark.png" alt="UWA Aerospace" style="width: 54px; height: 54px; object-fit: contain" />
       <span style="font-weight: 700; font-size: 18px; letter-spacing: 0.02em; text-transform: uppercase">UWA Aerospace</span>
     </a>
-    <nav style="display: flex; align-items: center; gap: clamp(10px, 1.5vw, 22px); font-family: 'JetBrains Mono', monospace; font-size: 11.5px; letter-spacing: 0.06em; text-transform: uppercase; flex-wrap: wrap">
+    <nav style="display: flex; align-items: center; gap: clamp(10px, 1.5vw, 22px); font-size: 11.5px; letter-spacing: 0.06em; text-transform: uppercase; flex-wrap: wrap">
       <a href="missions" style="color: oklch(0.68 0 0)" style-hover="color: oklch(0.97 0 0)">Missions</a>
       <a href="engines" style="color: oklch(0.68 0 0)" style-hover="color: oklch(0.97 0 0)">Engines</a>
       <a href="certifications" style="color: oklch(0.68 0 0)" style-hover="color: oklch(0.97 0 0)">Certifications</a>
@@ -69,7 +69,7 @@
   </header>
 
   <section style="padding: clamp(48px, 7vw, 104px) clamp(18px, 4vw, 64px) clamp(32px, 4vw, 52px); max-width: 1440px; margin: 0 auto">
-    <p data-reveal="" style="margin: 0 0 20px; font-family: 'JetBrains Mono', monospace; font-size: 11.5px; letter-spacing: 0.16em; text-transform: uppercase; color: oklch(0.84 0.14 80)">Outreach</p>
+    <p data-reveal="" style="margin: 0 0 20px; font-size: 11.5px; letter-spacing: 0.16em; text-transform: uppercase; color: oklch(0.84 0.14 80)">Outreach</p>
     <h1 data-reveal="" style="margin: 0; font-size: clamp(36px, 7vw, 82px); line-height: 0.98; letter-spacing: -0.035em; font-weight: 800; max-width: 17ch; text-wrap: balance">Bringing rocketry to schools</h1>
     <p data-reveal="" style="margin: 24px 0 0; font-size: clamp(16px, 1.4vw, 19px); line-height: 1.6; color: oklch(0.8 0 0); max-width: 58ch">We run a very active outreach program where we share our adventures in rocketry and teach students key teamwork and STEM skills through hands-on activities.</p>
     <div data-reveal="" style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px">
@@ -85,22 +85,22 @@
   </section>
 
   <section id="who" style="padding: clamp(40px, 6vw, 88px) clamp(18px, 4vw, 64px); max-width: 1440px; margin: 0 auto; border-top: 1px solid oklch(0.24 0 0)">
-    <p data-reveal="" style="margin: 0 0 16px; font-family: 'JetBrains Mono', monospace; font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: oklch(0.6 0 0)">01 · Who we visit</p>
+    <p data-reveal="" style="margin: 0 0 16px; font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: oklch(0.6 0 0)">01 · Who we visit</p>
     <h2 data-reveal="" style="margin: 0 0 clamp(24px, 3vw, 40px); font-size: clamp(26px, 3.2vw, 42px); line-height: 1.08; letter-spacing: -0.025em; font-weight: 700; max-width: 24ch">Schools, community groups and open days</h2>
     <div style="display: flex; flex-wrap: wrap; gap: 1px; background: oklch(0.28 0 0); border: 1px solid oklch(0.28 0 0); border-radius: 6px; overflow: hidden">
       <sc-for list="{{ audiences }}" as="a" hint-placeholder-count="3">
         <div data-reveal="" style="flex: 1 1 280px; min-width: 0; background: oklch(0.165 0 0); padding: clamp(24px, 2.6vw, 34px)" style-hover="background: oklch(0.2 0 0)">
-          <p style="margin: 0 0 14px; font-family: 'JetBrains Mono', monospace; font-size: 11px; color: oklch(0.82 0.15 80)">{{ a.no }}</p>
+          <p style="margin: 0 0 14px; font-size: 11px; color: oklch(0.82 0.15 80)">{{ a.no }}</p>
           <h3 style="margin: 0 0 11px; font-size: 20px; font-weight: 700; letter-spacing: -0.015em">{{ a.title }}</h3>
           <p style="margin: 0 0 16px; font-size: 15px; line-height: 1.65; color: oklch(0.78 0 0)">{{ a.body }}</p>
-          <p style="margin: 0; font-family: 'JetBrains Mono', monospace; font-size: 10.5px; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(0.62 0 0)">{{ a.format }}</p>
+          <p style="margin: 0; font-size: 10.5px; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(0.62 0 0)">{{ a.format }}</p>
         </div>
       </sc-for>
     </div>
   </section>
 
   <section id="what" style="padding: clamp(40px, 6vw, 88px) clamp(18px, 4vw, 64px); max-width: 1440px; margin: 0 auto; border-top: 1px solid oklch(0.24 0 0)">
-    <p data-reveal="" style="margin: 0 0 16px; font-family: 'JetBrains Mono', monospace; font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: oklch(0.6 0 0)">02 · What we bring</p>
+    <p data-reveal="" style="margin: 0 0 16px; font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: oklch(0.6 0 0)">02 · What we bring</p>
     <h2 data-reveal="" style="margin: 0 0 16px; font-size: clamp(26px, 3.2vw, 42px); line-height: 1.08; letter-spacing: -0.025em; font-weight: 700; max-width: 24ch">What a session includes</h2>
     <p data-reveal="" style="margin: 0 0 clamp(24px, 3vw, 40px); font-size: 15.5px; line-height: 1.6; color: oklch(0.76 0 0); max-width: 54ch">Sessions are run by the students who designed and flew the vehicles, and we tailor the mix to your group and the time you have. Get in touch and we will tell you exactly what we can bring.</p>
     <div style="display: flex; flex-direction: column; gap: 1px; background: oklch(0.28 0 0); border: 1px solid oklch(0.28 0 0); border-radius: 6px; overflow: hidden">
@@ -116,19 +116,19 @@
   <section id="book" style="padding: clamp(40px, 6vw, 88px) clamp(18px, 4vw, 64px); max-width: 1440px; margin: 0 auto; border-top: 1px solid oklch(0.24 0 0)">
     <div style="display: flex; flex-wrap: wrap; gap: clamp(24px, 4vw, 64px); align-items: flex-start">
       <div data-reveal="" style="flex: 1 1 300px; min-width: 0; position: sticky; top: 90px">
-        <p style="margin: 0 0 16px; font-family: 'JetBrains Mono', monospace; font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: oklch(0.6 0 0)">03 · Book a visit</p>
+        <p style="margin: 0 0 16px; font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: oklch(0.6 0 0)">03 · Book a visit</p>
         <h2 style="margin: 0 0 18px; font-size: clamp(26px, 3.2vw, 40px); line-height: 1.1; letter-spacing: -0.025em; font-weight: 700; max-width: 18ch">Request a session</h2>
         <p style="margin: 0 0 20px; font-size: 16px; line-height: 1.65; color: oklch(0.8 0 0); max-width: 46ch">Tell us roughly what you have in mind and we will come back with what is possible, including how much notice we need and how long a session we can run.</p>
         <p style="margin: 0; font-size: 14px; line-height: 1.6; color: oklch(0.68 0 0); max-width: 46ch">We are based at UWA in Perth. We will always tell you straight away if a request is outside what we can do rather than leave you waiting.</p>
       </div>
       <form novalidate="" onSubmit="{{ onSubmit }}" style="position: relative; flex: 1 1 440px; min-width: 0; border: 1px solid oklch(0.26 0 0); border-radius: 6px; padding: clamp(22px, 2.6vw, 34px); background: oklch(0.165 0 0); display: flex; flex-direction: column; gap: 20px">
           <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0" />
-          <div style="display: flex; flex-wrap: wrap; gap: 18px"><label style="flex: 1 1 200px; min-width: 0; display: flex; flex-direction: column; gap: 8px"><span style="font-family: 'JetBrains Mono', monospace; font-size: 10.5px; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(0.68 0 0)">Your name</span><input type="text" name="name" placeholder="Full name" style="padding: 12px 14px; background: oklch(0.13 0 0); border: 1px solid oklch(0.3 0 0); border-radius: 4px; font-size: 15px; width: 100%" /></label><label style="flex: 1 1 200px; min-width: 0; display: flex; flex-direction: column; gap: 8px"><span style="font-family: 'JetBrains Mono', monospace; font-size: 10.5px; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(0.68 0 0)">Email</span><input type="email" name="email" placeholder="you@school.wa.edu.au" style="padding: 12px 14px; background: oklch(0.13 0 0); border: 1px solid oklch(0.3 0 0); border-radius: 4px; font-size: 15px; width: 100%" /></label></div>
-          <div style="display: flex; flex-wrap: wrap; gap: 18px"><label style="flex: 1 1 200px; min-width: 0; display: flex; flex-direction: column; gap: 8px"><span style="font-family: 'JetBrains Mono', monospace; font-size: 10.5px; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(0.68 0 0)">School or organisation</span><input type="text" name="organisation" placeholder="School or organisation name" style="padding: 12px 14px; background: oklch(0.13 0 0); border: 1px solid oklch(0.3 0 0); border-radius: 4px; font-size: 15px; width: 100%" /></label><label style="flex: 1 1 160px; min-width: 0; display: flex; flex-direction: column; gap: 8px"><span style="font-family: 'JetBrains Mono', monospace; font-size: 10.5px; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(0.68 0 0)">Phone (optional)</span><input type="tel" name="phone" placeholder="For quick questions" style="padding: 12px 14px; background: oklch(0.13 0 0); border: 1px solid oklch(0.3 0 0); border-radius: 4px; font-size: 15px; width: 100%" /></label></div>
-          <div style="display: flex; flex-wrap: wrap; gap: 18px"><label style="flex: 1 1 200px; min-width: 0; display: flex; flex-direction: column; gap: 8px"><span style="font-family: 'JetBrains Mono', monospace; font-size: 10.5px; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(0.68 0 0)">Type of group</span><select name="audience" style="padding: 12px 14px; background: oklch(0.13 0 0); border: 1px solid oklch(0.3 0 0); border-radius: 4px; font-size: 15px; width: 100%"><option value="school">High school</option><option value="community">Community group or club</option><option value="openDay">Open day or industry event</option><option value="other">Other</option></select></label><label style="flex: 1 1 160px; min-width: 0; display: flex; flex-direction: column; gap: 8px"><span style="font-family: 'JetBrains Mono', monospace; font-size: 10.5px; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(0.68 0 0)">Suburb</span><input type="text" name="suburb" placeholder="Where you are" style="padding: 12px 14px; background: oklch(0.13 0 0); border: 1px solid oklch(0.3 0 0); border-radius: 4px; font-size: 15px; width: 100%" /></label></div>
-          <div style="display: flex; flex-wrap: wrap; gap: 18px"><label style="flex: 1 1 140px; min-width: 0; display: flex; flex-direction: column; gap: 8px"><span style="font-family: 'JetBrains Mono', monospace; font-size: 10.5px; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(0.68 0 0)">Group size</span><input type="text" name="groupSize" placeholder="e.g. 25 students" style="padding: 12px 14px; background: oklch(0.13 0 0); border: 1px solid oklch(0.3 0 0); border-radius: 4px; font-size: 15px; width: 100%" /></label><label style="flex: 1 1 160px; min-width: 0; display: flex; flex-direction: column; gap: 8px"><span style="font-family: 'JetBrains Mono', monospace; font-size: 10.5px; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(0.68 0 0)">Ages or year levels</span><input type="text" name="ages" placeholder="e.g. Years 9–10" style="padding: 12px 14px; background: oklch(0.13 0 0); border: 1px solid oklch(0.3 0 0); border-radius: 4px; font-size: 15px; width: 100%" /></label></div>
-          <label style="flex: 1 1 100%; min-width: 0; display: flex; flex-direction: column; gap: 8px"><span style="font-family: 'JetBrains Mono', monospace; font-size: 10.5px; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(0.68 0 0)">Preferred dates</span><input type="text" name="preferredDates" placeholder="Dates or weeks you have in mind, and how flexible they are" style="padding: 12px 14px; background: oklch(0.13 0 0); border: 1px solid oklch(0.3 0 0); border-radius: 4px; font-size: 15px; width: 100%" /></label>
-          <label style="flex: 1 1 100%; min-width: 0; display: flex; flex-direction: column; gap: 8px"><span style="font-family: 'JetBrains Mono', monospace; font-size: 10.5px; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(0.68 0 0)">Anything else</span><textarea name="message" rows="4" placeholder="How long a session, whether you want a hands-on activity, what the group is studying…" style="padding: 12px 14px; background: oklch(0.13 0 0); border: 1px solid oklch(0.3 0 0); border-radius: 4px; font-size: 15px; width: 100%; line-height: 1.55; resize: vertical"></textarea></label>
+          <div style="display: flex; flex-wrap: wrap; gap: 18px"><label style="flex: 1 1 200px; min-width: 0; display: flex; flex-direction: column; gap: 8px"><span style="font-size: 10.5px; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(0.68 0 0)">Your name</span><input type="text" name="name" placeholder="Full name" style="padding: 12px 14px; background: oklch(0.13 0 0); border: 1px solid oklch(0.3 0 0); border-radius: 4px; font-size: 15px; width: 100%" /></label><label style="flex: 1 1 200px; min-width: 0; display: flex; flex-direction: column; gap: 8px"><span style="font-size: 10.5px; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(0.68 0 0)">Email</span><input type="email" name="email" placeholder="you@school.wa.edu.au" style="padding: 12px 14px; background: oklch(0.13 0 0); border: 1px solid oklch(0.3 0 0); border-radius: 4px; font-size: 15px; width: 100%" /></label></div>
+          <div style="display: flex; flex-wrap: wrap; gap: 18px"><label style="flex: 1 1 200px; min-width: 0; display: flex; flex-direction: column; gap: 8px"><span style="font-size: 10.5px; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(0.68 0 0)">School or organisation</span><input type="text" name="organisation" placeholder="School or organisation name" style="padding: 12px 14px; background: oklch(0.13 0 0); border: 1px solid oklch(0.3 0 0); border-radius: 4px; font-size: 15px; width: 100%" /></label><label style="flex: 1 1 160px; min-width: 0; display: flex; flex-direction: column; gap: 8px"><span style="font-size: 10.5px; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(0.68 0 0)">Phone (optional)</span><input type="tel" name="phone" placeholder="For quick questions" style="padding: 12px 14px; background: oklch(0.13 0 0); border: 1px solid oklch(0.3 0 0); border-radius: 4px; font-size: 15px; width: 100%" /></label></div>
+          <div style="display: flex; flex-wrap: wrap; gap: 18px"><label style="flex: 1 1 200px; min-width: 0; display: flex; flex-direction: column; gap: 8px"><span style="font-size: 10.5px; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(0.68 0 0)">Type of group</span><select name="audience" style="padding: 12px 14px; background: oklch(0.13 0 0); border: 1px solid oklch(0.3 0 0); border-radius: 4px; font-size: 15px; width: 100%"><option value="school">High school</option><option value="community">Community group or club</option><option value="openDay">Open day or industry event</option><option value="other">Other</option></select></label><label style="flex: 1 1 160px; min-width: 0; display: flex; flex-direction: column; gap: 8px"><span style="font-size: 10.5px; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(0.68 0 0)">Suburb</span><input type="text" name="suburb" placeholder="Where you are" style="padding: 12px 14px; background: oklch(0.13 0 0); border: 1px solid oklch(0.3 0 0); border-radius: 4px; font-size: 15px; width: 100%" /></label></div>
+          <div style="display: flex; flex-wrap: wrap; gap: 18px"><label style="flex: 1 1 140px; min-width: 0; display: flex; flex-direction: column; gap: 8px"><span style="font-size: 10.5px; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(0.68 0 0)">Group size</span><input type="text" name="groupSize" placeholder="e.g. 25 students" style="padding: 12px 14px; background: oklch(0.13 0 0); border: 1px solid oklch(0.3 0 0); border-radius: 4px; font-size: 15px; width: 100%" /></label><label style="flex: 1 1 160px; min-width: 0; display: flex; flex-direction: column; gap: 8px"><span style="font-size: 10.5px; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(0.68 0 0)">Ages or year levels</span><input type="text" name="ages" placeholder="e.g. Years 9–10" style="padding: 12px 14px; background: oklch(0.13 0 0); border: 1px solid oklch(0.3 0 0); border-radius: 4px; font-size: 15px; width: 100%" /></label></div>
+          <label style="flex: 1 1 100%; min-width: 0; display: flex; flex-direction: column; gap: 8px"><span style="font-size: 10.5px; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(0.68 0 0)">Preferred dates</span><input type="text" name="preferredDates" placeholder="Dates or weeks you have in mind, and how flexible they are" style="padding: 12px 14px; background: oklch(0.13 0 0); border: 1px solid oklch(0.3 0 0); border-radius: 4px; font-size: 15px; width: 100%" /></label>
+          <label style="flex: 1 1 100%; min-width: 0; display: flex; flex-direction: column; gap: 8px"><span style="font-size: 10.5px; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(0.68 0 0)">Anything else</span><textarea name="message" rows="4" placeholder="How long a session, whether you want a hands-on activity, what the group is studying…" style="padding: 12px 14px; background: oklch(0.13 0 0); border: 1px solid oklch(0.3 0 0); border-radius: 4px; font-size: 15px; width: 100%; line-height: 1.55; resize: vertical"></textarea></label>
           <sc-if value="{{ sent }}" hint-placeholder-val="{{ false }}"><p role="status" style="margin: 0; padding: 12px 14px; border: 1px solid oklch(0.55 0.12 150); border-radius: 4px; background: oklch(0.2 0.04 150); font-size: 14.5px; color: oklch(0.93 0.05 150)">{{ sentMsg }}</p></sc-if>
           <sc-if value="{{ error }}" hint-placeholder-val="{{ false }}"><p role="alert" style="margin: 0; padding: 12px 14px; border: 1px solid oklch(0.5 0.14 30); border-radius: 4px; background: oklch(0.2 0.04 30); font-size: 14.5px; color: oklch(0.92 0.05 30)">{{ error }}</p></sc-if>
           <div style="padding-top: 4px"><button type="submit" style="padding: 14px 26px; background: oklch(0.8 0.16 78); color: oklch(0.12 0 0); border: 0; border-radius: 999px; font-weight: 600; font-size: 15px; cursor: pointer" style-hover="background: oklch(0.88 0.13 82)">{{ submitLabel }}</button></div>
@@ -158,14 +158,14 @@
         <a href="mailto:executive@uwaaerospace.org" style="font-size: 14px">executive@uwaaerospace.org</a>
       </div>
       <div style="flex: 1 1 180px; min-width: 0; display: flex; flex-direction: column; gap: 9px; font-size: 14px">
-        <p style="margin: 0 0 4px; font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(0.66 0 0)">Club</p>
+        <p style="margin: 0 0 4px; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(0.66 0 0)">Club</p>
         <a href="./" style="color: oklch(0.72 0 0)" style-hover="color: oklch(0.97 0 0)">Home</a>
         <a href="missions" style="color: oklch(0.72 0 0)" style-hover="color: oklch(0.97 0 0)">Missions</a>
         <a href="engines" style="color: oklch(0.72 0 0)" style-hover="color: oklch(0.97 0 0)">Engines</a>
         <a href="team" style="color: oklch(0.72 0 0)" style-hover="color: oklch(0.97 0 0)">Team</a>
       </div>
       <div style="flex: 1 1 180px; min-width: 0; display: flex; flex-direction: column; gap: 9px; font-size: 14px">
-        <p style="margin: 0 0 4px; font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(0.66 0 0)">Get involved</p>
+        <p style="margin: 0 0 4px; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(0.66 0 0)">Get involved</p>
         <a href="join" style="color: oklch(0.72 0 0)" style-hover="color: oklch(0.97 0 0)">Join</a>
         <a href="certifications" style="color: oklch(0.72 0 0)" style-hover="color: oklch(0.97 0 0)">Certifications</a>
         <a href="calendar" style="color: oklch(0.72 0 0)" style-hover="color: oklch(0.97 0 0)">Calendar</a>
@@ -174,14 +174,14 @@
         <a href="contact" style="color: oklch(0.72 0 0)" style-hover="color: oklch(0.97 0 0)">Contact</a>
       </div>
       <div style="flex: 1 1 180px; min-width: 0; display: flex; flex-direction: column; gap: 9px; font-size: 14px">
-        <p style="margin: 0 0 4px; font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(0.66 0 0)">Follow</p>
+        <p style="margin: 0 0 4px; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(0.66 0 0)">Follow</p>
         <a href="https://www.instagram.com/uwa_aerospace/" style="color: oklch(0.72 0 0)" style-hover="color: oklch(0.97 0 0)">Instagram</a>
         <a href="https://au.linkedin.com/company/uwa-aerospace" style="color: oklch(0.72 0 0)" style-hover="color: oklch(0.97 0 0)">LinkedIn</a>
         <a href="https://www.facebook.com/UWAAerospace" style="color: oklch(0.72 0 0)" style-hover="color: oklch(0.97 0 0)">Facebook</a>
         <a href="https://www.youtube.com/channel/UCclC8khZgZnaeF4LLJj9KKg" style="color: oklch(0.72 0 0)" style-hover="color: oklch(0.97 0 0)">YouTube</a>
       </div>
     </div>
-    <p style="max-width: 1440px; margin: 36px auto 0; padding-top: 20px; border-top: 1px solid oklch(0.22 0 0); font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.06em; color: oklch(0.6 0 0)">© 2026 UWA Aerospace · A student team at The University of Western Australia</p>
+    <p style="max-width: 1440px; margin: 36px auto 0; padding-top: 20px; border-top: 1px solid oklch(0.22 0 0); font-size: 11px; letter-spacing: 0.06em; color: oklch(0.6 0 0)">© 2026 UWA Aerospace · A student team at The University of Western Australia</p>
   </footer>
 </div>
 </x-dc>

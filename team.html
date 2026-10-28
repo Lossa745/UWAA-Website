@@ -24,7 +24,7 @@
 <link rel="icon" type="image/png" href="images/site/logo-uwaa-dark.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&display=swap">
 <style>
   * { box-sizing: border-box; }
   html { scroll-behavior: smooth; }
@@ -40,7 +40,7 @@
   @media (max-width: 720px) {
     footer a, header > a, header button { min-height: 44px; display: inline-flex; align-items: center; }
     main a:not([style*="padding"]):not(p a):not(nav a), section a:not([style*="padding"]):not(p a):not(nav a) { min-height: 44px; display: inline-flex; align-items: center; }
-    p > a:only-child[style*="JetBrains"] { min-height: 44px; display: inline-flex; align-items: center; }
+    p > a:only-child[style*="uppercase"] { min-height: 44px; display: inline-flex; align-items: center; }
   }
   #structure button[data-role][aria-pressed="false"] { border-color: oklch(0.3 0 0) !important; }
   #structure button[data-role][aria-pressed="false"]:hover { border-color: oklch(0.6 0 0) !important; }
@@ -57,7 +57,7 @@
       <img src="images/site/logo-uwaa-mark.png" alt="UWA Aerospace" style="width: 54px; height: 54px; object-fit: contain" />
       <span style="font-weight: 700; font-size: 18px; letter-spacing: 0.02em; text-transform: uppercase">UWA Aerospace</span>
     </a>
-    <nav style="display: flex; align-items: center; gap: clamp(10px, 1.5vw, 22px); font-family: 'JetBrains Mono', monospace; font-size: 11.5px; letter-spacing: 0.06em; text-transform: uppercase; flex-wrap: wrap">
+    <nav style="display: flex; align-items: center; gap: clamp(10px, 1.5vw, 22px); font-size: 11.5px; letter-spacing: 0.06em; text-transform: uppercase; flex-wrap: wrap">
       <a href="missions" style="color: oklch(0.68 0 0)" style-hover="color: oklch(0.97 0 0)">Missions</a>
       <a href="engines" style="color: oklch(0.68 0 0)" style-hover="color: oklch(0.97 0 0)">Engines</a>
       <a href="certifications" style="color: oklch(0.68 0 0)" style-hover="color: oklch(0.97 0 0)">Certifications</a>
@@ -71,7 +71,7 @@
   </header>
 
   <section style="padding: clamp(48px, 7vw, 104px) clamp(18px, 4vw, 64px) clamp(28px, 3.5vw, 48px); max-width: 1440px; margin: 0 auto">
-    <p data-reveal="" style="margin: 0 0 20px; font-family: 'JetBrains Mono', monospace; font-size: 11.5px; letter-spacing: 0.16em; text-transform: uppercase; color: oklch(0.84 0.14 80)">Team</p>
+    <p data-reveal="" style="margin: 0 0 20px; font-size: 11.5px; letter-spacing: 0.16em; text-transform: uppercase; color: oklch(0.84 0.14 80)">Team</p>
     <h1 data-reveal="" style="margin: 0; font-size: clamp(36px, 7vw, 82px); line-height: 0.98; letter-spacing: -0.035em; font-weight: 800; max-width: 17ch; text-wrap: balance">A student-run engineering team</h1>
     <p data-reveal="" style="margin: 24px 0 0; font-size: clamp(16px, 1.4vw, 19px); line-height: 1.6; color: oklch(0.8 0 0); max-width: 58ch">An executive runs the club; six sub-teams own the vehicle. Every role below is held by a student, and every one of them turns over each year. That is the point.</p>
   </section>
@@ -83,13 +83,13 @@
   </section>
 
   <section id="season" style="padding: clamp(44px, 6vw, 92px) clamp(18px, 4vw, 64px); max-width: 1440px; margin: 0 auto; border-top: 1px solid oklch(0.24 0 0)">
-    <p data-reveal="" style="margin: 0 0 16px; font-family: 'JetBrains Mono', monospace; font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: oklch(0.6 0 0)">01 · How a season runs</p>
+    <p data-reveal="" style="margin: 0 0 16px; font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: oklch(0.6 0 0)">01 · How a season runs</p>
     <h2 data-reveal="" style="margin: 0 0 16px; font-size: clamp(26px, 3.2vw, 42px); line-height: 1.08; letter-spacing: -0.025em; font-weight: 700; max-width: 22ch">One rocket a year</h2>
     <p data-reveal="" style="margin: 0 0 clamp(24px, 3vw, 40px); font-size: 15.5px; line-height: 1.6; color: oklch(0.76 0 0); max-width: 54ch">Every role in the club turns over annually, so each cohort takes a vehicle from a blank sheet to a launch rail inside one year.</p>
     <div style="display: flex; flex-wrap: wrap; gap: 1px; background: oklch(0.28 0 0); border: 1px solid oklch(0.28 0 0); border-radius: 6px; overflow: hidden">
       <sc-for list="{{ season }}" as="p" hint-placeholder-count="4">
         <div data-reveal="" style="flex: 1 1 240px; min-width: 0; background: oklch(0.165 0 0); padding: clamp(22px, 2.4vw, 30px)" style-hover="background: oklch(0.2 0 0)">
-          <p style="margin: 0 0 12px; font-family: 'JetBrains Mono', monospace; font-size: 10.5px; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(0.82 0.15 80)">{{ p.when }}</p>
+          <p style="margin: 0 0 12px; font-size: 10.5px; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(0.82 0.15 80)">{{ p.when }}</p>
           <h3 style="margin: 0 0 9px; font-size: 18.5px; font-weight: 600; letter-spacing: -0.01em">{{ p.title }}</h3>
           <p style="margin: 0; font-size: 14.5px; line-height: 1.6; color: oklch(0.76 0 0)">{{ p.body }}</p>
         </div>
@@ -98,27 +98,27 @@
   </section>
 
   <section id="structure" style="padding: clamp(44px, 6vw, 92px) clamp(18px, 4vw, 64px); max-width: 1440px; margin: 0 auto; border-top: 1px solid oklch(0.24 0 0)">
-    <p data-reveal="" style="margin: 0 0 16px; font-family: 'JetBrains Mono', monospace; font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: oklch(0.6 0 0)">02 · Structure</p>
+    <p data-reveal="" style="margin: 0 0 16px; font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: oklch(0.6 0 0)">02 · Structure</p>
     <h2 data-reveal="" style="margin: 0 0 clamp(24px, 3vw, 40px); font-size: clamp(26px, 3.2vw, 42px); line-height: 1.08; letter-spacing: -0.025em; font-weight: 700; max-width: 24ch">How the club is organised</h2>
     <div data-reveal="" style="max-width: 980px; margin: 0 auto">
-      <div style="display: flex; justify-content: center"><div style="width: min(100%, 300px)"><button type="button" data-role="pm" aria-pressed="{{ pressed.pm }}" onClick="{{ onPick }}" style="border: 1px solid oklch(0.8 0.16 78); border-radius: 6px; background: oklch(0.165 0 0); padding: clamp(12px, 1.6vw, 18px) clamp(10px, 1.4vw, 16px); text-align: center; display: block; width: 100%; text-align: left; color: inherit; font: inherit; cursor: pointer" style-hover="border-color: oklch(0.8 0.16 78)"><p style="margin: 0 0 6px; font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: oklch(0.82 0.15 80)">Lead</p><p style="margin: 0; font-size: clamp(14px, 1.5vw, 18px); font-weight: 700; letter-spacing: -0.01em">Project Manager</p></button></div></div>
+      <div style="display: flex; justify-content: center"><div style="width: min(100%, 300px)"><button type="button" data-role="pm" aria-pressed="{{ pressed.pm }}" onClick="{{ onPick }}" style="border: 1px solid oklch(0.8 0.16 78); border-radius: 6px; background: oklch(0.165 0 0); padding: clamp(12px, 1.6vw, 18px) clamp(10px, 1.4vw, 16px); text-align: center; display: block; width: 100%; text-align: left; color: inherit; font: inherit; cursor: pointer" style-hover="border-color: oklch(0.8 0.16 78)"><p style="margin: 0 0 6px; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: oklch(0.82 0.15 80)">Lead</p><p style="margin: 0; font-size: clamp(14px, 1.5vw, 18px); font-weight: 700; letter-spacing: -0.01em">Project Manager</p></button></div></div>
       <div style="position: relative; height: 40px"><span style="position: absolute; left: 50%; top: 0px; width: 1px; height: 16px; background: oklch(0.4 0 0)"></span><span style="position: absolute; left: 25%; right: 25%; top: 16px; height: 1px; background: oklch(0.4 0 0)"></span><span style="position: absolute; left: 25%; top: 16px; width: 1px; height: 24px; background: oklch(0.4 0 0)"></span><span style="position: absolute; left: 75%; top: 16px; width: 1px; height: 24px; background: oklch(0.4 0 0)"></span></div>
       <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr))">
-        <div style="padding: 0 clamp(4px, 1vw, 12px); display: flex"><div style="flex: 1; position: relative; border: 1px dashed oklch(0.82 0.15 80 / 0.55); border-radius: 10px; padding: clamp(26px, 3vw, 34px) clamp(10px, 1.6vw, 20px) clamp(12px, 1.6vw, 20px); background: oklch(0.82 0.15 80 / 0.03)"><span style="position: absolute; top: -9px; left: 16px; padding: 0 8px; background: oklch(0.12 0 0); font-family: 'JetBrains Mono', monospace; font-size: 10.5px; letter-spacing: 0.12em; text-transform: uppercase; color: oklch(0.84 0.14 80)">Business side</span><div style="display: flex; flex-direction: column; gap: 10px"><button type="button" data-role="treasurer" aria-pressed="{{ pressed.treasurer }}" onClick="{{ onPick }}" style="border: 1px solid oklch(0.3 0 0); border-radius: 6px; background: oklch(0.165 0 0); padding: clamp(12px, 1.6vw, 18px) clamp(10px, 1.4vw, 16px); text-align: center; display: block; width: 100%; text-align: left; color: inherit; font: inherit; cursor: pointer" style-hover="border-color: oklch(0.8 0.16 78)"><p style="margin: 0 0 6px; font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: oklch(0.82 0.15 80)">Executive</p><p style="margin: 0; font-size: clamp(14px, 1.5vw, 18px); font-weight: 700; letter-spacing: -0.01em">Treasurer</p></button><button type="button" data-role="marketing" aria-pressed="{{ pressed.marketing }}" onClick="{{ onPick }}" style="border: 1px solid oklch(0.3 0 0); border-radius: 6px; background: oklch(0.165 0 0); padding: clamp(12px, 1.6vw, 18px) clamp(10px, 1.4vw, 16px); text-align: center; display: block; width: 100%; text-align: left; color: inherit; font: inherit; cursor: pointer" style-hover="border-color: oklch(0.8 0.16 78)"><p style="margin: 0 0 6px; font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: oklch(0.82 0.15 80)">Executive</p><p style="margin: 0; font-size: clamp(14px, 1.5vw, 18px); font-weight: 700; letter-spacing: -0.01em">Marketing Director</p></button><button type="button" data-role="operations" aria-pressed="{{ pressed.operations }}" onClick="{{ onPick }}" style="border: 1px solid oklch(0.3 0 0); border-radius: 6px; background: oklch(0.165 0 0); padding: clamp(12px, 1.6vw, 18px) clamp(10px, 1.4vw, 16px); text-align: center; display: block; width: 100%; text-align: left; color: inherit; font: inherit; cursor: pointer" style-hover="border-color: oklch(0.8 0.16 78)"><p style="margin: 0 0 6px; font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: oklch(0.82 0.15 80)">Sub-team</p><p style="margin: 0; font-size: clamp(14px, 1.5vw, 18px); font-weight: 700; letter-spacing: -0.01em">Operations</p></button></div></div></div>
-        <div style="padding: 0 clamp(4px, 1vw, 12px); display: flex"><div style="flex: 1; position: relative; border: 1px dashed oklch(0.82 0.15 80 / 0.55); border-radius: 10px; padding: clamp(26px, 3vw, 34px) clamp(10px, 1.6vw, 20px) clamp(12px, 1.6vw, 20px); background: oklch(0.82 0.15 80 / 0.03)"><span style="position: absolute; top: -9px; left: 16px; padding: 0 8px; background: oklch(0.12 0 0); font-family: 'JetBrains Mono', monospace; font-size: 10.5px; letter-spacing: 0.12em; text-transform: uppercase; color: oklch(0.84 0.14 80)">Technical side</span><button type="button" data-role="td" aria-pressed="{{ pressed.td }}" onClick="{{ onPick }}" style="border: 1px solid oklch(0.3 0 0); border-radius: 6px; background: oklch(0.165 0 0); padding: clamp(12px, 1.6vw, 18px) clamp(10px, 1.4vw, 16px); text-align: center; display: block; width: 100%; text-align: left; color: inherit; font: inherit; cursor: pointer" style-hover="border-color: oklch(0.8 0.16 78)"><p style="margin: 0 0 6px; font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: oklch(0.82 0.15 80)">Executive</p><p style="margin: 0; font-size: clamp(14px, 1.5vw, 18px); font-weight: 700; letter-spacing: -0.01em">Technical Director</p></button><div style="position: relative; height: 22px"><span style="position: absolute; left: 50%; top: 0px; width: 1px; height: 22px; background: oklch(0.4 0 0)"></span></div><div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 130px), 1fr)); gap: 8px">
+        <div style="padding: 0 clamp(4px, 1vw, 12px); display: flex"><div style="flex: 1; position: relative; border: 1px dashed oklch(0.82 0.15 80 / 0.55); border-radius: 10px; padding: clamp(26px, 3vw, 34px) clamp(10px, 1.6vw, 20px) clamp(12px, 1.6vw, 20px); background: oklch(0.82 0.15 80 / 0.03)"><span style="position: absolute; top: -9px; left: 16px; padding: 0 8px; background: oklch(0.12 0 0); font-size: 10.5px; letter-spacing: 0.12em; text-transform: uppercase; color: oklch(0.84 0.14 80)">Business side</span><div style="display: flex; flex-direction: column; gap: 10px"><button type="button" data-role="treasurer" aria-pressed="{{ pressed.treasurer }}" onClick="{{ onPick }}" style="border: 1px solid oklch(0.3 0 0); border-radius: 6px; background: oklch(0.165 0 0); padding: clamp(12px, 1.6vw, 18px) clamp(10px, 1.4vw, 16px); text-align: center; display: block; width: 100%; text-align: left; color: inherit; font: inherit; cursor: pointer" style-hover="border-color: oklch(0.8 0.16 78)"><p style="margin: 0 0 6px; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: oklch(0.82 0.15 80)">Executive</p><p style="margin: 0; font-size: clamp(14px, 1.5vw, 18px); font-weight: 700; letter-spacing: -0.01em">Treasurer</p></button><button type="button" data-role="marketing" aria-pressed="{{ pressed.marketing }}" onClick="{{ onPick }}" style="border: 1px solid oklch(0.3 0 0); border-radius: 6px; background: oklch(0.165 0 0); padding: clamp(12px, 1.6vw, 18px) clamp(10px, 1.4vw, 16px); text-align: center; display: block; width: 100%; text-align: left; color: inherit; font: inherit; cursor: pointer" style-hover="border-color: oklch(0.8 0.16 78)"><p style="margin: 0 0 6px; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: oklch(0.82 0.15 80)">Executive</p><p style="margin: 0; font-size: clamp(14px, 1.5vw, 18px); font-weight: 700; letter-spacing: -0.01em">Marketing Director</p></button><button type="button" data-role="operations" aria-pressed="{{ pressed.operations }}" onClick="{{ onPick }}" style="border: 1px solid oklch(0.3 0 0); border-radius: 6px; background: oklch(0.165 0 0); padding: clamp(12px, 1.6vw, 18px) clamp(10px, 1.4vw, 16px); text-align: center; display: block; width: 100%; text-align: left; color: inherit; font: inherit; cursor: pointer" style-hover="border-color: oklch(0.8 0.16 78)"><p style="margin: 0 0 6px; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: oklch(0.82 0.15 80)">Sub-team</p><p style="margin: 0; font-size: clamp(14px, 1.5vw, 18px); font-weight: 700; letter-spacing: -0.01em">Operations</p></button></div></div></div>
+        <div style="padding: 0 clamp(4px, 1vw, 12px); display: flex"><div style="flex: 1; position: relative; border: 1px dashed oklch(0.82 0.15 80 / 0.55); border-radius: 10px; padding: clamp(26px, 3vw, 34px) clamp(10px, 1.6vw, 20px) clamp(12px, 1.6vw, 20px); background: oklch(0.82 0.15 80 / 0.03)"><span style="position: absolute; top: -9px; left: 16px; padding: 0 8px; background: oklch(0.12 0 0); font-size: 10.5px; letter-spacing: 0.12em; text-transform: uppercase; color: oklch(0.84 0.14 80)">Technical side</span><button type="button" data-role="td" aria-pressed="{{ pressed.td }}" onClick="{{ onPick }}" style="border: 1px solid oklch(0.3 0 0); border-radius: 6px; background: oklch(0.165 0 0); padding: clamp(12px, 1.6vw, 18px) clamp(10px, 1.4vw, 16px); text-align: center; display: block; width: 100%; text-align: left; color: inherit; font: inherit; cursor: pointer" style-hover="border-color: oklch(0.8 0.16 78)"><p style="margin: 0 0 6px; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: oklch(0.82 0.15 80)">Executive</p><p style="margin: 0; font-size: clamp(14px, 1.5vw, 18px); font-weight: 700; letter-spacing: -0.01em">Technical Director</p></button><div style="position: relative; height: 22px"><span style="position: absolute; left: 50%; top: 0px; width: 1px; height: 22px; background: oklch(0.4 0 0)"></span></div><div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 130px), 1fr)); gap: 8px">
             <sc-for list="{{ techTeams }}" as="t" hint-placeholder-count="5">
-              <button type="button" data-role="{{ t.anchor }}" aria-pressed="{{ t.pressed }}" onClick="{{ onPick }}" style="display: flex; gap: 8px; align-items: baseline; min-width: 0; box-sizing: border-box; padding: 11px clamp(9px, 1.2vw, 13px); border: 1px solid oklch(0.28 0 0); border-radius: 4px; background: oklch(0.175 0 0); color: oklch(0.95 0 0); width: 100%; text-align: left; font: inherit; cursor: pointer" style-hover="border-color: oklch(0.8 0.16 78); color: oklch(0.95 0 0)"><span style="font-family: 'JetBrains Mono', monospace; font-size: 10.5px; color: oklch(0.82 0.15 80)">{{ t.no }}</span><span style="min-width: 0; font-size: clamp(13px, 1.4vw, 14.5px); font-weight: 600; overflow-wrap: anywhere; hyphens: auto">{{ t.name }}</span></button>
+              <button type="button" data-role="{{ t.anchor }}" aria-pressed="{{ t.pressed }}" onClick="{{ onPick }}" style="display: flex; gap: 8px; align-items: baseline; min-width: 0; box-sizing: border-box; padding: 11px clamp(9px, 1.2vw, 13px); border: 1px solid oklch(0.28 0 0); border-radius: 4px; background: oklch(0.175 0 0); color: oklch(0.95 0 0); width: 100%; text-align: left; font: inherit; cursor: pointer" style-hover="border-color: oklch(0.8 0.16 78); color: oklch(0.95 0 0)"><span style="font-size: 10.5px; color: oklch(0.82 0.15 80)">{{ t.no }}</span><span style="min-width: 0; font-size: clamp(13px, 1.4vw, 14.5px); font-weight: 600; overflow-wrap: anywhere; hyphens: auto">{{ t.name }}</span></button>
             </sc-for>
           </div></div></div>
       </div>
       <div aria-live="polite" style="margin-top: clamp(20px, 2.6vw, 32px); border: 1px solid oklch(0.3 0 0); border-radius: 6px; background: oklch(0.165 0 0); padding: clamp(20px, 2.4vw, 30px); display: flex; flex-wrap: wrap; gap: clamp(16px, 2.4vw, 36px)">
         <div style="flex: 1 1 320px; min-width: 0">
-          <p style="margin: 0 0 8px; font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: oklch(0.82 0.15 80)">{{ sel.kind }}</p>
+          <p style="margin: 0 0 8px; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: oklch(0.82 0.15 80)">{{ sel.kind }}</p>
           <h3 style="margin: 0 0 12px; font-size: clamp(20px, 2.2vw, 26px); font-weight: 700; letter-spacing: -0.02em">{{ sel.name }}</h3>
           <p style="margin: 0; font-size: 15.5px; line-height: 1.6; color: oklch(0.8 0 0); max-width: 60ch; text-wrap: pretty">{{ sel.desc }}</p>
         </div>
         <div style="flex: 1 1 220px; min-width: 0; display: flex; flex-direction: column; gap: 10px">
-          <p style="margin: 0; font-family: 'JetBrains Mono', monospace; font-size: 10.5px; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(0.62 0 0)">{{ sel.listLabel }}</p>
+          <p style="margin: 0; font-size: 10.5px; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(0.62 0 0)">{{ sel.listLabel }}</p>
           <div style="display: flex; flex-wrap: wrap; gap: 8px">
             <sc-for list="{{ sel.list }}" as="s" hint-placeholder-count="3">
               <span style="padding: 6px 11px; border: 1px solid oklch(0.32 0 0); border-radius: 999px; font-size: 13px; color: oklch(0.88 0 0)">{{ s }}</span>
@@ -126,7 +126,7 @@
           </div>
         </div>
       </div>
-      <p style="margin: 12px 0 0; font-family: 'JetBrains Mono', monospace; font-size: 10.5px; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(0.6 0 0); text-align: center">Select any box to see what the role does</p>
+      <p style="margin: 12px 0 0; font-size: 10.5px; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(0.6 0 0); text-align: center">Select any box to see what the role does</p>
     </div>
   </section>
 
@@ -152,14 +152,14 @@
         <a href="mailto:executive@uwaaerospace.org" style="font-size: 14px">executive@uwaaerospace.org</a>
       </div>
       <div style="flex: 1 1 180px; min-width: 0; display: flex; flex-direction: column; gap: 9px; font-size: 14px">
-        <p style="margin: 0 0 4px; font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(0.66 0 0)">Club</p>
+        <p style="margin: 0 0 4px; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(0.66 0 0)">Club</p>
         <a href="./" style="color: oklch(0.72 0 0)" style-hover="color: oklch(0.97 0 0)">Home</a>
         <a href="missions" style="color: oklch(0.72 0 0)" style-hover="color: oklch(0.97 0 0)">Missions</a>
         <a href="engines" style="color: oklch(0.72 0 0)" style-hover="color: oklch(0.97 0 0)">Engines</a>
         <a href="team" style="color: oklch(0.72 0 0)" style-hover="color: oklch(0.97 0 0)">Team</a>
       </div>
       <div style="flex: 1 1 180px; min-width: 0; display: flex; flex-direction: column; gap: 9px; font-size: 14px">
-        <p style="margin: 0 0 4px; font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(0.66 0 0)">Get involved</p>
+        <p style="margin: 0 0 4px; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(0.66 0 0)">Get involved</p>
         <a href="join" style="color: oklch(0.72 0 0)" style-hover="color: oklch(0.97 0 0)">Join</a>
         <a href="certifications" style="color: oklch(0.72 0 0)" style-hover="color: oklch(0.97 0 0)">Certifications</a>
         <a href="calendar" style="color: oklch(0.72 0 0)" style-hover="color: oklch(0.97 0 0)">Calendar</a>
@@ -168,14 +168,14 @@
         <a href="contact" style="color: oklch(0.72 0 0)" style-hover="color: oklch(0.97 0 0)">Contact</a>
       </div>
       <div style="flex: 1 1 180px; min-width: 0; display: flex; flex-direction: column; gap: 9px; font-size: 14px">
-        <p style="margin: 0 0 4px; font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(0.66 0 0)">Follow</p>
+        <p style="margin: 0 0 4px; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(0.66 0 0)">Follow</p>
         <a href="https://www.instagram.com/uwa_aerospace/" style="color: oklch(0.72 0 0)" style-hover="color: oklch(0.97 0 0)">Instagram</a>
         <a href="https://au.linkedin.com/company/uwa-aerospace" style="color: oklch(0.72 0 0)" style-hover="color: oklch(0.97 0 0)">LinkedIn</a>
         <a href="https://www.facebook.com/UWAAerospace" style="color: oklch(0.72 0 0)" style-hover="color: oklch(0.97 0 0)">Facebook</a>
         <a href="https://www.youtube.com/channel/UCclC8khZgZnaeF4LLJj9KKg" style="color: oklch(0.72 0 0)" style-hover="color: oklch(0.97 0 0)">YouTube</a>
       </div>
     </div>
-    <p style="max-width: 1440px; margin: 36px auto 0; padding-top: 20px; border-top: 1px solid oklch(0.22 0 0); font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.06em; color: oklch(0.6 0 0)">© 2026 UWA Aerospace · A student team at The University of Western Australia</p>
+    <p style="max-width: 1440px; margin: 36px auto 0; padding-top: 20px; border-top: 1px solid oklch(0.22 0 0); font-size: 11px; letter-spacing: 0.06em; color: oklch(0.6 0 0)">© 2026 UWA Aerospace · A student team at The University of Western Australia</p>
   </footer>
 </div>
 </x-dc>

@@ -24,7 +24,7 @@
 <link rel="icon" type="image/png" href="images/site/logo-uwaa-dark.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&display=swap">
 <style>
   * { box-sizing: border-box; }
   html { scroll-behavior: smooth; }
@@ -40,7 +40,7 @@
   @media (max-width: 720px) {
     footer a, header > a, header button { min-height: 44px; display: inline-flex; align-items: center; }
     main a:not([style*="padding"]):not(p a):not(nav a), section a:not([style*="padding"]):not(p a):not(nav a) { min-height: 44px; display: inline-flex; align-items: center; }
-    p > a:only-child[style*="JetBrains"] { min-height: 44px; display: inline-flex; align-items: center; }
+    p > a:only-child[style*="uppercase"] { min-height: 44px; display: inline-flex; align-items: center; }
   }
 </style>
 <script src="./site-config.js"></script>
@@ -53,7 +53,7 @@
       <img src="images/site/logo-uwaa-mark.png" alt="UWA Aerospace" style="width: 54px; height: 54px; object-fit: contain" />
       <span style="font-weight: 700; font-size: 18px; letter-spacing: 0.02em; text-transform: uppercase">UWA Aerospace</span>
     </a>
-    <nav style="display: flex; align-items: center; gap: clamp(10px, 1.5vw, 22px); font-family: 'JetBrains Mono', monospace; font-size: 11.5px; letter-spacing: 0.06em; text-transform: uppercase; flex-wrap: wrap">
+    <nav style="display: flex; align-items: center; gap: clamp(10px, 1.5vw, 22px); font-size: 11.5px; letter-spacing: 0.06em; text-transform: uppercase; flex-wrap: wrap">
       <a href="missions" style="color: oklch(0.82 0.15 80)" style-hover="color: oklch(0.9 0.11 84)">Missions</a>
       <a href="engines" style="color: oklch(0.68 0 0)" style-hover="color: oklch(0.97 0 0)">Engines</a>
       <a href="certifications" style="color: oklch(0.68 0 0)" style-hover="color: oklch(0.97 0 0)">Certifications</a>
@@ -67,27 +67,27 @@
   </header>
 
   <section style="padding: clamp(48px, 7vw, 104px) clamp(18px, 4vw, 64px) clamp(36px, 4vw, 60px); max-width: 1440px; margin: 0 auto">
-    <p data-reveal="" style="margin: 0 0 20px; font-family: 'JetBrains Mono', monospace; font-size: 11.5px; letter-spacing: 0.16em; text-transform: uppercase; color: oklch(0.84 0.14 80)">Missions</p>
+    <p data-reveal="" style="margin: 0 0 20px; font-size: 11.5px; letter-spacing: 0.16em; text-transform: uppercase; color: oklch(0.84 0.14 80)">Missions</p>
     <h1 data-reveal="" style="margin: 0; font-size: clamp(36px, 7vw, 82px); line-height: 0.98; letter-spacing: -0.035em; font-weight: 800; max-width: 16ch; text-wrap: balance">Our competition history</h1>
     <p data-reveal="" style="margin: 24px 0 0; font-size: clamp(16px, 1.4vw, 19px); line-height: 1.6; color: oklch(0.8 0 0); max-width: 60ch">Seven years of competition entries, published research and student theses. Each campaign below carries the vehicle, the objective and the result.</p>
     <div data-reveal="" style="display: flex; flex-wrap: wrap; gap: 1px; background: oklch(0.28 0 0); border: 1px solid oklch(0.28 0 0); border-radius: 6px; overflow: hidden; margin-top: clamp(28px, 4vw, 48px)">
       <sc-for list="{{ facts }}" as="f" hint-placeholder-count="4">
         <div style="flex: 1 1 168px; min-width: 0; background: oklch(0.175 0 0); padding: 22px 18px">
           <p style="margin: 0 0 6px; font-size: clamp(22px, 2.4vw, 32px); font-weight: 700; letter-spacing: -0.03em; color: oklch(0.82 0.15 80)">{{ f.value }}</p>
-          <p style="margin: 0; font-family: 'JetBrains Mono', monospace; font-size: 10.5px; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(0.62 0 0)">{{ f.label }}</p>
+          <p style="margin: 0; font-size: 10.5px; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(0.62 0 0)">{{ f.label }}</p>
         </div>
       </sc-for>
     </div>
     <nav data-reveal="" style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: clamp(24px, 3vw, 36px)">
       <sc-for list="{{ jump }}" as="j" hint-placeholder-count="4">
-        <a href="{{ j.href }}" style="padding: 10px 18px; border: 1px solid oklch(0.3 0 0); border-radius: 999px; font-family: 'JetBrains Mono', monospace; font-size: 11.5px; letter-spacing: 0.06em; text-transform: uppercase; color: oklch(0.8 0 0)" style-hover="border-color: oklch(0.8 0.16 78); color: oklch(0.97 0 0)">{{ j.label }}</a>
+        <a href="{{ j.href }}" style="padding: 10px 18px; border: 1px solid oklch(0.3 0 0); border-radius: 999px; font-size: 11.5px; letter-spacing: 0.06em; text-transform: uppercase; color: oklch(0.8 0 0)" style-hover="border-color: oklch(0.8 0.16 78); color: oklch(0.97 0 0)">{{ j.label }}</a>
       </sc-for>
     </nav>
   </section>
 
   <sc-for list="{{ groups }}" as="grp" hint-placeholder-count="3">
     <section id="{{ grp.anchor }}" style="padding: clamp(44px, 6vw, 92px) clamp(18px, 4vw, 64px); max-width: 1440px; margin: 0 auto; border-top: 1px solid oklch(0.24 0 0)">
-      <p data-reveal="" style="margin: 0 0 16px; font-family: 'JetBrains Mono', monospace; font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: oklch(0.6 0 0)">{{ grp.no }}</p>
+      <p data-reveal="" style="margin: 0 0 16px; font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: oklch(0.6 0 0)">{{ grp.no }}</p>
       <h2 data-reveal="" style="margin: 0 0 12px; font-size: clamp(26px, 3.2vw, 42px); line-height: 1.08; letter-spacing: -0.025em; font-weight: 700; max-width: 26ch">{{ grp.title }}</h2>
       <p data-reveal="" style="margin: 0 0 clamp(24px, 3vw, 40px); font-size: 15.5px; line-height: 1.6; color: oklch(0.76 0 0); max-width: 58ch">{{ grp.blurb }}</p>
 
@@ -96,21 +96,21 @@
           <article data-reveal="" style="background: oklch(0.165 0 0); padding: clamp(22px, 2.6vw, 34px); display: flex; flex-wrap: wrap; gap: clamp(20px, 3vw, 48px)" style-hover="background: oklch(0.195 0 0)">
             <div style="flex: 1 1 260px; min-width: 0">
               <div style="display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-bottom: 12px">
-                <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.1em; color: oklch(0.82 0.15 80)">{{ e.year }}</span>
-                <span style="padding: 4px 10px; border: 1px solid oklch(0.32 0 0); border-radius: 999px; font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(0.72 0 0)">{{ e.kind }}</span>
+                <span style="font-size: 12px; letter-spacing: 0.1em; color: oklch(0.82 0.15 80)">{{ e.year }}</span>
+                <span style="padding: 4px 10px; border: 1px solid oklch(0.32 0 0); border-radius: 999px; font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(0.72 0 0)">{{ e.kind }}</span>
               </div>
               <h3 style="margin: 0 0 10px; font-size: clamp(21px, 2.2vw, 27px); font-weight: 700; letter-spacing: -0.02em">{{ e.name }}</h3>
-              <p style="margin: 0 0 12px; font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: oklch(0.6 0 0)">{{ e.vehicle }}</p>
+              <p style="margin: 0 0 12px; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: oklch(0.6 0 0)">{{ e.vehicle }}</p>
               <p style="margin: 0; font-size: 15px; line-height: 1.6; color: oklch(0.78 0 0); max-width: 46ch">{{ e.body }}</p>
               <sc-if value="{{ e.paper }}" hint-placeholder-val="{{ false }}">
-                <a href="{{ e.paper }}" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 8px; margin-top: 16px; font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(0.82 0.15 80); text-decoration: none; border-bottom: 1px solid oklch(0.82 0.15 80 / 0.4); padding-bottom: 2px" style-hover="border-bottom-color: oklch(0.82 0.15 80)">Read the paper (PDF) ↗</a>
+                <a href="{{ e.paper }}" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 8px; margin-top: 16px; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(0.82 0.15 80); text-decoration: none; border-bottom: 1px solid oklch(0.82 0.15 80 / 0.4); padding-bottom: 2px" style-hover="border-bottom-color: oklch(0.82 0.15 80)">Read the paper (PDF) ↗</a>
               </sc-if>
             </div>
             <sc-if value="{{ e.media }}" hint-placeholder-val="{{ true }}"><div style="flex: 1 1 220px; min-width: 0">{{ e.media }}</div></sc-if>
             <div style="flex: 1 1 260px; min-width: 0; display: flex; flex-direction: column; gap: 14px">
               <sc-for list="{{ e.results }}" as="r" hint-placeholder-count="3">
                 <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: space-between; align-items: baseline; padding-bottom: 12px; border-bottom: 1px solid oklch(0.24 0 0)">
-                  <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: oklch(0.62 0 0)">{{ r.k }}</span>
+                  <span style="font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: oklch(0.62 0 0)">{{ r.k }}</span>
                   <span style="font-size: 17px; font-weight: 600; color: oklch(0.94 0 0); text-align: right">{{ r.v }}</span>
                 </div>
               </sc-for>
@@ -122,7 +122,7 @@
   </sc-for>
 
   <section id="fleet" style="padding: clamp(44px, 6vw, 92px) clamp(18px, 4vw, 64px); max-width: 1440px; margin: 0 auto; border-top: 1px solid oklch(0.24 0 0)">
-    <p data-reveal="" style="margin: 0 0 16px; font-family: 'JetBrains Mono', monospace; font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: oklch(0.6 0 0)">04 · Other vehicles</p>
+    <p data-reveal="" style="margin: 0 0 16px; font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: oklch(0.6 0 0)">04 · Other vehicles</p>
     <h2 data-reveal="" style="margin: 0 0 12px; font-size: clamp(26px, 3.2vw, 42px); line-height: 1.08; letter-spacing: -0.025em; font-weight: 700; max-width: 24ch">Test and certification rockets</h2>
     <p data-reveal="" style="margin: 0 0 clamp(24px, 3vw, 40px); font-size: 15.5px; line-height: 1.6; color: oklch(0.76 0 0); max-width: 54ch">Rockets built outside the competition campaigns above, named by the members who built them.</p>
     <div style="display: flex; flex-wrap: wrap; gap: 1px; background: oklch(0.28 0 0); border: 1px solid oklch(0.28 0 0); border-radius: 6px; overflow: hidden">
@@ -130,7 +130,7 @@
         <div data-reveal="" style="flex: 1 1 180px; min-width: 0; background: oklch(0.175 0 0); padding: 22px 20px" style-hover="background: oklch(0.21 0 0)">
           <div style="margin: -22px -20px 16px">{{ v.imgEl }}</div>
           <h3 style="margin: 0 0 7px; font-size: 19px; font-weight: 700; letter-spacing: -0.015em">{{ v.name }}</h3>
-          <p style="margin: 0; font-family: 'JetBrains Mono', monospace; font-size: 10.5px; letter-spacing: 0.06em; text-transform: uppercase; color: oklch(0.62 0 0)">{{ v.note }}</p>
+          <p style="margin: 0; font-size: 10.5px; letter-spacing: 0.06em; text-transform: uppercase; color: oklch(0.62 0 0)">{{ v.note }}</p>
         </div>
       </sc-for>
     </div>
@@ -157,14 +157,14 @@
         <a href="mailto:executive@uwaaerospace.org" style="font-size: 14px">executive@uwaaerospace.org</a>
       </div>
       <div style="flex: 1 1 180px; min-width: 0; display: flex; flex-direction: column; gap: 9px; font-size: 14px">
-        <p style="margin: 0 0 4px; font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(0.66 0 0)">Club</p>
+        <p style="margin: 0 0 4px; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(0.66 0 0)">Club</p>
         <a href="./" style="color: oklch(0.72 0 0)" style-hover="color: oklch(0.97 0 0)">Home</a>
         <a href="missions" style="color: oklch(0.72 0 0)" style-hover="color: oklch(0.97 0 0)">Missions</a>
         <a href="engines" style="color: oklch(0.72 0 0)" style-hover="color: oklch(0.97 0 0)">Engines</a>
         <a href="team" style="color: oklch(0.72 0 0)" style-hover="color: oklch(0.97 0 0)">Team</a>
       </div>
       <div style="flex: 1 1 180px; min-width: 0; display: flex; flex-direction: column; gap: 9px; font-size: 14px">
-        <p style="margin: 0 0 4px; font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(0.66 0 0)">Get involved</p>
+        <p style="margin: 0 0 4px; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(0.66 0 0)">Get involved</p>
         <a href="join" style="color: oklch(0.72 0 0)" style-hover="color: oklch(0.97 0 0)">Join</a>
         <a href="certifications" style="color: oklch(0.72 0 0)" style-hover="color: oklch(0.97 0 0)">Certifications</a>
         <a href="calendar" style="color: oklch(0.72 0 0)" style-hover="color: oklch(0.97 0 0)">Calendar</a>
@@ -173,14 +173,14 @@
         <a href="contact" style="color: oklch(0.72 0 0)" style-hover="color: oklch(0.97 0 0)">Contact</a>
       </div>
       <div style="flex: 1 1 180px; min-width: 0; display: flex; flex-direction: column; gap: 9px; font-size: 14px">
-        <p style="margin: 0 0 4px; font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(0.66 0 0)">Follow</p>
+        <p style="margin: 0 0 4px; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(0.66 0 0)">Follow</p>
         <a href="https://www.instagram.com/uwa_aerospace/" style="color: oklch(0.72 0 0)" style-hover="color: oklch(0.97 0 0)">Instagram</a>
         <a href="https://au.linkedin.com/company/uwa-aerospace" style="color: oklch(0.72 0 0)" style-hover="color: oklch(0.97 0 0)">LinkedIn</a>
         <a href="https://www.facebook.com/UWAAerospace" style="color: oklch(0.72 0 0)" style-hover="color: oklch(0.97 0 0)">Facebook</a>
         <a href="https://www.youtube.com/channel/UCclC8khZgZnaeF4LLJj9KKg" style="color: oklch(0.72 0 0)" style-hover="color: oklch(0.97 0 0)">YouTube</a>
       </div>
     </div>
-    <p style="max-width: 1440px; margin: 36px auto 0; padding-top: 20px; border-top: 1px solid oklch(0.22 0 0); font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.06em; color: oklch(0.6 0 0)">© 2026 UWA Aerospace · A student team at The University of Western Australia</p>
+    <p style="max-width: 1440px; margin: 36px auto 0; padding-top: 20px; border-top: 1px solid oklch(0.22 0 0); font-size: 11px; letter-spacing: 0.06em; color: oklch(0.6 0 0)">© 2026 UWA Aerospace · A student team at The University of Western Australia</p>
   </footer>
 </div>
 </x-dc>
@@ -272,7 +272,6 @@ class Component extends DCLogic {
         "span",
         {
           style: {
-            fontFamily: "'JetBrains Mono', monospace",
             fontSize: "11px",
             letterSpacing: "0.06em",
             color: "oklch(0.62 0 0)",
@@ -291,7 +290,7 @@ class Component extends DCLogic {
       alt,
       loading: "lazy",
       decoding: "async",
-      style: { width: "100%", height: h || "260px", objectFit: fit || "cover", borderRadius: h ? "0" : "4px", display: "block", background: fit === "contain" ? "oklch(0.97 0 0)" : "oklch(0.2 0 0)" }
+      style: { width: "100%", height: h || "260px", objectFit: fit || "cover", borderRadius: h ? "0" : "4px", border: h ? "none" : "1px solid oklch(0.36 0 0)", boxSizing: "border-box", display: "block", background: fit === "contain" ? "oklch(0.97 0 0)" : "oklch(0.2 0 0)" }
     });
   }
   renderVals() {

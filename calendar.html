@@ -24,7 +24,7 @@
 <link rel="icon" type="image/png" href="images/site/logo-uwaa-dark.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&display=swap">
 <style>
   * { box-sizing: border-box; }
   html { scroll-behavior: smooth; }
@@ -40,7 +40,7 @@
   @media (max-width: 720px) {
     footer a, header > a, header button { min-height: 44px; display: inline-flex; align-items: center; }
     main a:not([style*="padding"]):not(p a):not(nav a), section a:not([style*="padding"]):not(p a):not(nav a) { min-height: 44px; display: inline-flex; align-items: center; }
-    p > a:only-child[style*="JetBrains"] { min-height: 44px; display: inline-flex; align-items: center; }
+    p > a:only-child[style*="uppercase"] { min-height: 44px; display: inline-flex; align-items: center; }
   }
 </style>
 <script src="./site-config.js"></script>
@@ -53,7 +53,7 @@
       <img src="images/site/logo-uwaa-mark.png" alt="UWA Aerospace" style="width: 54px; height: 54px; object-fit: contain" />
       <span style="font-weight: 700; font-size: 18px; letter-spacing: 0.02em; text-transform: uppercase">UWA Aerospace</span>
     </a>
-    <nav style="display: flex; align-items: center; gap: clamp(10px, 1.5vw, 22px); font-family: 'JetBrains Mono', monospace; font-size: 11.5px; letter-spacing: 0.06em; text-transform: uppercase; flex-wrap: wrap">
+    <nav style="display: flex; align-items: center; gap: clamp(10px, 1.5vw, 22px); font-size: 11.5px; letter-spacing: 0.06em; text-transform: uppercase; flex-wrap: wrap">
       <a href="missions" style="color: oklch(0.68 0 0)" style-hover="color: oklch(0.97 0 0)">Missions</a>
       <a href="engines" style="color: oklch(0.68 0 0)" style-hover="color: oklch(0.97 0 0)">Engines</a>
       <a href="certifications" style="color: oklch(0.68 0 0)" style-hover="color: oklch(0.97 0 0)">Certifications</a>
@@ -67,9 +67,17 @@
   </header>
 
   <section style="padding: clamp(48px, 7vw, 104px) clamp(18px, 4vw, 64px) clamp(32px, 4vw, 52px); max-width: 1440px; margin: 0 auto">
-    <p data-reveal="" style="margin: 0 0 20px; font-family: 'JetBrains Mono', monospace; font-size: 11.5px; letter-spacing: 0.16em; text-transform: uppercase; color: oklch(0.84 0.14 80)">Calendar</p>
+    <p data-reveal="" style="margin: 0 0 20px; font-size: 11.5px; letter-spacing: 0.16em; text-transform: uppercase; color: oklch(0.84 0.14 80)">Calendar</p>
     <h1 data-reveal="" style="margin: 0; font-size: clamp(36px, 7vw, 82px); line-height: 0.98; letter-spacing: -0.035em; font-weight: 800; max-width: 16ch; text-wrap: balance">Launch days and events</h1>
     <p data-reveal="" style="margin: 24px 0 0; font-size: clamp(16px, 1.4vw, 19px); line-height: 1.6; color: oklch(0.8 0 0); max-width: 58ch">WARS launch days, info nights, competitions and open days. Launch days run April to September and depend on weather and fire bans, so check back the week before.</p>
+    <sc-if value="{{ hasFeed }}" hint-placeholder-val="{{ true }}">
+      <div data-reveal="" style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-top: clamp(22px, 3vw, 34px)">
+        <span style="font-size: 11.5px; letter-spacing: 0.12em; text-transform: uppercase; color: oklch(0.7 0 0)">Add to your calendar</span>
+        <a href="{{ googleFeed }}" target="_blank" rel="noopener noreferrer" style="padding: 10px 16px; min-height: 44px; display: inline-flex; align-items: center; border: 1px solid oklch(0.34 0 0); border-radius: 999px; color: oklch(0.97 0 0); font-size: 14px" style-hover="border-color: oklch(0.8 0.16 78); color: oklch(0.97 0 0)">Google Calendar</a>
+        <a href="{{ webcalFeed }}" style="padding: 10px 16px; min-height: 44px; display: inline-flex; align-items: center; border: 1px solid oklch(0.34 0 0); border-radius: 999px; color: oklch(0.97 0 0); font-size: 14px" style-hover="border-color: oklch(0.8 0.16 78); color: oklch(0.97 0 0)">Apple or Outlook</a>
+        <button type="button" onClick="{{ onCopyFeed }}" style="padding: 10px 16px; min-height: 44px; background: transparent; border: 1px solid oklch(0.34 0 0); border-radius: 999px; color: oklch(0.97 0 0); font: inherit; font-size: 14px; cursor: pointer" style-hover="border-color: oklch(0.8 0.16 78)">{{ copyLabel }}</button>
+      </div>
+    </sc-if>
   </section>
 
   <section style="padding: clamp(32px, 4vw, 56px) clamp(18px, 4vw, 64px) clamp(48px, 6vw, 92px); max-width: 1440px; margin: 0 auto; border-top: 1px solid oklch(0.24 0 0)">
@@ -83,26 +91,77 @@
       <div style="border: 1px dashed oklch(0.32 0 0); border-radius: 6px; padding: clamp(28px, 4vw, 48px); display: flex; flex-direction: column; gap: 12px; align-items: flex-start">
         <p style="margin: 0; font-size: clamp(18px, 1.8vw, 22px); font-weight: 600">{{ messageTitle }}</p>
         <p style="margin: 0; font-size: 15px; line-height: 1.6; color: oklch(0.74 0 0); max-width: 52ch">{{ messageBody }}</p>
-        <a href="https://www.instagram.com/uwa_aerospace/" style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase">Follow us on Instagram →</a>
+        <a href="https://www.instagram.com/uwa_aerospace/" style="font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase">Follow us on Instagram →</a>
       </div>
     </sc-if>
 
     <div style="display: flex; flex-direction: column; gap: clamp(28px, 3.5vw, 44px)">
       <sc-for list="{{ months }}" as="m" hint-placeholder-count="0">
         <div>
-          <h2 style="margin: 0 0 14px; font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: oklch(0.66 0 0)">{{ m.label }}</h2>
+          <h2 style="margin: 0 0 14px; font-size: 12px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: oklch(0.66 0 0)">{{ m.label }}</h2>
           <ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 1px; background: oklch(0.28 0 0); border: 1px solid oklch(0.28 0 0); border-radius: 6px; overflow: hidden">
             <sc-for list="{{ m.events }}" as="e" hint-placeholder-count="2">
               <li data-reveal="" style="background: oklch(0.165 0 0); padding: clamp(16px, 2vw, 22px) clamp(16px, 2.2vw, 26px); display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: clamp(14px, 2vw, 26px); align-items: center">
                 <div style="text-align: center; border-right: 1px solid oklch(0.28 0 0); padding-right: clamp(10px, 1.6vw, 20px)">
                   <p style="margin: 0; font-size: 30px; font-weight: 800; letter-spacing: -0.03em; line-height: 1; color: oklch(0.82 0.15 80)">{{ e.day }}</p>
-                  <p style="margin: 6px 0 0; font-family: 'JetBrains Mono', monospace; font-size: 10.5px; letter-spacing: 0.1em; text-transform: uppercase; color: oklch(0.66 0 0)">{{ e.weekday }}</p>
+                  <p style="margin: 6px 0 0; font-size: 10.5px; letter-spacing: 0.1em; text-transform: uppercase; color: oklch(0.66 0 0)">{{ e.weekday }}</p>
                 </div>
                 <div style="min-width: 0; display: flex; flex-direction: column; gap: 6px">
-                  <p style="margin: 0; font-family: 'JetBrains Mono', monospace; font-size: 10.5px; letter-spacing: 0.1em; text-transform: uppercase; color: oklch(0.82 0.15 80)">{{ e.kindLabel }}</p>
+                  <p style="margin: 0; font-size: 10.5px; letter-spacing: 0.1em; text-transform: uppercase; color: oklch(0.82 0.15 80)">{{ e.kindLabel }}</p>
                   <h3 style="margin: 0; font-size: clamp(17px, 1.7vw, 20px); font-weight: 700; letter-spacing: -0.015em">{{ e.title }}</h3>
                   <p style="margin: 0; font-size: 14px; color: oklch(0.72 0 0)">{{ e.meta }}</p>
+                  <sc-if value="{{ e.description }}" hint-placeholder-val="{{ false }}">
+                    <p style="margin: 2px 0 0; font-size: 14.5px; line-height: 1.6; color: oklch(0.8 0 0); max-width: 62ch; text-wrap: pretty">{{ e.description }}</p>
+                  </sc-if>
+                  <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px 18px; margin-top: 4px">
+                    <sc-if value="{{ e.hasSignUp }}" hint-placeholder-val="{{ false }}">
+                      <button type="button" data-id="{{ e.id }}" aria-expanded="{{ e.expanded }}" onClick="{{ onToggleSignUp }}" style="padding: 10px 18px; min-height: 44px; background: oklch(0.8 0.16 78); color: oklch(0.12 0 0); border: 0; border-radius: 999px; font: inherit; font-size: 14px; font-weight: 600; cursor: pointer" style-hover="background: oklch(0.88 0.13 82)">{{ e.signUpLabel }}</button>
+                      <span style="font-size: 13px; color: oklch(0.7 0 0)">{{ e.signUpNote }}</span>
+                    </sc-if>
+                    <sc-if value="{{ e.link }}" hint-placeholder-val="{{ false }}">
+                      <a href="{{ e.link }}" target="_blank" rel="noopener noreferrer" style="font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase">More info →</a>
+                    </sc-if>
+                  </div>
                 </div>
+                <sc-if value="{{ e.showDone }}" hint-placeholder-val="{{ false }}">
+                  <p role="status" style="grid-column: 1 / -1; margin: 0; padding: 14px 16px; border: 1px solid oklch(0.55 0.12 150); border-radius: 4px; background: oklch(0.2 0.03 150); font-size: 14.5px; line-height: 1.55">You're signed up. We've emailed you a confirmation, and we'll send a reminder the day before.</p>
+                </sc-if>
+                <sc-if value="{{ e.showForm }}" hint-placeholder-val="{{ false }}">
+                  <form novalidate="" data-id="{{ e.id }}" data-form="{{ e.formId }}" onSubmit="{{ onSignUp }}" style="grid-column: 1 / -1; position: relative; display: flex; flex-direction: column; gap: 16px; padding: clamp(16px, 2vw, 24px); border: 1px solid oklch(0.28 0 0); border-radius: 6px; background: oklch(0.14 0 0)">
+                    <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0" />
+                    <sc-if value="{{ e.membersOnly }}" hint-placeholder-val="{{ false }}">
+                      <p style="margin: 0; font-size: 13.5px; line-height: 1.55; color: oklch(0.84 0.14 80)">Members only. Use the email you joined the club with.</p>
+                    </sc-if>
+                    <div style="display: flex; flex-wrap: wrap; gap: 16px">
+                      <sc-for list="{{ e.inputs }}" as="f" hint-placeholder-count="2">
+                        <label style="flex: 1 1 220px; min-width: 0; display: flex; flex-direction: column; gap: 8px">
+                          <span style="font-size: 10.5px; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(0.68 0 0)">{{ f.label }}</span>
+                          <sc-if value="{{ f.isText }}" hint-placeholder-val="{{ true }}">
+                            <input type="{{ f.type }}" name="{{ f.name }}" autocomplete="{{ f.auto }}" inputmode="{{ f.mode }}" maxlength="{{ f.max }}" placeholder="{{ f.placeholder }}" style="padding: 12px 14px; background: oklch(0.13 0 0); border: 1px solid oklch(0.3 0 0); border-radius: 4px; color: oklch(0.97 0 0); font: inherit; font-size: 15px; width: 100%" />
+                          </sc-if>
+                          <sc-if value="{{ f.isLong }}" hint-placeholder-val="{{ false }}">
+                            <textarea name="{{ f.name }}" rows="3" maxlength="2000" style="padding: 12px 14px; background: oklch(0.13 0 0); border: 1px solid oklch(0.3 0 0); border-radius: 4px; color: oklch(0.97 0 0); font: inherit; font-size: 15px; width: 100%"></textarea>
+                          </sc-if>
+                          <sc-if value="{{ f.isChoice }}" hint-placeholder-val="{{ false }}">
+                            <select name="{{ f.name }}" style="padding: 12px 14px; background: oklch(0.13 0 0); border: 1px solid oklch(0.3 0 0); border-radius: 4px; color: oklch(0.97 0 0); font: inherit; font-size: 15px; width: 100%">
+                              <option value="">Choose…</option>
+                              <sc-for list="{{ f.options }}" as="o" hint-placeholder-count="2">
+                                <option value="{{ o }}">{{ o }}</option>
+                              </sc-for>
+                            </select>
+                          </sc-if>
+                        </label>
+                      </sc-for>
+                    </div>
+                    <sc-if value="{{ e.error }}" hint-placeholder-val="{{ false }}">
+                      <p role="alert" style="margin: 0; padding: 12px 14px; border: 1px solid oklch(0.5 0.14 30); border-radius: 4px; background: oklch(0.2 0.04 30); font-size: 14.5px; color: oklch(0.92 0.05 30)">{{ e.error }}</p>
+                    </sc-if>
+                    <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 14px">
+                      <button type="submit" style="padding: 13px 24px; min-height: 44px; background: oklch(0.8 0.16 78); color: oklch(0.12 0 0); border: 0; border-radius: 999px; font: inherit; font-size: 15px; font-weight: 600; cursor: pointer" style-hover="background: oklch(0.88 0.13 82)">{{ e.submitLabel }}</button>
+                      <p style="margin: 0; font-size: 13px; line-height: 1.55; color: oklch(0.7 0 0); max-width: 52ch">Your details are seen only by the UWA Aerospace committee, for this event, and are deleted 30 days after it.</p>
+                    </div>
+                  </form>
+                </sc-if>
               </li>
             </sc-for>
           </ul>
@@ -114,11 +173,11 @@
   <section style="padding: clamp(40px, 6vw, 88px) clamp(18px, 4vw, 64px); max-width: 1440px; margin: 0 auto; border-top: 1px solid oklch(0.24 0 0)">
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 1px; background: oklch(0.28 0 0); border: 1px solid oklch(0.28 0 0); border-radius: 6px; overflow: hidden">
       <a href="certifications" style="background: oklch(0.165 0 0); padding: clamp(22px, 2.6vw, 32px); display: flex; flex-direction: column; gap: 8px; color: oklch(0.95 0 0)" style-hover="background: oklch(0.2 0 0); color: oklch(0.95 0 0)">
-        <p style="margin: 0; font-family: 'JetBrains Mono', monospace; font-size: 10.5px; letter-spacing: 0.1em; text-transform: uppercase; color: oklch(0.82 0.15 80)">Certification</p>
+        <p style="margin: 0; font-size: 10.5px; letter-spacing: 0.1em; text-transform: uppercase; color: oklch(0.82 0.15 80)">Certification</p>
         <h3 style="margin: 0; font-size: 20px; font-weight: 700">Fly your Level 1 at a launch day →</h3>
       </a>
       <a href="join" style="background: oklch(0.165 0 0); padding: clamp(22px, 2.6vw, 32px); display: flex; flex-direction: column; gap: 8px; color: oklch(0.95 0 0)" style-hover="background: oklch(0.2 0 0); color: oklch(0.95 0 0)">
-        <p style="margin: 0; font-family: 'JetBrains Mono', monospace; font-size: 10.5px; letter-spacing: 0.1em; text-transform: uppercase; color: oklch(0.82 0.15 80)">Join</p>
+        <p style="margin: 0; font-size: 10.5px; letter-spacing: 0.1em; text-transform: uppercase; color: oklch(0.82 0.15 80)">Join</p>
         <h3 style="margin: 0; font-size: 20px; font-weight: 700">Come to an info night →</h3>
       </a>
     </div>
@@ -132,14 +191,14 @@
         <a href="mailto:executive@uwaaerospace.org" style="font-size: 14px">executive@uwaaerospace.org</a>
       </div>
       <div style="flex: 1 1 180px; min-width: 0; display: flex; flex-direction: column; gap: 9px; font-size: 14px">
-        <p style="margin: 0 0 4px; font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(0.66 0 0)">Club</p>
+        <p style="margin: 0 0 4px; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(0.66 0 0)">Club</p>
         <a href="./" style="color: oklch(0.72 0 0)" style-hover="color: oklch(0.97 0 0)">Home</a>
         <a href="missions" style="color: oklch(0.72 0 0)" style-hover="color: oklch(0.97 0 0)">Missions</a>
         <a href="engines" style="color: oklch(0.72 0 0)" style-hover="color: oklch(0.97 0 0)">Engines</a>
         <a href="team" style="color: oklch(0.72 0 0)" style-hover="color: oklch(0.97 0 0)">Team</a>
       </div>
       <div style="flex: 1 1 180px; min-width: 0; display: flex; flex-direction: column; gap: 9px; font-size: 14px">
-        <p style="margin: 0 0 4px; font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(0.66 0 0)">Get involved</p>
+        <p style="margin: 0 0 4px; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(0.66 0 0)">Get involved</p>
         <a href="join" style="color: oklch(0.72 0 0)" style-hover="color: oklch(0.97 0 0)">Join</a>
         <a href="certifications" style="color: oklch(0.72 0 0)" style-hover="color: oklch(0.97 0 0)">Certifications</a>
         <a href="calendar" style="color: oklch(0.72 0 0)" style-hover="color: oklch(0.97 0 0)">Calendar</a>
@@ -148,20 +207,97 @@
         <a href="contact" style="color: oklch(0.72 0 0)" style-hover="color: oklch(0.97 0 0)">Contact</a>
       </div>
       <div style="flex: 1 1 180px; min-width: 0; display: flex; flex-direction: column; gap: 9px; font-size: 14px">
-        <p style="margin: 0 0 4px; font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(0.66 0 0)">Follow</p>
+        <p style="margin: 0 0 4px; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(0.66 0 0)">Follow</p>
         <a href="https://www.instagram.com/uwa_aerospace/" style="color: oklch(0.72 0 0)" style-hover="color: oklch(0.97 0 0)">Instagram</a>
         <a href="https://au.linkedin.com/company/uwa-aerospace" style="color: oklch(0.72 0 0)" style-hover="color: oklch(0.97 0 0)">LinkedIn</a>
         <a href="https://www.facebook.com/UWAAerospace" style="color: oklch(0.72 0 0)" style-hover="color: oklch(0.97 0 0)">Facebook</a>
         <a href="https://www.youtube.com/channel/UCclC8khZgZnaeF4LLJj9KKg" style="color: oklch(0.72 0 0)" style-hover="color: oklch(0.97 0 0)">YouTube</a>
       </div>
     </div>
-    <p style="max-width: 1440px; margin: 36px auto 0; padding-top: 20px; border-top: 1px solid oklch(0.22 0 0); font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.06em; color: oklch(0.6 0 0)">© 2026 UWA Aerospace · A student team at The University of Western Australia</p>
+    <p style="max-width: 1440px; margin: 36px auto 0; padding-top: 20px; border-top: 1px solid oklch(0.22 0 0); font-size: 11px; letter-spacing: 0.06em; color: oklch(0.6 0 0)">© 2026 UWA Aerospace · A student team at The University of Western Australia</p>
   </footer>
 </div>
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280}}">
 class Component extends DCLogic {
-  state = { events: null, failed: false, filter: "" };
+  state = { events: null, failed: false, filter: "", rsvp: {}, copied: false };
+  rsvpSet(id, patch) {
+    this.setState((s) => ({ rsvp: { ...s.rsvp, [id]: { ...(s.rsvp[id] || {}), ...patch } } }));
+  }
+  onToggleSignUp = (ev) => {
+    const id = ev.currentTarget.dataset.id;
+    const cur = this.state.rsvp[id] || {};
+    this.rsvpSet(id, { open: !cur.open, error: "" });
+  };
+  onSignUp = async (ev) => {
+    ev.preventDefault();
+    const form = ev.currentTarget;
+    const id = form.dataset.id;
+    if ((this.state.rsvp[id] || {}).sending) return;
+    const fd = new FormData(form);
+    const body = { formId: Number(form.dataset.form), answers: {} };
+    for (const [k, v] of fd.entries()) {
+      if (k.startsWith("q:")) body.answers[k.slice(2)] = String(v);
+      else body[k] = String(v);
+    }
+    const event = (this.state.events || []).find((e) => e.id === id);
+    const missing = this.inputsFor(event).find((f) => f.required && !String(fd.get(f.name) || "").trim());
+    if (missing) return this.rsvpSet(id, { error: "Please fill in: " + missing.label.replace(/ \(optional\)$/, "") });
+    if (!/^\S+@\S+\.\S+$/.test(body.email || "")) return this.rsvpSet(id, { error: "Please add a valid email address." });
+    if ("studentNumber" in body && !/^\d{8}$/.test(body.studentNumber.trim())) return this.rsvpSet(id, { error: "Your student number should be 8 digits." });
+    this.rsvpSet(id, { sending: true, error: "" });
+    try {
+      const base = (window.UWA_API || "").replace(/\/$/, "");
+      const r = await fetch(base + "/api/rsvps", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) });
+      const d = await r.json().catch(() => ({}));
+      if (r.ok && d.ok) this.rsvpSet(id, { sending: false, done: true, open: false });
+      else this.rsvpSet(id, { sending: false, error: d.error || "That didn't go through. Please try again, or email executive@uwaaerospace.org." });
+    } catch (e) {
+      this.rsvpSet(id, { sending: false, error: "We couldn't reach the server. Check your connection and try again." });
+    }
+  };
+  inputsFor(e) {
+    const s = e && e.signUp;
+    if (!s) return [];
+    const fixed = {
+      studentNumber: { label: "Student number", mode: "numeric", max: 8, placeholder: "8 digits", required: true },
+      dietary: { label: "Dietary needs", placeholder: "None, vegetarian, allergies…", required: false },
+      phone: { label: "Phone", type: "tel", auto: "tel", mode: "tel", max: 40, required: true },
+      carpool: { label: "Lift to the event", placeholder: "Need a lift / can drive 3 / making my own way", required: false },
+      tripoli: { label: "Tripoli member number", max: 20, required: true },
+      emergency: { label: "Emergency contact", placeholder: "Name and phone number", max: 200, required: true },
+    };
+    const out = [
+      { name: "name", label: "Your name", auto: "name", max: 120, required: true },
+      { name: "email", label: "Email", type: "email", auto: "email", mode: "email", max: 200, required: true },
+      ...(s.fields || []).filter((k) => fixed[k]).map((k) => ({ name: k, ...fixed[k] })),
+      ...(s.questions || []).map((q) => ({
+        name: "q:" + q.id,
+        label: q.label,
+        kind: q.type === "long" ? "long" : q.type === "yesno" || q.type === "choice" ? "choice" : "text",
+        options: q.type === "yesno" ? ["Yes", "No"] : q.options || [],
+        max: 300,
+        required: !!q.required,
+      })),
+    ];
+    return out.map((f) => {
+      const kind = f.kind || "text";
+      return {
+        name: f.name,
+        label: f.required ? f.label : f.label + " (optional)",
+        required: f.required,
+        isText: kind === "text",
+        isLong: kind === "long",
+        isChoice: kind === "choice",
+        options: f.options || [],
+        type: f.type || "text",
+        auto: f.auto || "off",
+        mode: f.mode || "text",
+        max: String(f.max || 300),
+        placeholder: f.placeholder || "",
+      };
+    });
+  }
   canScroll() {
     const de = document.documentElement;
     if (de.scrollHeight <= de.clientHeight + 4) return false;
@@ -247,18 +383,43 @@ class Component extends DCLogic {
     const list = (events || []).filter((e) => !filter || e.kind === filter);
     const d = (iso) => new Date(iso + "T00:00:00");
     const fmt = (iso, o) => new Intl.DateTimeFormat("en-AU", o).format(d(iso));
+    const time = (t) => {
+      const m = /^(\d{2}):(\d{2})$/.exec(t || "");
+      if (!m) return "";
+      const h = Number(m[1]);
+      return (h % 12 || 12) + ":" + m[2] + (h < 12 ? " am" : " pm");
+    };
+    const apiBase = (window.UWA_API || "").replace(/\/$/, "");
+    const feedHost = apiBase.replace(/^https?:\/\//, "");
     const groups = [];
     for (const e of list) {
       const label = fmt(e.start, { month: "long", year: "numeric" });
       let g = groups.find((x) => x.label === label);
       if (!g) groups.push((g = { label, events: [] }));
       const range = e.end ? "Until " + fmt(e.end, { weekday: "short", day: "numeric", month: "short" }) : "";
+      const rs = this.state.rsvp[e.id] || {};
+      const s = e.signUp;
+      const closes = s ? fmt(s.closesOn, { weekday: "short", day: "numeric", month: "short" }) : "";
       g.events.push({
+        id: e.id,
+        formId: s ? String(s.formId) : "",
+        description: e.description || "",
+        link: /^https?:\/\//.test(e.link || "") ? e.link : "",
+        hasSignUp: !!s && !rs.done,
+        expanded: String(!!rs.open),
+        signUpLabel: rs.open ? "Close" : "Sign up",
+        signUpNote: s ? (s.membersOnly ? "Members only · " : "") + "Sign-ups close " + closes : "",
+        showForm: !!s && !!rs.open && !rs.done,
+        showDone: !!rs.done,
+        membersOnly: !!(s && s.membersOnly),
+        inputs: rs.open ? this.inputsFor(e) : [],
+        error: rs.error || "",
+        submitLabel: rs.sending ? "Sending…" : "Sign up",
         title: e.title,
         kindLabel: e.kindLabel || "Event",
         day: fmt(e.start, { day: "numeric" }),
         weekday: fmt(e.start, { weekday: "short" }),
-        meta: [e.place, range].filter(Boolean).join(" · ") || "Details to follow",
+        meta: [time(e.time), e.place, range].filter(Boolean).join(" · ") || "Details to follow",
       });
     }
     const chip = (on) => [
@@ -268,6 +429,19 @@ class Component extends DCLogic {
     const loading = events === null;
     const none = !loading && list.length === 0;
     return {
+      hasFeed: !!feedHost,
+      webcalFeed: feedHost ? "webcal://" + feedHost + "/api/public/calendar.ics" : "",
+      googleFeed: feedHost ? "https://calendar.google.com/calendar/r?cid=" + encodeURIComponent("webcal://" + feedHost + "/api/public/calendar.ics") : "",
+      copyLabel: this.state.copied ? "Link copied" : "Copy link",
+      onCopyFeed: () => {
+        const url = apiBase + "/api/public/calendar.ics";
+        (navigator.clipboard ? navigator.clipboard.writeText(url) : Promise.reject()).then(
+          () => { this.setState({ copied: true }); setTimeout(() => this.setState({ copied: false }), 2000); },
+          () => window.prompt("Copy this calendar link:", url)
+        );
+      },
+      onToggleSignUp: this.onToggleSignUp,
+      onSignUp: this.onSignUp,
       chips: kinds.map(([key, label]) => ({ key, label, pressed: String(filter === key), style: chip(filter === key) })),
       onFilter: (e) => this.setState({ filter: e.currentTarget.dataset.kind || "" }),
       months: groups,

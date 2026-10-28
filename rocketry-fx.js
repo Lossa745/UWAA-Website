@@ -2,7 +2,7 @@
   if (window.__uwaFx) return;
   window.__uwaFx = true;
   const AMBER = "oklch(0.82 0.15 80)";
-  const MONO = "'JetBrains Mono', monospace";
+  const MONO = "inherit"; // site font; numbers use tabular figures so counters don't jiggle
   const TARGET_FT = 328084; // Kármán line, 100 km
   const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
   const done = new WeakSet();
@@ -18,11 +18,11 @@
     for (let i = 0; i <= 10; i++) {
       const major = i % 5 === 0;
       gauge.appendChild(mk("div", { position: "absolute", bottom: i * 10 + "%", right: "0", width: major ? "12px" : "7px", height: "1px", background: major ? "oklch(0.6 0 0)" : "oklch(0.42 0 0)" }));
-      if (major) gauge.appendChild(mk("div", { position: "absolute", bottom: i * 10 + "%", left: "8px", transform: "translateY(50%)", fontFamily: MONO, fontSize: "10px", letterSpacing: "0.06em", color: "oklch(0.62 0 0)" }, i === 0 ? "0" : i === 10 ? "100 KM" : i * 10 + " KM"));
+      if (major) gauge.appendChild(mk("div", { position: "absolute", bottom: i * 10 + "%", left: "8px", transform: "translateY(50%)", fontFamily: MONO, fontVariantNumeric: "tabular-nums", fontSize: "10px", letterSpacing: "0.06em", color: "oklch(0.62 0 0)" }, i === 0 ? "0" : i === 10 ? "100 KM" : i * 10 + " KM"));
     }
     fill = mk("div", { position: "absolute", bottom: "0", left: "-0.5px", width: "3px", height: "0%", background: `linear-gradient(to top, oklch(0.82 0.15 80 / 0.1), ${AMBER})`, boxShadow: "0 0 10px oklch(0.82 0.15 80 / 0.6)" });
     marker = mk("div", { position: "absolute", bottom: "0%", left: "-6px", width: "0", height: "0", borderLeft: "7px solid transparent", borderRight: "7px solid transparent", borderBottom: `14px solid ${AMBER}`, transform: "translateY(50%)", filter: "drop-shadow(0 0 6px oklch(0.82 0.15 80 / 0.8))" });
-    label = mk("div", { position: "absolute", right: "18px", bottom: "0", transform: "translateY(50%)", fontFamily: MONO, fontSize: "11px", fontWeight: "500", letterSpacing: "0.08em", color: AMBER, whiteSpace: "nowrap", background: "oklch(0.12 0 0 / 0.9)", border: "1px solid oklch(0.82 0.15 80 / 0.4)", padding: "4px 8px", borderRadius: "3px", transition: "opacity .35s", opacity: "0.55" });
+    label = mk("div", { position: "absolute", right: "18px", bottom: "0", transform: "translateY(50%)", fontFamily: MONO, fontVariantNumeric: "tabular-nums", fontSize: "11px", fontWeight: "500", letterSpacing: "0.08em", color: AMBER, whiteSpace: "nowrap", background: "oklch(0.12 0 0 / 0.9)", border: "1px solid oklch(0.82 0.15 80 / 0.4)", padding: "4px 8px", borderRadius: "3px", transition: "opacity .35s", opacity: "0.55" });
     gauge.append(fill, marker, label);
     gauge.setAttribute("aria-hidden", "true");
     document.body.appendChild(gauge);
@@ -123,7 +123,7 @@
     const img = fig.querySelector("img");
     pushIn(img); return;
     sessionStorage.setItem("uwa-fx-countdown", "1");
-    const box = mk("div", { position: "absolute", inset: "0", zIndex: "2", display: "flex", alignItems: "center", justifyContent: "center", gap: "14px", background: "oklch(0.08 0 0 / 0.55)", fontFamily: MONO, fontSize: "clamp(34px, 5vw, 64px)", fontWeight: "500", letterSpacing: "0.06em", color: "oklch(0.95 0 0)", transition: "opacity .6s" });
+    const box = mk("div", { position: "absolute", inset: "0", zIndex: "2", display: "flex", alignItems: "center", justifyContent: "center", gap: "14px", background: "oklch(0.08 0 0 / 0.55)", fontFamily: MONO, fontVariantNumeric: "tabular-nums", fontSize: "clamp(34px, 5vw, 64px)", fontWeight: "500", letterSpacing: "0.06em", color: "oklch(0.95 0 0)", transition: "opacity .6s" });
     const dot = mk("span", { width: "14px", height: "14px", borderRadius: "50%", background: AMBER, boxShadow: "0 0 16px oklch(0.82 0.15 80 / 0.9)" });
     const txt = mk("span", {});
     box.append(dot, txt);
@@ -151,7 +151,7 @@
     if (!nav || header.__fxMenu) return;
     header.__fxMenu = true;
     const orig = nav.getAttribute("style") || "";
-    const btn = mk("button", { display: "none", alignItems: "center", gap: "8px", padding: "9px 14px", border: "1px solid oklch(0.36 0 0)", borderRadius: "999px", background: "transparent", color: "oklch(0.95 0 0)", fontFamily: MONO, fontSize: "11.5px", letterSpacing: "0.08em", textTransform: "uppercase", cursor: "pointer" });
+    const btn = mk("button", { display: "none", alignItems: "center", gap: "8px", padding: "9px 14px", border: "1px solid oklch(0.36 0 0)", borderRadius: "999px", background: "transparent", color: "oklch(0.95 0 0)", fontFamily: MONO, fontVariantNumeric: "tabular-nums", fontSize: "11.5px", letterSpacing: "0.08em", textTransform: "uppercase", cursor: "pointer" });
     btn.setAttribute("aria-expanded", "false");
     btn.setAttribute("aria-label", "Menu");
     header.appendChild(btn);
@@ -211,7 +211,7 @@
       const s = el.style;
       const txt = el.textContent.trim();
       if (!txt || el.closest("header, footer, nav")) return;
-      if (s.fontFamily.includes("JetBrains") && s.textTransform === "uppercase" && (s.letterSpacing === "0.14em" || s.letterSpacing === "0.16em") && txt.length < 80) {
+      if (s.textTransform === "uppercase" && (s.letterSpacing === "0.14em" || s.letterSpacing === "0.16em") && txt.length < 80) {
         done.add(el); if (!reduced) armTyping(el); return;
       }
       if (s.fontWeight === "700" && /\d/.test(txt) && txt.length <= 10 && parseFloat(getComputedStyle(el).fontSize) >= 20) {
@@ -236,4 +236,21 @@
     let n = 0; const iv = setInterval(() => { scan(); buildMenu(); markNav(); skipLink(); updateGauge(false); if (++n > 25) clearInterval(iv); }, 200);
   }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init); else init();
+
+  // ---- Hero launch video: muted autoplay, paused off-screen and for reduced motion ----
+  (function heroVideo() {
+    const start = () => {
+      const v = document.querySelector("video[data-hero-video]");
+      if (!v) return false;
+      v.muted = true; v.defaultMuted = true; v.loop = true; v.playsInline = true;
+      const still = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
+      if (still) { v.removeAttribute("autoplay"); v.pause(); return true; }
+      const play = () => { const p = v.play(); if (p && p.catch) p.catch(() => {}); };
+      if ("IntersectionObserver" in window) {
+        new IntersectionObserver((es) => es.forEach((e) => (e.isIntersecting ? play() : v.pause())), { threshold: 0.15 }).observe(v);
+      } else play();
+      return true;
+    };
+    if (!start()) { let n = 0; const t = setInterval(() => { if (start() || ++n > 40) clearInterval(t); }, 250); }
+  })();
 })();
