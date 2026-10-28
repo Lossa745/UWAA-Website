@@ -2,17 +2,19 @@
 <html lang="en-AU">
 <head>
 <meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://budget-manager-two-blond.vercel.app; object-src 'none'; base-uri 'self'; form-action 'self' mailto:" />
+<meta name="referrer" content="strict-origin-when-cross-origin" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="./support.js"></script>
 </head>
 <body>
 <x-dc>
 <helmet>
-<title>Contact — UWA Aerospace</title>
+<title>Contact | UWA Aerospace</title>
 <meta name="description" content="Get in touch with UWA Aerospace, follow our launches, or find us on campus in Perth." />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="UWA Aerospace" />
-<meta property="og:title" content="Contact — UWA Aerospace" />
+<meta property="og:title" content="Contact | UWA Aerospace" />
 <meta property="og:description" content="Get in touch with UWA Aerospace, follow our launches, or find us on campus in Perth." />
 <meta property="og:url" content="https://uwaaerospace.org/contact" />
 <meta property="og:image" content="https://uwaaerospace.org/images/site/discover.jpg" />
@@ -83,7 +85,7 @@
   </section>
 
   <section id="social" style="padding: clamp(44px, 6vw, 92px) clamp(18px, 4vw, 64px); max-width: 1440px; margin: 0 auto; border-top: 1px solid oklch(0.24 0 0)">
-    <p data-reveal="" style="margin: 0 0 16px; font-family: 'JetBrains Mono', monospace; font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: oklch(0.6 0 0)">01 — Follow the build</p>
+    <p data-reveal="" style="margin: 0 0 16px; font-family: 'JetBrains Mono', monospace; font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: oklch(0.6 0 0)">01 · Follow the build</p>
     <h2 data-reveal="" style="margin: 0 0 clamp(24px, 3vw, 40px); font-size: clamp(26px, 3.2vw, 42px); line-height: 1.08; letter-spacing: -0.025em; font-weight: 700; max-width: 24ch">Follow our launches</h2>
     <div style="display: flex; flex-wrap: wrap; gap: 1px; background: oklch(0.28 0 0); border: 1px solid oklch(0.28 0 0); border-radius: 6px; overflow: hidden">
       <sc-for list="{{ socials }}" as="s" hint-placeholder-count="4">
@@ -98,7 +100,7 @@
   <section id="visit" style="padding: clamp(44px, 6vw, 92px) clamp(18px, 4vw, 64px); max-width: 1440px; margin: 0 auto; border-top: 1px solid oklch(0.24 0 0)">
     <div style="display: flex; flex-wrap: wrap; gap: clamp(24px, 4vw, 64px)">
       <div data-reveal="" style="flex: 1 1 280px; min-width: 0">
-        <p style="margin: 0 0 16px; font-family: 'JetBrains Mono', monospace; font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: oklch(0.6 0 0)">02 — Find us</p>
+        <p style="margin: 0 0 16px; font-family: 'JetBrains Mono', monospace; font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: oklch(0.6 0 0)">02 · Find us</p>
         <h2 style="margin: 0 0 20px; font-size: clamp(26px, 3.2vw, 42px); line-height: 1.08; letter-spacing: -0.025em; font-weight: 700; max-width: 20ch">Find us on campus</h2>
         <dl style="margin: 0; display: flex; flex-direction: column; gap: 20px">
           <sc-for list="{{ details }}" as="d" hint-placeholder-count="3">

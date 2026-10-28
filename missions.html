@@ -2,17 +2,19 @@
 <html lang="en-AU">
 <head>
 <meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://budget-manager-two-blond.vercel.app; object-src 'none'; base-uri 'self'; form-action 'self' mailto:" />
+<meta name="referrer" content="strict-origin-when-cross-origin" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="./support.js"></script>
 </head>
 <body>
 <x-dc>
 <helmet>
-<title>Missions — UWA Aerospace</title>
+<title>Missions | UWA Aerospace</title>
 <meta name="description" content="Our competition history at IREC and AURC, research projects, and the rockets we have built." />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="UWA Aerospace" />
-<meta property="og:title" content="Missions — UWA Aerospace" />
+<meta property="og:title" content="Missions | UWA Aerospace" />
 <meta property="og:description" content="Our competition history at IREC and AURC, research projects, and the rockets we have built." />
 <meta property="og:url" content="https://uwaaerospace.org/missions" />
 <meta property="og:image" content="https://uwaaerospace.org/images/site/discover.jpg" />
@@ -119,7 +121,7 @@
   </sc-for>
 
   <section id="fleet" style="padding: clamp(44px, 6vw, 92px) clamp(18px, 4vw, 64px); max-width: 1440px; margin: 0 auto; border-top: 1px solid oklch(0.24 0 0)">
-    <p data-reveal="" style="margin: 0 0 16px; font-family: 'JetBrains Mono', monospace; font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: oklch(0.6 0 0)">04 — Other vehicles</p>
+    <p data-reveal="" style="margin: 0 0 16px; font-family: 'JetBrains Mono', monospace; font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: oklch(0.6 0 0)">04 · Other vehicles</p>
     <h2 data-reveal="" style="margin: 0 0 12px; font-size: clamp(26px, 3.2vw, 42px); line-height: 1.08; letter-spacing: -0.025em; font-weight: 700; max-width: 24ch">Test and certification rockets</h2>
     <p data-reveal="" style="margin: 0 0 clamp(24px, 3vw, 40px); font-size: 15.5px; line-height: 1.6; color: oklch(0.76 0 0); max-width: 54ch">Rockets built outside the competition campaigns above, named by the members who built them.</p>
     <div style="display: flex; flex-wrap: wrap; gap: 1px; background: oklch(0.28 0 0); border: 1px solid oklch(0.28 0 0); border-radius: 6px; overflow: hidden">
@@ -137,7 +139,7 @@
     <div data-reveal="" style="border: 1px solid oklch(0.26 0 0); border-radius: 6px; padding: clamp(24px, 3vw, 40px); background: oklch(0.165 0 0); display: flex; flex-wrap: wrap; gap: clamp(20px, 3vw, 44px); align-items: center">
       <div style="flex: 1 1 280px; min-width: 0">
         <h2 style="margin: 0 0 12px; font-size: clamp(22px, 2.4vw, 30px); font-weight: 700; letter-spacing: -0.02em">Want the technical reports?</h2>
-        <p style="margin: 0; font-size: 15.5px; line-height: 1.6; color: oklch(0.78 0 0); max-width: 46ch">Every competition entry is documented — the AURC 2019 report ran to 114 pages, SAC 2021 to 173. Sponsors, judges and researchers can request them directly.</p>
+        <p style="margin: 0; font-size: 15.5px; line-height: 1.6; color: oklch(0.78 0 0); max-width: 46ch">Every competition entry is documented. The AURC 2019 report ran to 114 pages, SAC 2021 to 173. Sponsors, judges and researchers can request them directly.</p>
       </div>
       <div style="flex: 0 1 auto; display: flex; flex-wrap: wrap; gap: 12px">
         <a href="mailto:executive@uwaaerospace.org" style="padding: 14px 24px; background: oklch(0.8 0.16 78); color: oklch(0.12 0 0); border-radius: 999px; font-weight: 600; font-size: 15px" style-hover="background: oklch(0.88 0.13 82); color: oklch(0.12 0 0)">Request a report</a>
@@ -295,7 +297,7 @@ class Component extends DCLogic {
     return {
       facts: [
         { value: "2019–2027", label: "Campaigns" },
-        { value: "5th", label: "Best placing — AURC 2019" },
+        { value: "5th", label: "Best placing: AURC 2019" },
         { value: "30,000 ft", label: "Next target altitude" },
         { value: "11", label: "Vehicles built" }
       ],
@@ -308,7 +310,7 @@ class Component extends DCLogic {
       groups: [
         {
           anchor: "irec",
-          no: "01 — International",
+          no: "01 · International",
           title: "Spaceport America Cup / IREC",
           blurb: "The world's largest intercollegiate rocket engineering competition, judged on engineering documentation as much as flight performance. Our longest-running campaign.",
           entries: [
@@ -316,7 +318,7 @@ class Component extends DCLogic {
               year: "2027",
               kind: "Upcoming",
               name: "IREC 2027",
-              vehicle: "Vehicle — Cygnus",
+              vehicle: "Vehicle: Cygnus",
               body: "Our next campaign: Cygnus, a 30,000 ft vehicle for the 30K COTS category, three times the altitude of any rocket the club has flown.",
               media: null,
               results: [
@@ -329,7 +331,7 @@ class Component extends DCLogic {
               year: "2025",
               kind: "Flown",
               name: "IREC 2025",
-              vehicle: "Vehicle — SVEN",
+              vehicle: "Vehicle: SVEN",
               body: "SVEN reached around 10,300 ft, but the COTS flight computer failed during the flight, so the altitude could not be scored. On every other score, the team would have placed 7th of 161 overall, 5th of 87 in 10K COTS and 2nd among Australian teams.",
               media: this.photo("images/fleet/sven-web.jpg", "The team with SVEN on the pad at IREC 2025"),
               results: [
@@ -342,7 +344,7 @@ class Component extends DCLogic {
               year: "2023",
               kind: "Flown",
               name: "SAC 2023",
-              vehicle: "Vehicle — Cooker",
+              vehicle: "Vehicle: Cooker",
               body: "The team travelled to New Mexico with Cooker in June, placing in the top fifth of the field.",
               media: this.photo("images/missions/sac-2023-cooker-rail.png", "The team with Cooker on the rail at Spaceport America, 2023"),
               results: [
@@ -354,8 +356,8 @@ class Component extends DCLogic {
               year: "2021",
               kind: "Design entry",
               name: "SAC 2021",
-              vehicle: "Design entry — not flown",
-              body: "A design-only entry: a 10,000 ft COTS-category rocket, designed but not built or flown, with two student-designed circuit boards and an air-brake system for apogee control. A 15-minute design presentation accompanied the entry.",
+              vehicle: "Design entry (not flown)",
+              body: "A 10,000 ft COTS-category rocket with two student-designed circuit boards and an air-brake system for apogee control. A 15-minute design presentation accompanied the entry.",
               media: this.photo("images/missions/sac-2021-srad-board.png", "Render of a student-designed flight board", "contain"),
               results: [
                 { k: "Overall", v: "Top third" },
@@ -367,7 +369,7 @@ class Component extends DCLogic {
         },
         {
           anchor: "aurc",
-          no: "02 — National",
+          no: "02 · National",
           title: "Australian Universities Rocket Competition",
           blurb: "Our national campaign, and where most new members see their first launch. Run against the other Australian university teams.",
           entries: [
@@ -375,16 +377,16 @@ class Component extends DCLogic {
               year: "2024",
               kind: "Payload",
               name: "AURC 2024",
-              vehicle: "Camera payload — accelerometer instrumented",
+              vehicle: "Camera payload with accelerometer instrumentation",
               body: "A camera payload developed as a student thesis project and flown as the competition payload.",
-              media: this.slot("payload photo — camera payload assembled"),
+              media: this.slot("payload photo: camera payload assembled"),
               results: [{ k: "Payload", v: "Camera, dual accelerometer" }]
             },
             {
               year: "2021",
               kind: "Internal",
-              name: "AURC 2021 — Mock AURC",
-              vehicle: "Vehicles — Poggers, Nightmare",
+              name: "AURC 2021: Mock AURC",
+              vehicle: "Vehicles: Poggers, Nightmare",
               body: "The club ran its own internal Mock AURC so two teams of younger members could take a 5,000 ft rocket from design to documentation.",
               media: this.photo("images/fleet/launch-web.jpg", "Poggers leaving the pad at the Mock AURC"),
               results: [
@@ -397,7 +399,7 @@ class Component extends DCLogic {
               year: "2019",
               kind: "Flown",
               name: "AURC 2019",
-              vehicle: "Vehicle — Finley",
+              vehicle: "Vehicle: Finley",
               body: "Two launches to 10,000 ft, documented in a 114-page technical report.",
               media: this.photo("images/missions/aurc-2019-finley-launch.png", "Finley leaving the pad at AURC 2019"),
               results: [
@@ -410,7 +412,7 @@ class Component extends DCLogic {
         },
         {
           anchor: "research",
-          no: "03 — Research & publications",
+          no: "03 · Research & publications",
           title: "Papers, theses and the EMU programme",
           blurb: "Competition is not the only output. The club hosts honours theses and has published at the International Astronautical Congress.",
           entries: [
@@ -418,7 +420,7 @@ class Component extends DCLogic {
               year: "2025",
               kind: "Thesis",
               name: "Rocket Range Testing for Aerodynamic Modelling",
-              vehicle: "Honours thesis — vehicle Lynx Africa",
+              vehicle: "Honours thesis: vehicle Lynx Africa",
               body: "A purpose-built test rocket flown five times to measure drag from onboard flight data, then compared against OpenRocket simulations and Ansys CFD. The aim is a validated method the team can use to check its trajectory predictions.",
               media: this.photo("images/missions/thesis-2025-lynx-africa.jpg", "Lynx Africa after painting", "contain"),
               results: [
@@ -430,8 +432,8 @@ class Component extends DCLogic {
             {
               year: "2022",
               kind: "Publication",
-              name: "IAC 2022 — EMU II",
-              vehicle: "Platform — EMU II",
+              name: "IAC 2022: EMU II",
+              vehicle: "Platform: EMU II",
               body: "The second-generation Experimental Microgravity Unit, presented at the International Astronautical Congress.",
               media: this.photo("images/fleet/emu-ii-web.jpg", "EMU II"),
               results: [{ k: "Venue", v: "IAC 2022" }]
@@ -440,7 +442,7 @@ class Component extends DCLogic {
               year: "2021",
               kind: "Thesis",
               name: "Rocket Air-Brake Design for Apogee Control",
-              vehicle: "Honours thesis — hosted by UWA Aerospace",
+              vehicle: "Honours thesis hosted by UWA Aerospace",
               body: "CFD research into rocket aerodynamics, and the first of many UWA Aerospace hosted theses.",
               media: this.photo("images/missions/thesis-2021-airbrakes.jpg", "Render of the air-brakes deployed from the airframe", "contain"),
               results: []
@@ -448,8 +450,8 @@ class Component extends DCLogic {
             {
               year: "2020",
               kind: "Publication",
-              name: "IAC 2020 — EMU",
-              vehicle: "Platform — EMU (Experimental Microgravity Unit)",
+              name: "IAC 2020: EMU",
+              vehicle: "Platform: EMU (Experimental Microgravity Unit)",
               body: "An open-source, low-cost microgravity platform: a weather balloon lifts an inverted rocket to 30 km, the line is severed, and the payload experiences roughly 11 seconds of freefall microgravity. Tested at UWA Future Farm and presented in a 10-minute talk at the 71st International Astronautical Congress.",
               media: this.photo("images/missions/iac-2020-emu-exploded.jpg", "Exploded CAD view of EMU", "contain"),
               results: [

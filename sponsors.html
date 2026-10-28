@@ -2,17 +2,19 @@
 <html lang="en-AU">
 <head>
 <meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://budget-manager-two-blond.vercel.app; object-src 'none'; base-uri 'self'; form-action 'self' mailto:" />
+<meta name="referrer" content="strict-origin-when-cross-origin" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="./support.js"></script>
 </head>
 <body>
 <x-dc>
 <helmet>
-<title>Sponsors — UWA Aerospace</title>
+<title>Sponsors | UWA Aerospace</title>
 <meta name="description" content="The partners who fund UWA Aerospace, what sponsorship covers, and how to become a sponsor." />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="UWA Aerospace" />
-<meta property="og:title" content="Sponsors — UWA Aerospace" />
+<meta property="og:title" content="Sponsors | UWA Aerospace" />
 <meta property="og:description" content="The partners who fund UWA Aerospace, what sponsorship covers, and how to become a sponsor." />
 <meta property="og:url" content="https://uwaaerospace.org/sponsors" />
 <meta property="og:image" content="https://uwaaerospace.org/images/site/discover.jpg" />
@@ -76,7 +78,7 @@
   </section>
 
   <section id="partners" style="padding: clamp(44px, 6vw, 92px) clamp(18px, 4vw, 64px); max-width: 1440px; margin: 0 auto; border-top: 1px solid oklch(0.24 0 0)">
-    <p data-reveal="" style="margin: 0 0 16px; font-family: 'JetBrains Mono', monospace; font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: oklch(0.6 0 0)">01 — Our partners</p>
+    <p data-reveal="" style="margin: 0 0 16px; font-family: 'JetBrains Mono', monospace; font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: oklch(0.6 0 0)">01 · Our partners</p>
     <h2 data-reveal="" style="margin: 0 0 clamp(24px, 3vw, 40px); font-size: clamp(26px, 3.2vw, 42px); line-height: 1.08; letter-spacing: -0.025em; font-weight: 700; max-width: 24ch">Our current partners</h2>
     <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 250px), 1fr)); gap: clamp(12px, 1.4vw, 18px)">
       <sc-for list="{{ partners }}" as="p" hint-placeholder-count="8">
@@ -96,9 +98,9 @@
   </section>
 
   <section id="tiers" style="padding: clamp(44px, 6vw, 92px) clamp(18px, 4vw, 64px); max-width: 1440px; margin: 0 auto; border-top: 1px solid oklch(0.24 0 0)">
-    <p data-reveal="" style="margin: 0 0 16px; font-family: 'JetBrains Mono', monospace; font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: oklch(0.6 0 0)">02 — What sponsorship covers</p>
+    <p data-reveal="" style="margin: 0 0 16px; font-family: 'JetBrains Mono', monospace; font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: oklch(0.6 0 0)">02 · What sponsorship covers</p>
     <h2 data-reveal="" style="margin: 0 0 16px; font-size: clamp(26px, 3.2vw, 42px); line-height: 1.08; letter-spacing: -0.025em; font-weight: 700; max-width: 24ch">Where sponsorship goes</h2>
-    <p data-reveal="" style="margin: 0 0 clamp(24px, 3vw, 40px); font-size: 15.5px; line-height: 1.6; color: oklch(0.76 0 0); max-width: 54ch">None of this is covered by the university. Every campaign is funded by partners, grants and in-kind support.</p>
+    <p data-reveal="" style="margin: 0 0 clamp(24px, 3vw, 40px); font-size: 15.5px; line-height: 1.6; color: oklch(0.76 0 0); max-width: 54ch">Very little of this is covered by the university. Every campaign is funded by partners, grants and in-kind support.</p>
     <div style="display: flex; flex-wrap: wrap; gap: 1px; background: oklch(0.28 0 0); border: 1px solid oklch(0.28 0 0); border-radius: 6px; overflow: hidden">
       <sc-for list="{{ costs }}" as="c" hint-placeholder-count="4">
         <div data-reveal="" style="flex: 1 1 240px; min-width: 0; background: oklch(0.175 0 0); padding: clamp(22px, 2.4vw, 32px)" style-hover="background: oklch(0.21 0 0)">
@@ -111,7 +113,7 @@
   </section>
 
   <section id="benefits" style="padding: clamp(44px, 6vw, 92px) clamp(18px, 4vw, 64px); max-width: 1440px; margin: 0 auto; border-top: 1px solid oklch(0.24 0 0)">
-    <p data-reveal="" style="margin: 0 0 16px; font-family: 'JetBrains Mono', monospace; font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: oklch(0.6 0 0)">03 — What partners get</p>
+    <p data-reveal="" style="margin: 0 0 16px; font-family: 'JetBrains Mono', monospace; font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: oklch(0.6 0 0)">03 · What partners get</p>
     <h2 data-reveal="" style="margin: 0 0 clamp(24px, 3vw, 40px); font-size: clamp(26px, 3.2vw, 42px); line-height: 1.08; letter-spacing: -0.025em; font-weight: 700; max-width: 24ch">What partners receive</h2>
     <div style="display: flex; flex-wrap: wrap; gap: clamp(20px, 3vw, 48px)">
       <div data-reveal="" style="flex: 1 1 300px; min-width: 0">
@@ -126,7 +128,7 @@
       </div>
       <div data-reveal="" style="flex: 1 1 300px; min-width: 0; border: 1px solid oklch(0.26 0 0); border-radius: 6px; padding: clamp(22px, 2.4vw, 32px); background: oklch(0.165 0 0)">
         <h3 style="margin: 0 0 14px; font-size: 18px; font-weight: 700">Tiers</h3>
-        <p style="margin: 0 0 18px; font-size: 14.5px; line-height: 1.6; color: oklch(0.74 0 0)">Tier structure and contribution levels are set out in the sponsorship pack — ask us for a copy. In-kind support, whether materials, machining, software licences or test-site access, is as valuable to us as cash.</p>
+        <p style="margin: 0 0 18px; font-size: 14.5px; line-height: 1.6; color: oklch(0.74 0 0)">Tier structure and contribution levels are set out in the sponsorship pack; ask us for a copy. In-kind support, whether materials, machining, software licences or test-site access, is as valuable to us as cash.</p>
         <a href="#enquire" style="display: inline-block; padding: 12px 20px; border: 1px solid oklch(0.34 0 0); border-radius: 999px; color: oklch(0.97 0 0); font-weight: 600; font-size: 14.5px" style-hover="border-color: oklch(0.8 0.16 78); color: oklch(0.97 0 0)">Ask for the pack</a>
       </div>
     </div>
@@ -135,7 +137,7 @@
   <section id="enquire" style="padding: clamp(44px, 6vw, 92px) clamp(18px, 4vw, 64px); max-width: 1440px; margin: 0 auto; border-top: 1px solid oklch(0.24 0 0)">
     <div style="display: flex; flex-wrap: wrap; gap: clamp(24px, 4vw, 64px); align-items: flex-start">
       <div data-reveal="" style="flex: 1 1 300px; min-width: 0">
-        <p style="margin: 0 0 16px; font-family: 'JetBrains Mono', monospace; font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: oklch(0.6 0 0)">04 — Get in touch</p>
+        <p style="margin: 0 0 16px; font-family: 'JetBrains Mono', monospace; font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: oklch(0.6 0 0)">04 · Get in touch</p>
         <h2 style="margin: 0 0 18px; font-size: clamp(26px, 3.2vw, 40px); line-height: 1.1; letter-spacing: -0.025em; font-weight: 700; max-width: 18ch">Become a sponsor</h2>
         <p style="margin: 0 0 20px; font-size: 16px; line-height: 1.65; color: oklch(0.8 0 0); max-width: 46ch">We will send the sponsorship pack, last season's technical report and what we are building this year.</p>
         <a href="missions" style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase">See our campaigns →</a>
@@ -148,6 +150,7 @@
         <sc-if value="{{ sent }}" hint-placeholder-val="{{ false }}"><p role="status" style="margin: 0; padding: 12px 14px; border: 1px solid oklch(0.55 0.12 150); border-radius: 4px; background: oklch(0.2 0.04 150); font-size: 14.5px; color: oklch(0.93 0.05 150)">{{ sentMsg }}</p></sc-if>
           <sc-if value="{{ error }}" hint-placeholder-val="{{ false }}"><p role="alert" style="margin: 0; padding: 12px 14px; border: 1px solid oklch(0.5 0.14 30); border-radius: 4px; background: oklch(0.2 0.04 30); font-size: 14.5px; color: oklch(0.92 0.05 30)">{{ error }}</p></sc-if>
         <div style="padding-top: 4px"><button type="submit" style="padding: 14px 26px; background: oklch(0.8 0.16 78); color: oklch(0.12 0 0); border: 0; border-radius: 999px; font-weight: 600; font-size: 15px; cursor: pointer" style-hover="background: oklch(0.88 0.13 82)">{{ submitLabel }}</button></div>
+        <p style="margin: 0; font-size: 13px; line-height: 1.55; color: oklch(0.7 0 0); max-width: 60ch">Your details are used only by the UWA Aerospace committee to respond to your enquiry.</p>
       </form>
     </div>
   </section>
@@ -285,7 +288,7 @@ class Component extends DCLogic {
       if (r.offline) {
         this.setState({ sending: false });
         const body = Object.entries(d).filter(([k, v]) => v && k !== "website").map(([k, v]) => k + ": " + v).join("\n");
-        window.location.href = "mailto:executive@uwaaerospace.org?subject=" + encodeURIComponent("Sponsorship enquiry" + (d.organisation ? " — " + d.organisation : "")) + "&body=" + encodeURIComponent(body);
+        window.location.href = "mailto:executive@uwaaerospace.org?subject=" + encodeURIComponent("Sponsorship enquiry" + (d.organisation ? ": " + d.organisation : "")) + "&body=" + encodeURIComponent(body);
         return;
       }
       this.setState({ sending: false, error: r.error || "That didn't send. Please try again, or email executive@uwaaerospace.org directly." });
@@ -326,7 +329,7 @@ class Component extends DCLogic {
         "Your logo on the competition airframe and in the launch livestream.",
         "Logo placement on team apparel, the competition banner and this website.",
         "First contact with graduating members across propulsion, structures, avionics, recovery and simulations.",
-        "Named acknowledgement in our technical reports — documents that run to over 170 pages and are read by competition judges.",
+        "Named acknowledgement in our technical reports, which run to over 170 pages and are read by competition judges.",
         "Social coverage across the season on Instagram, LinkedIn, Facebook and YouTube.",
         "An invitation to a test day or site visit to see the vehicle before it flies."
       ]
