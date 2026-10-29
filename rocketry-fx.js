@@ -244,11 +244,26 @@
       if (!v) return false;
       v.muted = true; v.defaultMuted = true; v.loop = true; v.playsInline = true;
       const still = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
-      if (still) { v.removeAttribute("autoplay"); v.pause(); return true; }
-      const play = () => { const p = v.play(); if (p && p.catch) p.catch(() => {}); };
-      if ("IntersectionObserver" in window) {
-        new IntersectionObserver((es) => es.forEach((e) => (e.isIntersecting ? play() : v.pause())), { threshold: 0.15 }).observe(v);
-      } else play();
+      const c = navigator.connection || {};
+      // Reduced motion, data saver or a very slow connection: keep the poster image, never download the video.
+      if (still || c.saveData || /(^|-)2g$/.test(c.effectiveType || "")) { v.pause(); return true; }
+      const full = v.getAttribute("data-src"), small = v.getAttribute("data-src-mobile");
+      const phone = window.matchMedia && matchMedia("(max-width: 720px)").matches;
+      let loaded = false;
+      const load = () => {
+        if (loaded) return; loaded = true;
+        if (phone && small) v.addEventListener("error", () => { if (full && !v.src.endsWith(full)) { v.src = full; play(); } }, { once: true });
+        v.src = (phone && small) || full; v.preload = "auto";
+      };
+      const play = () => { load(); const p = v.play(); if (p && p.catch) p.catch(() => {}); };
+      const watch = () => {
+        if ("IntersectionObserver" in window) {
+          new IntersectionObserver((es) => es.forEach((e) => (e.isIntersecting ? play() : loaded && v.pause())), { threshold: 0.15 }).observe(v);
+        } else play();
+      };
+      // Wait until the rest of the page has loaded so the video doesn't compete with text, fonts and images.
+      if (document.readyState === "complete") setTimeout(watch, 300);
+      else window.addEventListener("load", () => setTimeout(watch, 300), { once: true });
       return true;
     };
     if (!start()) { let n = 0; const t = setInterval(() => { if (start() || ++n > 40) clearInterval(t); }, 250); }

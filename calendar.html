@@ -99,9 +99,9 @@
       <sc-for list="{{ months }}" as="m" hint-placeholder-count="0">
         <div>
           <h2 style="margin: 0 0 14px; font-size: 12px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: oklch(0.66 0 0)">{{ m.label }}</h2>
-          <ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 1px; background: oklch(0.28 0 0); border: 1px solid oklch(0.28 0 0); border-radius: 6px; overflow: hidden">
+          <ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 1px; background: oklch(0.32 0.012 80); border: 1px solid oklch(0.32 0.012 80); border-radius: 6px; overflow: hidden">
             <sc-for list="{{ m.events }}" as="e" hint-placeholder-count="2">
-              <li data-reveal="" style="background: oklch(0.165 0 0); padding: clamp(16px, 2vw, 22px) clamp(16px, 2.2vw, 26px); display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: clamp(14px, 2vw, 26px); align-items: center">
+              <li data-reveal="" style="background: linear-gradient(180deg, oklch(0.215 0.01 80), oklch(0.175 0.004 80)); padding: clamp(16px, 2vw, 22px) clamp(16px, 2.2vw, 26px); display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: clamp(14px, 2vw, 26px); align-items: center; transition: box-shadow 0.2s ease, background 0.2s ease" style-hover="box-shadow: inset 0 2px 0 oklch(0.82 0.15 80); background: linear-gradient(180deg, oklch(0.24 0.014 80), oklch(0.19 0.006 80))">
                 <div style="text-align: center; border-right: 1px solid oklch(0.28 0 0); padding-right: clamp(10px, 1.6vw, 20px)">
                   <p style="margin: 0; font-size: 30px; font-weight: 800; letter-spacing: -0.03em; line-height: 1; color: oklch(0.82 0.15 80)">{{ e.day }}</p>
                   <p style="margin: 6px 0 0; font-size: 10.5px; letter-spacing: 0.1em; text-transform: uppercase; color: oklch(0.66 0 0)">{{ e.weekday }}</p>
@@ -171,12 +171,12 @@
   </section>
 
   <section style="padding: clamp(40px, 6vw, 88px) clamp(18px, 4vw, 64px); max-width: 1440px; margin: 0 auto; border-top: 1px solid oklch(0.24 0 0)">
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 1px; background: oklch(0.28 0 0); border: 1px solid oklch(0.28 0 0); border-radius: 6px; overflow: hidden">
-      <a href="certifications" style="background: oklch(0.165 0 0); padding: clamp(22px, 2.6vw, 32px); display: flex; flex-direction: column; gap: 8px; color: oklch(0.95 0 0)" style-hover="background: oklch(0.2 0 0); color: oklch(0.95 0 0)">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 1px; background: oklch(0.32 0.012 80); border: 1px solid oklch(0.32 0.012 80); border-radius: 6px; overflow: hidden">
+      <a href="certifications" style="background: linear-gradient(180deg, oklch(0.215 0.01 80), oklch(0.175 0.004 80)); padding: clamp(22px, 2.6vw, 32px); display: flex; flex-direction: column; gap: 8px; color: oklch(0.95 0 0); transition: box-shadow 0.2s ease, background 0.2s ease" style-hover="box-shadow: inset 0 2px 0 oklch(0.82 0.15 80); background: linear-gradient(180deg, oklch(0.24 0.014 80), oklch(0.19 0.006 80))">
         <p style="margin: 0; font-size: 10.5px; letter-spacing: 0.1em; text-transform: uppercase; color: oklch(0.82 0.15 80)">Certification</p>
         <h3 style="margin: 0; font-size: 20px; font-weight: 700">Fly your Level 1 at a launch day →</h3>
       </a>
-      <a href="join" style="background: oklch(0.165 0 0); padding: clamp(22px, 2.6vw, 32px); display: flex; flex-direction: column; gap: 8px; color: oklch(0.95 0 0)" style-hover="background: oklch(0.2 0 0); color: oklch(0.95 0 0)">
+      <a href="join" style="background: linear-gradient(180deg, oklch(0.215 0.01 80), oklch(0.175 0.004 80)); padding: clamp(22px, 2.6vw, 32px); display: flex; flex-direction: column; gap: 8px; color: oklch(0.95 0 0); transition: box-shadow 0.2s ease, background 0.2s ease" style-hover="box-shadow: inset 0 2px 0 oklch(0.82 0.15 80); background: linear-gradient(180deg, oklch(0.24 0.014 80), oklch(0.19 0.006 80))">
         <p style="margin: 0; font-size: 10.5px; letter-spacing: 0.1em; text-transform: uppercase; color: oklch(0.82 0.15 80)">Join</p>
         <h3 style="margin: 0; font-size: 20px; font-weight: 700">Come to an info night →</h3>
       </a>
