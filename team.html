@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://budget-manager-two-blond.vercel.app; object-src 'none'; base-uri 'self'; form-action 'self' mailto:" />
 <meta name="referrer" content="strict-origin-when-cross-origin" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="./support.js"></script>
+<script src="./assets/js/support.js"></script>
 </head>
 <body>
 <x-dc>
@@ -18,10 +18,10 @@
 <meta property="og:title" content="Team | UWA Aerospace" />
 <meta property="og:description" content="How UWA Aerospace is organised: the executive, operations and six sub-teams." />
 <meta property="og:url" content="https://uwaaerospace.org/team" />
-<meta property="og:image" content="https://uwaaerospace.org/images/site/discover.jpg" />
+<meta property="og:image" content="https://uwaaerospace.org/assets/images/site/discover.jpg" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="theme-color" content="#111111" />
-<link rel="icon" type="image/png" href="images/site/logo-uwaa-dark.png" />
+<link rel="icon" type="image/png" href="assets/images/site/logo-uwaa-dark.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&display=swap">
@@ -47,14 +47,14 @@
   #structure button[data-role][aria-pressed="true"] { border-color: oklch(0.8 0.16 78) !important; background: oklch(0.21 0.03 80) !important; box-shadow: 0 0 0 1px oklch(0.8 0.16 78); }
   #structure button[data-role]:focus-visible { outline: 2px solid oklch(0.8 0.16 78); outline-offset: 2px; }
 </style>
-<script src="./site-config.js"></script>
-<script src="./rocketry-fx.js"></script>
+<script src="./assets/js/site-config.js"></script>
+<script src="./assets/js/rocketry-fx.js"></script>
 </helmet>
 <div style="background: oklch(0.12 0 0); min-height: 100vh; overflow-x: hidden">
 
   <header style="position: sticky; top: 0; z-index: 50; display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; padding: 12px clamp(18px, 4vw, 64px); background: oklch(0.12 0 0 / 0.96); backdrop-filter: blur(14px); border-bottom: 1px solid oklch(0.26 0 0)">
     <a href="./" style="display: flex; align-items: center; gap: 11px; color: inherit">
-      <img src="images/site/logo-uwaa-mark.png" alt="UWA Aerospace" style="width: 54px; height: 54px; object-fit: contain" />
+      <img src="assets/images/site/logo-uwaa-mark.png" alt="UWA Aerospace" style="width: 54px; height: 54px; object-fit: contain" />
       <span style="font-weight: 700; font-size: 18px; letter-spacing: 0.02em; text-transform: uppercase">UWA Aerospace</span>
     </a>
     <nav style="display: flex; align-items: center; gap: clamp(10px, 1.5vw, 22px); font-size: 13.5px; font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; flex-wrap: wrap">
@@ -71,19 +71,19 @@
   </header>
 
   <section style="padding: clamp(48px, 7vw, 104px) clamp(18px, 4vw, 64px) clamp(28px, 3.5vw, 48px); max-width: 1440px; margin: 0 auto">
-    <p data-reveal="" style="margin: 0 0 20px; font-size: 11.5px; letter-spacing: 0.16em; text-transform: uppercase; color: oklch(0.84 0.14 80)">Team</p>
+    <p data-reveal="" style="margin: 0 0 20px; font-size: 14px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: oklch(0.84 0.14 80)">Team</p>
     <h1 data-reveal="" style="margin: 0; font-size: clamp(36px, 7vw, 82px); line-height: 0.98; letter-spacing: -0.035em; font-weight: 800; max-width: 17ch; text-wrap: balance">A student-run engineering team</h1>
-    <p data-reveal="" style="margin: 24px 0 0; font-size: clamp(16px, 1.4vw, 19px); line-height: 1.6; color: oklch(0.8 0 0); max-width: 58ch">An executive runs the club; six sub-teams own the vehicle. Every role below is held by a student, and every one of them turns over each year. That is the point.</p>
+    <p data-reveal="" style="margin: 24px 0 0; font-size: clamp(16px, 1.4vw, 19px); line-height: 1.6; color: oklch(0.8 0 0); max-width: 58ch">A core student engineering team makes up the club’s Executive, providing expertise and guidance. They’re supported by peers in roles across the six sub-teams, ensuring continuity in the club’s operations.</p>
   </section>
 
   <section style="padding: 0 clamp(18px, 4vw, 64px) clamp(44px, 6vw, 88px); max-width: 1440px; margin: 0 auto">
     <div data-reveal="" style="border: 1px solid oklch(0.26 0 0); border-radius: 6px; overflow: hidden">
-      <img src="images/site/discover.jpg" alt="The UWA Aerospace team" loading="lazy" decoding="async" style="width: 100%; aspect-ratio: 21 / 9; object-fit: cover" />
+      <img src="assets/images/site/discover.jpg" alt="The UWA Aerospace team" loading="lazy" decoding="async" style="width: 100%; aspect-ratio: 21 / 9; object-fit: cover" />
     </div>
   </section>
 
   <section id="season" style="padding: clamp(44px, 6vw, 92px) clamp(18px, 4vw, 64px); max-width: 1440px; margin: 0 auto; border-top: 1px solid oklch(0.24 0 0)">
-    <p data-reveal="" style="margin: 0 0 16px; font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: oklch(0.6 0 0)">01 · How a season runs</p>
+    <p data-reveal="" style="margin: 0 0 16px; font-size: 14px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: oklch(0.84 0.14 80)">01 · How a season runs</p>
     <h2 data-reveal="" style="margin: 0 0 16px; font-size: clamp(26px, 3.2vw, 42px); line-height: 1.08; letter-spacing: -0.025em; font-weight: 700; max-width: 22ch">One rocket a year</h2>
     <p data-reveal="" style="margin: 0 0 clamp(24px, 3vw, 40px); font-size: 15.5px; line-height: 1.6; color: oklch(0.76 0 0); max-width: 54ch">Every role in the club turns over annually, so each cohort takes a vehicle from a blank sheet to a launch rail inside one year.</p>
     <div style="display: flex; flex-wrap: wrap; gap: 1px; background: oklch(0.32 0.012 80); border: 1px solid oklch(0.32 0.012 80); border-radius: 6px; overflow: hidden">
@@ -98,7 +98,7 @@
   </section>
 
   <section id="structure" style="padding: clamp(44px, 6vw, 92px) clamp(18px, 4vw, 64px); max-width: 1440px; margin: 0 auto; border-top: 1px solid oklch(0.24 0 0)">
-    <p data-reveal="" style="margin: 0 0 16px; font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: oklch(0.6 0 0)">02 · Structure</p>
+    <p data-reveal="" style="margin: 0 0 16px; font-size: 14px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: oklch(0.84 0.14 80)">02 · Structure</p>
     <h2 data-reveal="" style="margin: 0 0 clamp(24px, 3vw, 40px); font-size: clamp(26px, 3.2vw, 42px); line-height: 1.08; letter-spacing: -0.025em; font-weight: 700; max-width: 24ch">How the club is organised</h2>
     <div data-reveal="" style="max-width: 980px; margin: 0 auto">
       <div style="display: flex; justify-content: center"><div style="width: min(100%, 300px)"><button type="button" data-role="pm" aria-pressed="{{ pressed.pm }}" onClick="{{ onPick }}" style="border: 1px solid oklch(0.8 0.16 78); border-radius: 6px; background: oklch(0.165 0 0); padding: clamp(12px, 1.6vw, 18px) clamp(10px, 1.4vw, 16px); text-align: center; display: block; width: 100%; text-align: left; color: inherit; font: inherit; cursor: pointer" style-hover="border-color: oklch(0.8 0.16 78)"><p style="margin: 0 0 6px; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: oklch(0.82 0.15 80)">Lead</p><p style="margin: 0; font-size: clamp(14px, 1.5vw, 18px); font-weight: 700; letter-spacing: -0.01em">Project Manager</p></button></div></div>

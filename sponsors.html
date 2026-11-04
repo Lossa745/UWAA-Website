@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://budget-manager-two-blond.vercel.app; connect-src 'self' https://budget-manager-two-blond.vercel.app; object-src 'none'; base-uri 'self'; form-action 'self' mailto:" />
 <meta name="referrer" content="strict-origin-when-cross-origin" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="./support.js"></script>
+<script src="./assets/js/support.js"></script>
 </head>
 <body>
 <x-dc>
@@ -18,10 +18,10 @@
 <meta property="og:title" content="Sponsors | UWA Aerospace" />
 <meta property="og:description" content="The partners who fund UWA Aerospace, what sponsorship covers, and how to become a sponsor." />
 <meta property="og:url" content="https://uwaaerospace.org/sponsors" />
-<meta property="og:image" content="https://uwaaerospace.org/images/site/discover.jpg" />
+<meta property="og:image" content="https://uwaaerospace.org/assets/images/site/discover.jpg" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="theme-color" content="#111111" />
-<link rel="icon" type="image/png" href="images/site/logo-uwaa-dark.png" />
+<link rel="icon" type="image/png" href="assets/images/site/logo-uwaa-dark.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&display=swap">
@@ -45,14 +45,14 @@
     p > a:only-child[style*="uppercase"] { min-height: 44px; display: inline-flex; align-items: center; }
   }
 </style>
-<script src="./site-config.js"></script>
-<script src="./rocketry-fx.js"></script>
+<script src="./assets/js/site-config.js"></script>
+<script src="./assets/js/rocketry-fx.js"></script>
 </helmet>
 <div style="background: oklch(0.12 0 0); min-height: 100vh; overflow-x: hidden">
 
   <header style="position: sticky; top: 0; z-index: 50; display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; padding: 12px clamp(18px, 4vw, 64px); background: oklch(0.12 0 0 / 0.96); backdrop-filter: blur(14px); border-bottom: 1px solid oklch(0.26 0 0)">
     <a href="./" style="display: flex; align-items: center; gap: 11px; color: inherit">
-      <img src="images/site/logo-uwaa-mark.png" alt="UWA Aerospace" style="width: 54px; height: 54px; object-fit: contain" />
+      <img src="assets/images/site/logo-uwaa-mark.png" alt="UWA Aerospace" style="width: 54px; height: 54px; object-fit: contain" />
       <span style="font-weight: 700; font-size: 18px; letter-spacing: 0.02em; text-transform: uppercase">UWA Aerospace</span>
     </a>
     <nav style="display: flex; align-items: center; gap: clamp(10px, 1.5vw, 22px); font-size: 13.5px; font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; flex-wrap: wrap">
@@ -69,7 +69,7 @@
   </header>
 
   <section style="padding: clamp(48px, 7vw, 104px) clamp(18px, 4vw, 64px) clamp(36px, 4vw, 60px); max-width: 1440px; margin: 0 auto">
-    <p data-reveal="" style="margin: 0 0 20px; font-size: 11.5px; letter-spacing: 0.16em; text-transform: uppercase; color: oklch(0.84 0.14 80)">Sponsors</p>
+    <p data-reveal="" style="margin: 0 0 20px; font-size: 14px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: oklch(0.84 0.14 80)">Sponsors</p>
     <h1 data-reveal="" style="margin: 0; font-size: clamp(36px, 7vw, 82px); line-height: 0.98; letter-spacing: -0.035em; font-weight: 800; max-width: 16ch; text-wrap: balance">Supported by our sponsors</h1>
     <p data-reveal="" style="margin: 24px 0 0; font-size: clamp(16px, 1.4vw, 19px); line-height: 1.6; color: oklch(0.8 0 0); max-width: 60ch">Composites, propellant, machining time, software licences and travel to competition are funded by our partners. In return they get their name on the airframe and first contact with the graduates who built it.</p>
     <div data-reveal="" style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: clamp(26px, 3.5vw, 42px)">
@@ -79,7 +79,7 @@
   </section>
 
   <section id="partners" style="padding: clamp(44px, 6vw, 92px) clamp(18px, 4vw, 64px); max-width: 1440px; margin: 0 auto; border-top: 1px solid oklch(0.24 0 0)">
-    <p data-reveal="" style="margin: 0 0 16px; font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: oklch(0.6 0 0)">01 · Our partners</p>
+    <p data-reveal="" style="margin: 0 0 16px; font-size: 14px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: oklch(0.84 0.14 80)">01 · Our partners</p>
     <h2 data-reveal="" style="margin: 0 0 clamp(24px, 3vw, 40px); font-size: clamp(26px, 3.2vw, 42px); line-height: 1.08; letter-spacing: -0.025em; font-weight: 700; max-width: 24ch">Our current partners</h2>
     <div style="display: flex; flex-direction: column; gap: clamp(28px, 3.5vw, 44px)">
     <sc-for list="{{ partnerGroups }}" as="g" hint-placeholder-count="1">
@@ -127,7 +127,7 @@
   </sc-if>
 
   <section id="tiers" style="padding: clamp(44px, 6vw, 92px) clamp(18px, 4vw, 64px); max-width: 1440px; margin: 0 auto; border-top: 1px solid oklch(0.24 0 0)">
-    <p data-reveal="" style="margin: 0 0 16px; font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: oklch(0.6 0 0)">02 · What sponsorship covers</p>
+    <p data-reveal="" style="margin: 0 0 16px; font-size: 14px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: oklch(0.84 0.14 80)">02 · What sponsorship covers</p>
     <h2 data-reveal="" style="margin: 0 0 16px; font-size: clamp(26px, 3.2vw, 42px); line-height: 1.08; letter-spacing: -0.025em; font-weight: 700; max-width: 24ch">Where sponsorship goes</h2>
     <p data-reveal="" style="margin: 0 0 clamp(24px, 3vw, 40px); font-size: 15.5px; line-height: 1.6; color: oklch(0.76 0 0); max-width: 54ch">Very little of this is covered by the university. Every campaign is funded by partners, grants and in-kind support.</p>
     <div style="display: flex; flex-wrap: wrap; gap: 1px; background: oklch(0.32 0.012 80); border: 1px solid oklch(0.32 0.012 80); border-radius: 6px; overflow: hidden">
@@ -142,7 +142,7 @@
   </section>
 
   <section id="benefits" style="padding: clamp(44px, 6vw, 92px) clamp(18px, 4vw, 64px); max-width: 1440px; margin: 0 auto; border-top: 1px solid oklch(0.24 0 0)">
-    <p data-reveal="" style="margin: 0 0 16px; font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: oklch(0.6 0 0)">03 · What partners get</p>
+    <p data-reveal="" style="margin: 0 0 16px; font-size: 14px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: oklch(0.84 0.14 80)">03 · What partners get</p>
     <h2 data-reveal="" style="margin: 0 0 clamp(24px, 3vw, 40px); font-size: clamp(26px, 3.2vw, 42px); line-height: 1.08; letter-spacing: -0.025em; font-weight: 700; max-width: 24ch">What partners receive</h2>
     <div style="display: flex; flex-wrap: wrap; gap: clamp(20px, 3vw, 48px)">
       <div data-reveal="" style="flex: 1 1 300px; min-width: 0">
@@ -166,7 +166,7 @@
   <section id="enquire" style="padding: clamp(44px, 6vw, 92px) clamp(18px, 4vw, 64px); max-width: 1440px; margin: 0 auto; border-top: 1px solid oklch(0.24 0 0)">
     <div style="display: flex; flex-wrap: wrap; gap: clamp(24px, 4vw, 64px); align-items: flex-start">
       <div data-reveal="" style="flex: 1 1 300px; min-width: 0">
-        <p style="margin: 0 0 16px; font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: oklch(0.6 0 0)">04 · Get in touch</p>
+        <p style="margin: 0 0 16px; font-size: 14px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: oklch(0.84 0.14 80)">04 · Get in touch</p>
         <h2 style="margin: 0 0 18px; font-size: clamp(26px, 3.2vw, 40px); line-height: 1.1; letter-spacing: -0.025em; font-weight: 700; max-width: 18ch">Become a sponsor</h2>
         <p style="margin: 0 0 20px; font-size: 16px; line-height: 1.65; color: oklch(0.8 0 0); max-width: 46ch">We will send the sponsorship pack, last season's technical report and what we are building this year.</p>
         <a href="missions" style="font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase">See our campaigns →</a>
@@ -337,7 +337,7 @@ class Component extends DCLogic {
     });
   };
   renderVals() {
-    const base = "images/site/";
+    const base = "assets/images/site/";
     const partners = [
       ["UWA", "logo-uwa.png",
        "The University of Western Australia (UWA) is a prestigious research-intensive university located in Perth, the capital city of Western Australia. Founded in 1911, UWA is renowned for its impressive Romanesque architecture, sprawling gardens, and significant contributions to research and education. It is a member of the Group of Eight, a coalition of Australia's leading research universities, and boasts a strong reputation for excellence in teaching, learning, and research."],

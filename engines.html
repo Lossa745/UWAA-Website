@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://budget-manager-two-blond.vercel.app; object-src 'none'; base-uri 'self'; form-action 'self' mailto:" />
 <meta name="referrer" content="strict-origin-when-cross-origin" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="./support.js"></script>
+<script src="./assets/js/support.js"></script>
 </head>
 <body>
 <x-dc>
@@ -18,10 +18,10 @@
 <meta property="og:title" content="Hybrid Engines | UWA Aerospace" />
 <meta property="og:description" content="UWA Aerospace is developing its own hybrid rocket engines, from injector design to static fire testing." />
 <meta property="og:url" content="https://uwaaerospace.org/engines" />
-<meta property="og:image" content="https://uwaaerospace.org/images/site/discover.jpg" />
+<meta property="og:image" content="https://uwaaerospace.org/assets/images/site/discover.jpg" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="theme-color" content="#111111" />
-<link rel="icon" type="image/png" href="images/site/logo-uwaa-dark.png" />
+<link rel="icon" type="image/png" href="assets/images/site/logo-uwaa-dark.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&display=swap">
@@ -43,14 +43,14 @@
     p > a:only-child[style*="uppercase"] { min-height: 44px; display: inline-flex; align-items: center; }
   }
 </style>
-<script src="./site-config.js"></script>
-<script src="./rocketry-fx.js"></script>
+<script src="./assets/js/site-config.js"></script>
+<script src="./assets/js/rocketry-fx.js"></script>
 </helmet>
 <div style="background: oklch(0.12 0 0); min-height: 100vh; overflow-x: hidden">
 
   <header style="position: sticky; top: 0; z-index: 50; display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; padding: 12px clamp(18px, 4vw, 64px); background: oklch(0.12 0 0 / 0.96); backdrop-filter: blur(14px); border-bottom: 1px solid oklch(0.26 0 0)">
     <a href="./" style="display: flex; align-items: center; gap: 11px; color: inherit">
-      <img src="images/site/logo-uwaa-mark.png" alt="UWA Aerospace" style="width: 54px; height: 54px; object-fit: contain" />
+      <img src="assets/images/site/logo-uwaa-mark.png" alt="UWA Aerospace" style="width: 54px; height: 54px; object-fit: contain" />
       <span style="font-weight: 700; font-size: 18px; letter-spacing: 0.02em; text-transform: uppercase">UWA Aerospace</span>
     </a>
     <nav style="display: flex; align-items: center; gap: clamp(10px, 1.5vw, 22px); font-size: 13.5px; font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; flex-wrap: wrap">
@@ -67,7 +67,7 @@
   </header>
 
   <section style="padding: clamp(48px, 7vw, 104px) clamp(18px, 4vw, 64px) clamp(36px, 4vw, 56px); max-width: 1440px; margin: 0 auto">
-    <p data-reveal="" style="margin: 0 0 20px; font-size: 11.5px; letter-spacing: 0.16em; text-transform: uppercase; color: oklch(0.84 0.14 80)">Hybrid engine programme</p>
+    <p data-reveal="" style="margin: 0 0 20px; font-size: 14px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: oklch(0.84 0.14 80)">Hybrid engine programme</p>
     <h1 data-reveal="" style="margin: 0; font-size: clamp(36px, 7vw, 82px); line-height: 0.98; letter-spacing: -0.035em; font-weight: 800; max-width: 19ch; text-wrap: balance">Building our own engines</h1>
     <p data-reveal="" style="margin: 24px 0 0; font-size: clamp(16px, 1.4vw, 19px); line-height: 1.6; color: oklch(0.8 0 0); max-width: 60ch">While most student teams fly commercially manufactured motors, UWA Aerospace is developing its own hybrid rocket engines. Current work covers injector and combustion chamber design, construction of the oxidiser feed system, and preparation for our first static fire.</p>
     <p data-reveal="" style="margin: 20px 0 0; padding: 14px 18px; border: 1px solid oklch(0.34 0 0); border-radius: 6px; background: oklch(0.17 0 0); font-size: 11.5px; letter-spacing: 0.06em; text-transform: uppercase; color: oklch(0.84 0.14 80); max-width: 60ch">Programme status: in development. Nothing has flown yet.</p>
@@ -76,7 +76,7 @@
   <section id="what" style="padding: clamp(40px, 6vw, 88px) clamp(18px, 4vw, 64px); max-width: 1440px; margin: 0 auto; border-top: 1px solid oklch(0.24 0 0)">
     <div style="display: flex; flex-wrap: wrap; gap: clamp(28px, 5vw, 72px)">
       <div data-reveal="" style="flex: 1 1 300px; min-width: 0">
-        <p style="margin: 0 0 16px; font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: oklch(0.6 0 0)">01 · What a hybrid is</p>
+        <p style="margin: 0 0 16px; font-size: 14px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: oklch(0.84 0.14 80)">01 · What a hybrid is</p>
         <h2 style="margin: 0 0 20px; font-size: clamp(26px, 3.2vw, 42px); line-height: 1.08; letter-spacing: -0.025em; font-weight: 700; max-width: 20ch">How a hybrid engine works</h2>
         <p style="margin: 0 0 18px; font-size: 16px; line-height: 1.65; color: oklch(0.8 0 0); max-width: 48ch">A solid motor holds its fuel and oxidiser pre-mixed in one casting: light it and it burns to completion. A liquid engine feeds both propellants in as liquids, which adds significant plumbing complexity.</p>
         <p style="margin: 0; font-size: 16px; line-height: 1.65; color: oklch(0.8 0 0); max-width: 48ch">A hybrid sits between them. The fuel is a solid grain cast into the chamber; the oxidiser is stored separately as a liquid or gas and fed in through an injector. Because the two are never mixed until they meet in the chamber, the motor cannot sustain combustion on its own.</p>
@@ -93,7 +93,7 @@
   </section>
 
   <section id="why" style="padding: clamp(40px, 6vw, 88px) clamp(18px, 4vw, 64px); max-width: 1440px; margin: 0 auto; border-top: 1px solid oklch(0.24 0 0)">
-    <p data-reveal="" style="margin: 0 0 16px; font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: oklch(0.6 0 0)">02 · Why we build them</p>
+    <p data-reveal="" style="margin: 0 0 16px; font-size: 14px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: oklch(0.84 0.14 80)">02 · Why we build them</p>
     <h2 data-reveal="" style="margin: 0 0 clamp(24px, 3vw, 40px); font-size: clamp(26px, 3.2vw, 42px); line-height: 1.08; letter-spacing: -0.025em; font-weight: 700; max-width: 24ch">Why we chose hybrids</h2>
     <div style="display: flex; flex-wrap: wrap; gap: 1px; background: oklch(0.32 0.012 80); border: 1px solid oklch(0.32 0.012 80); border-radius: 6px; overflow: hidden">
       <sc-for list="{{ reasons }}" as="r" hint-placeholder-count="3">
@@ -107,7 +107,7 @@
   </section>
 
   <section id="work" style="padding: clamp(40px, 6vw, 88px) clamp(18px, 4vw, 64px); max-width: 1440px; margin: 0 auto; border-top: 1px solid oklch(0.24 0 0)">
-    <p data-reveal="" style="margin: 0 0 16px; font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: oklch(0.6 0 0)">03 · The work</p>
+    <p data-reveal="" style="margin: 0 0 16px; font-size: 14px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: oklch(0.84 0.14 80)">03 · The work</p>
     <h2 data-reveal="" style="margin: 0 0 16px; font-size: clamp(26px, 3.2vw, 42px); line-height: 1.08; letter-spacing: -0.025em; font-weight: 700; max-width: 24ch">What we're working on</h2>
     <p data-reveal="" style="margin: 0 0 clamp(24px, 3vw, 40px); font-size: 15.5px; line-height: 1.6; color: oklch(0.76 0 0); max-width: 54ch">Most members join with no propulsion background. The work splits into four areas, and while the programme is this early most people touch all of them.</p>
     <div style="display: flex; flex-direction: column; gap: 1px; background: oklch(0.32 0.012 80); border: 1px solid oklch(0.32 0.012 80); border-radius: 6px; overflow: hidden">
@@ -128,7 +128,7 @@
   <section id="stand" style="padding: clamp(40px, 6vw, 88px) clamp(18px, 4vw, 64px); max-width: 1440px; margin: 0 auto; border-top: 1px solid oklch(0.24 0 0)">
     <div style="display: flex; flex-wrap: wrap; gap: clamp(24px, 4vw, 56px); align-items: center">
       <div data-reveal="" style="flex: 1 1 300px; min-width: 0">
-        <p style="margin: 0 0 16px; font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: oklch(0.6 0 0)">04 · Test campaigns</p>
+        <p style="margin: 0 0 16px; font-size: 14px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: oklch(0.84 0.14 80)">04 · Test campaigns</p>
         <h2 style="margin: 0 0 18px; font-size: clamp(26px, 3.2vw, 40px); line-height: 1.1; letter-spacing: -0.025em; font-weight: 700; max-width: 20ch">Tested before it flies</h2>
         <p style="margin: 0 0 24px; font-size: 16px; line-height: 1.65; color: oklch(0.8 0 0); max-width: 46ch">Before any engine is considered for a vehicle it will go through an instrumented static fire campaign, logging thrust, chamber pressure and feed pressures on every fire. Building that test capability is the programme's current focus.</p>
         <div style="display: flex; flex-wrap: wrap; gap: 12px">

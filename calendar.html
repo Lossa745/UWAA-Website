@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://budget-manager-two-blond.vercel.app; object-src 'none'; base-uri 'self'; form-action 'self' mailto:" />
 <meta name="referrer" content="strict-origin-when-cross-origin" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="./support.js"></script>
+<script src="./assets/js/support.js"></script>
 </head>
 <body>
 <x-dc>
@@ -18,10 +18,10 @@
 <meta property="og:title" content="Calendar | UWA Aerospace" />
 <meta property="og:description" content="Upcoming WARS launch days, info nights, competitions and open days for UWA Aerospace." />
 <meta property="og:url" content="https://uwaaerospace.org/calendar" />
-<meta property="og:image" content="https://uwaaerospace.org/images/site/discover.jpg" />
+<meta property="og:image" content="https://uwaaerospace.org/assets/images/site/discover.jpg" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="theme-color" content="#111111" />
-<link rel="icon" type="image/png" href="images/site/logo-uwaa-dark.png" />
+<link rel="icon" type="image/png" href="assets/images/site/logo-uwaa-dark.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&display=swap">
@@ -43,14 +43,14 @@
     p > a:only-child[style*="uppercase"] { min-height: 44px; display: inline-flex; align-items: center; }
   }
 </style>
-<script src="./site-config.js"></script>
-<script src="./rocketry-fx.js"></script>
+<script src="./assets/js/site-config.js"></script>
+<script src="./assets/js/rocketry-fx.js"></script>
 </helmet>
 <div style="background: oklch(0.12 0 0); min-height: 100vh; overflow-x: hidden">
 
   <header style="position: sticky; top: 0; z-index: 50; display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; padding: 12px clamp(18px, 4vw, 64px); background: oklch(0.12 0 0 / 0.96); backdrop-filter: blur(14px); border-bottom: 1px solid oklch(0.26 0 0)">
     <a href="./" style="display: flex; align-items: center; gap: 11px; color: inherit">
-      <img src="images/site/logo-uwaa-mark.png" alt="UWA Aerospace" style="width: 54px; height: 54px; object-fit: contain" />
+      <img src="assets/images/site/logo-uwaa-mark.png" alt="UWA Aerospace" style="width: 54px; height: 54px; object-fit: contain" />
       <span style="font-weight: 700; font-size: 18px; letter-spacing: 0.02em; text-transform: uppercase">UWA Aerospace</span>
     </a>
     <nav style="display: flex; align-items: center; gap: clamp(10px, 1.5vw, 22px); font-size: 13.5px; font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; flex-wrap: wrap">
@@ -67,12 +67,12 @@
   </header>
 
   <section style="padding: clamp(48px, 7vw, 104px) clamp(18px, 4vw, 64px) clamp(32px, 4vw, 52px); max-width: 1440px; margin: 0 auto">
-    <p data-reveal="" style="margin: 0 0 20px; font-size: 11.5px; letter-spacing: 0.16em; text-transform: uppercase; color: oklch(0.84 0.14 80)">Calendar</p>
+    <p data-reveal="" style="margin: 0 0 20px; font-size: 14px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: oklch(0.84 0.14 80)">Calendar</p>
     <h1 data-reveal="" style="margin: 0; font-size: clamp(36px, 7vw, 82px); line-height: 0.98; letter-spacing: -0.035em; font-weight: 800; max-width: 16ch; text-wrap: balance">Launch days and events</h1>
     <p data-reveal="" style="margin: 24px 0 0; font-size: clamp(16px, 1.4vw, 19px); line-height: 1.6; color: oklch(0.8 0 0); max-width: 58ch">WARS launch days, info nights, competitions and open days. Launch days run April to September and depend on weather and fire bans, so check back the week before.</p>
     <sc-if value="{{ hasFeed }}" hint-placeholder-val="{{ true }}">
       <div data-reveal="" style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-top: clamp(22px, 3vw, 34px)">
-        <span style="font-size: 11.5px; letter-spacing: 0.12em; text-transform: uppercase; color: oklch(0.7 0 0)">Add to your calendar</span>
+        <span style="font-size: 14px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: oklch(0.84 0.14 80)">Add to your calendar</span>
         <a href="{{ googleFeed }}" target="_blank" rel="noopener noreferrer" style="padding: 10px 16px; min-height: 44px; display: inline-flex; align-items: center; border: 1px solid oklch(0.34 0 0); border-radius: 999px; color: oklch(0.97 0 0); font-size: 14px" style-hover="border-color: oklch(0.8 0.16 78); color: oklch(0.97 0 0)">Google Calendar</a>
         <a href="{{ webcalFeed }}" style="padding: 10px 16px; min-height: 44px; display: inline-flex; align-items: center; border: 1px solid oklch(0.34 0 0); border-radius: 999px; color: oklch(0.97 0 0); font-size: 14px" style-hover="border-color: oklch(0.8 0.16 78); color: oklch(0.97 0 0)">Apple or Outlook</a>
         <button type="button" onClick="{{ onCopyFeed }}" style="padding: 10px 16px; min-height: 44px; background: transparent; border: 1px solid oklch(0.34 0 0); border-radius: 999px; color: oklch(0.97 0 0); font: inherit; font-size: 14px; cursor: pointer" style-hover="border-color: oklch(0.8 0.16 78)">{{ copyLabel }}</button>
@@ -124,7 +124,7 @@
                   </div>
                 </div>
                 <sc-if value="{{ e.showDone }}" hint-placeholder-val="{{ false }}">
-                  <p role="status" style="grid-column: 1 / -1; margin: 0; padding: 14px 16px; border: 1px solid oklch(0.55 0.12 150); border-radius: 4px; background: oklch(0.2 0.03 150); font-size: 14.5px; line-height: 1.55">{{ e.doneMsg }}</p>
+                  <p role="status" style="grid-column: 1 / -1; margin: 0; padding: 14px 16px; border: 1px solid oklch(0.55 0.12 150); border-radius: 4px; background: oklch(0.2 0.03 150); font-size: 14.5px; line-height: 1.55">You're signed up. We've emailed you a confirmation, and we'll send a reminder the day before.</p>
                 </sc-if>
                 <sc-if value="{{ e.showForm }}" hint-placeholder-val="{{ false }}">
                   <form novalidate="" data-id="{{ e.id }}" data-form="{{ e.formId }}" onSubmit="{{ onSignUp }}" style="grid-column: 1 / -1; position: relative; display: flex; flex-direction: column; gap: 16px; padding: clamp(16px, 2vw, 24px); border: 1px solid oklch(0.28 0 0); border-radius: 6px; background: oklch(0.14 0 0)">
@@ -250,7 +250,7 @@ class Component extends DCLogic {
       const base = (window.UWA_API || "").replace(/\/$/, "");
       const r = await fetch(base + "/api/rsvps", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) });
       const d = await r.json().catch(() => ({}));
-      if (r.ok && d.ok) this.rsvpSet(id, { sending: false, done: true, open: false, waitlisted: !!d.waitlisted });
+      if (r.ok && d.ok) this.rsvpSet(id, { sending: false, done: true, open: false });
       else this.rsvpSet(id, { sending: false, error: d.error || "That didn't go through. Please try again, or email executive@uwaaerospace.org." });
     } catch (e) {
       this.rsvpSet(id, { sending: false, error: "We couldn't reach the server. Check your connection and try again." });
@@ -407,21 +407,14 @@ class Component extends DCLogic {
         link: /^https?:\/\//.test(e.link || "") ? e.link : "",
         hasSignUp: !!s && !rs.done,
         expanded: String(!!rs.open),
-        signUpLabel: rs.open ? "Close" : s && s.full ? "Join the waiting list" : "Sign up",
-        signUpNote: s
-          ? (s.membersOnly ? "Members only · " : "") +
-            (s.full ? "Full, join the waiting list · " : typeof s.placesLeft === "number" ? s.placesLeft + (s.placesLeft === 1 ? " place" : " places") + " left · " : "") +
-            "Sign-ups close " + closes
-          : "",
-        doneMsg: rs.waitlisted
-          ? "You're on the waiting list. We'll email you if a place opens up."
-          : "You're signed up. We've emailed you a confirmation, and we'll send a reminder the day before.",
+        signUpLabel: rs.open ? "Close" : "Sign up",
+        signUpNote: s ? (s.membersOnly ? "Members only · " : "") + "Sign-ups close " + closes : "",
         showForm: !!s && !!rs.open && !rs.done,
         showDone: !!rs.done,
         membersOnly: !!(s && s.membersOnly),
         inputs: rs.open ? this.inputsFor(e) : [],
         error: rs.error || "",
-        submitLabel: rs.sending ? "Sending…" : s && s.full ? "Join the waiting list" : "Sign up",
+        submitLabel: rs.sending ? "Sending…" : "Sign up",
         title: e.title,
         kindLabel: e.kindLabel || "Event",
         day: fmt(e.start, { day: "numeric" }),

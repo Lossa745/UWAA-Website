@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://budget-manager-two-blond.vercel.app; object-src 'none'; base-uri 'self'; form-action 'self' mailto:" />
 <meta name="referrer" content="strict-origin-when-cross-origin" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="./support.js"></script>
+<script src="./assets/js/support.js"></script>
 </head>
 <body>
 <x-dc>
@@ -18,10 +18,10 @@
 <meta property="og:title" content="Certification Program | UWA Aerospace" />
 <meta property="og:description" content="Build your own rocket and earn a Tripoli Level 1 or Level 2 high-power rocketry certification with UWA Aerospace." />
 <meta property="og:url" content="https://uwaaerospace.org/certifications" />
-<meta property="og:image" content="https://uwaaerospace.org/images/site/discover.jpg" />
+<meta property="og:image" content="https://uwaaerospace.org/assets/images/site/discover.jpg" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="theme-color" content="#111111" />
-<link rel="icon" type="image/png" href="images/site/logo-uwaa-dark.png" />
+<link rel="icon" type="image/png" href="assets/images/site/logo-uwaa-dark.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&display=swap">
@@ -43,14 +43,14 @@
     p > a:only-child[style*="uppercase"] { min-height: 44px; display: inline-flex; align-items: center; }
   }
 </style>
-<script src="./site-config.js"></script>
-<script src="./rocketry-fx.js"></script>
+<script src="./assets/js/site-config.js"></script>
+<script src="./assets/js/rocketry-fx.js"></script>
 </helmet>
 <div style="background: oklch(0.12 0 0); min-height: 100vh; overflow-x: hidden">
 
   <header style="position: sticky; top: 0; z-index: 50; display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; padding: 12px clamp(18px, 4vw, 64px); background: oklch(0.12 0 0 / 0.96); backdrop-filter: blur(14px); border-bottom: 1px solid oklch(0.26 0 0)">
     <a href="./" style="display: flex; align-items: center; gap: 11px; color: inherit">
-      <img src="images/site/logo-uwaa-mark.png" alt="UWA Aerospace" style="width: 54px; height: 54px; object-fit: contain" />
+      <img src="assets/images/site/logo-uwaa-mark.png" alt="UWA Aerospace" style="width: 54px; height: 54px; object-fit: contain" />
       <span style="font-weight: 700; font-size: 18px; letter-spacing: 0.02em; text-transform: uppercase">UWA Aerospace</span>
     </a>
     <nav style="display: flex; align-items: center; gap: clamp(10px, 1.5vw, 22px); font-size: 13.5px; font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; flex-wrap: wrap">
@@ -67,7 +67,7 @@
   </header>
 
   <section style="padding: clamp(48px, 7vw, 104px) clamp(18px, 4vw, 64px) clamp(36px, 4vw, 60px); max-width: 1440px; margin: 0 auto">
-    <p data-reveal="" style="margin: 0 0 20px; font-size: 11.5px; letter-spacing: 0.16em; text-transform: uppercase; color: oklch(0.84 0.14 80)">Certification Program</p>
+    <p data-reveal="" style="margin: 0 0 20px; font-size: 14px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: oklch(0.84 0.14 80)">Certification Program</p>
     <h1 data-reveal="" style="margin: 0; font-size: clamp(36px, 7vw, 82px); line-height: 0.98; letter-spacing: -0.035em; font-weight: 800; max-width: 18ch; text-wrap: balance">Build a rocket, earn your certification</h1>
     <p data-reveal="" style="margin: 24px 0 0; font-size: clamp(16px, 1.4vw, 19px); line-height: 1.6; color: oklch(0.8 0 0); max-width: 62ch">The UWA Aerospace Certification Program is designed to help members achieve their Level 1 and/or Level 2 Tripoli Rocketry Certification. With this certification, you are licensed to launch high-powered rockets with motors up to a specified size. The program centres on building your own rocket and successfully launching and recovering it on one of our scheduled launch days.</p>
     <div data-reveal="" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 150px), 1fr)); gap: 1px; background: oklch(0.32 0.012 80); border: 1px solid oklch(0.32 0.012 80); border-radius: 6px; overflow: hidden; margin-top: clamp(28px, 4vw, 48px)">
@@ -81,7 +81,7 @@
   </section>
 
   <section id="how" style="padding: clamp(48px, 7vw, 104px) clamp(18px, 4vw, 64px); max-width: 1440px; margin: 0 auto; border-top: 1px solid oklch(0.24 0 0)">
-    <p data-reveal="" style="margin: 0 0 18px; font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: oklch(0.6 0 0)">01 · How it works</p>
+    <p data-reveal="" style="margin: 0 0 18px; font-size: 14px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: oklch(0.84 0.14 80)">01 · How it works</p>
     <h2 data-reveal="" style="margin: 0 0 clamp(26px, 4vw, 44px); font-size: clamp(28px, 3.4vw, 44px); line-height: 1.08; letter-spacing: -0.025em; font-weight: 700; max-width: 24ch">From first build to flight</h2>
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, max(280px, 30%)), 1fr)); gap: 1px; background: oklch(0.32 0.012 80); border: 1px solid oklch(0.32 0.012 80); border-radius: 6px; overflow: hidden">
       <sc-for list="{{ steps }}" as="s" hint-placeholder-count="6">
@@ -97,7 +97,7 @@
   <section id="rockets" style="padding: clamp(48px, 7vw, 104px) clamp(18px, 4vw, 64px); max-width: 1440px; margin: 0 auto; border-top: 1px solid oklch(0.24 0 0)">
     <div style="display: flex; flex-wrap: wrap; gap: 16px; align-items: baseline; justify-content: space-between; margin-bottom: clamp(24px, 3vw, 40px)">
       <div>
-        <p data-reveal="" style="margin: 0 0 18px; font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: oklch(0.6 0 0)">02 · Certified rockets</p>
+        <p data-reveal="" style="margin: 0 0 18px; font-size: 14px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: oklch(0.84 0.14 80)">02 · Certified rockets</p>
         <h2 data-reveal="" style="margin: 0; font-size: clamp(28px, 3.4vw, 44px); line-height: 1.08; letter-spacing: -0.025em; font-weight: 700; max-width: 22ch">Built by our members</h2>
       </div>
     </div>
@@ -117,7 +117,7 @@
   <section id="start" style="padding: clamp(48px, 7vw, 104px) clamp(18px, 4vw, 64px); max-width: 1440px; margin: 0 auto; border-top: 1px solid oklch(0.24 0 0)">
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: clamp(28px, 5vw, 72px); align-items: start">
       <div>
-        <p data-reveal="" style="margin: 0 0 18px; font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: oklch(0.6 0 0)">03 · Get started</p>
+        <p data-reveal="" style="margin: 0 0 18px; font-size: 14px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: oklch(0.84 0.14 80)">03 · Get started</p>
         <h2 data-reveal="" style="margin: 0 0 18px; font-size: clamp(26px, 3vw, 40px); line-height: 1.1; letter-spacing: -0.025em; font-weight: 700; max-width: 20ch">Start your Level 1</h2>
         <p data-reveal="" style="margin: 0 0 24px; font-size: 16px; line-height: 1.6; color: oklch(0.78 0 0); max-width: 46ch">Launch days run April to September, so builds start in the preceding months. Get in touch and we will put you in the next cohort. <a href="calendar">See launch dates →</a></p>
         <a data-reveal="" href="mailto:executive@uwaaerospace.org" style="display: inline-block; padding: 14px 24px; background: oklch(0.8 0.16 78); color: oklch(0.12 0 0); border-radius: 999px; font-weight: 600; font-size: 15px" style-hover="background: oklch(0.88 0.13 82); color: oklch(0.12 0 0)">Ask about certification</a>
@@ -257,7 +257,7 @@ class Component extends DCLogic {
     });
   }
   renderVals() {
-    const base = "images/site/";
+    const base = "assets/images/site/";
     const rockets = [
       ["STRAF", "L1", "cert-l1-straf-2022-06-26-web.jpg"],
       ["Gabe", "L1", "cert-l1-gabe-2022-06-26-web.jpg"],

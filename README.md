@@ -1,6 +1,6 @@
 # UWA Aerospace website
 
-New to looking after the site? Start with HANDOVER.md.
+New to looking after the site? Start with docs/HANDOVER.md.
 
 Static site for GitHub Pages. No build step.
 
@@ -22,7 +22,7 @@ In GoDaddy → My Products → uwaaerospace.org → DNS:
 
 ## Forms and calendar
 The Join, Book a visit and Become a sponsor forms, and the Calendar page, all talk to the Budget Manager (see `budget-manager-patch/README.md`).
-Set the app address once in `site-config.js`:
+Set the app address once in `assets/js/site-config.js`:
 `window.UWA_API = "https://<your-budget-app>.vercel.app";`
 Until it is set, forms open the visitor's email app and the calendar shows "No dates published yet".
 
