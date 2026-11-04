@@ -49,20 +49,20 @@
 <div style="background: oklch(0.12 0 0); min-height: 100vh; overflow-x: hidden">
 
   <header style="position: sticky; top: 0; z-index: 50; display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; padding: 12px clamp(18px, 4vw, 64px); background: oklch(0.12 0 0 / 0.96); backdrop-filter: blur(14px); border-bottom: 1px solid oklch(0.26 0 0)">
-    <a href="index.html" style="display: flex; align-items: center; gap: 11px; color: inherit">
+    <a href="./" style="display: flex; align-items: center; gap: 11px; color: inherit">
       <img src="assets/images/site/logo-uwaa-mark.png" alt="UWA Aerospace" style="width: 54px; height: 54px; object-fit: contain" />
       <span style="font-weight: 700; font-size: 18px; letter-spacing: 0.02em; text-transform: uppercase">UWA Aerospace</span>
     </a>
     <nav style="display: flex; align-items: center; gap: clamp(10px, 1.5vw, 22px); font-size: 13.5px; font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; flex-wrap: wrap">
-      <a href="missions.html" style="color: oklch(0.86 0 0)" style-hover="color: oklch(1 0 0)">Missions</a>
-      <a href="engines.html" style="color: oklch(0.86 0 0)" style-hover="color: oklch(1 0 0)">Engines</a>
-      <a href="certifications.html" style="color: oklch(0.86 0 0)" style-hover="color: oklch(1 0 0)">Certifications</a>
-      <a href="team.html" style="color: oklch(0.86 0 0)" style-hover="color: oklch(1 0 0)">Team</a>
-      <a href="outreach.html" style="color: oklch(0.86 0 0)" style-hover="color: oklch(1 0 0)">Outreach</a>
-      <a href="calendar.html" style="color: oklch(0.86 0 0)" style-hover="color: oklch(1 0 0)">Calendar</a>
-      <a href="sponsors.html" style="color: oklch(0.86 0 0)" style-hover="color: oklch(1 0 0)">Sponsors</a>
-      <a href="contact.html" style="color: oklch(0.82 0.15 80)" style-hover="color: oklch(0.9 0.11 84)">Contact</a>
-      <a href="join.html" style="padding: 8px 15px; background: oklch(0.8 0.16 78); color: oklch(0.12 0 0); border-radius: 999px; font-weight: 600" style-hover="background: oklch(0.88 0.13 82); color: oklch(0.12 0 0)">Join</a>
+      <a href="missions" style="color: oklch(0.86 0 0)" style-hover="color: oklch(1 0 0)">Missions</a>
+      <a href="engines" style="color: oklch(0.86 0 0)" style-hover="color: oklch(1 0 0)">Engines</a>
+      <a href="certifications" style="color: oklch(0.86 0 0)" style-hover="color: oklch(1 0 0)">Certifications</a>
+      <a href="team" style="color: oklch(0.86 0 0)" style-hover="color: oklch(1 0 0)">Team</a>
+      <a href="outreach" style="color: oklch(0.86 0 0)" style-hover="color: oklch(1 0 0)">Outreach</a>
+      <a href="calendar" style="color: oklch(0.86 0 0)" style-hover="color: oklch(1 0 0)">Calendar</a>
+      <a href="sponsors" style="color: oklch(0.86 0 0)" style-hover="color: oklch(1 0 0)">Sponsors</a>
+      <a href="contact" style="color: oklch(0.82 0.15 80)" style-hover="color: oklch(0.9 0.11 84)">Contact</a>
+      <a href="join" style="padding: 8px 15px; white-space: nowrap; flex-shrink: 0; line-height: 1.2; background: oklch(0.8 0.16 78); color: oklch(0.12 0 0); border-radius: 999px; font-weight: 600" style-hover="background: oklch(0.88 0.13 82); color: oklch(0.12 0 0)">Join</a>
     </nav>
   </header>
 
@@ -89,12 +89,22 @@
     <p data-reveal="" style="margin: 0 0 16px; font-size: 14px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: oklch(0.84 0.14 80)">01 · Follow the build</p>
     <h2 data-reveal="" style="margin: 0 0 clamp(24px, 3vw, 40px); font-size: clamp(26px, 3.2vw, 42px); line-height: 1.08; letter-spacing: -0.025em; font-weight: 700; max-width: 24ch">Follow our launches</h2>
     <div style="display: flex; flex-wrap: wrap; gap: clamp(10px, 1.2vw, 14px)">
-      <sc-for list="{{ socials }}" as="s" hint-placeholder-count="4">
-        <a data-reveal="" href="{{ s.href }}" target="_blank" rel="noreferrer" style="border: 1px solid oklch(0.32 0.012 80); border-radius: 6px; overflow: hidden; flex: 1 1 200px; min-width: 0; background: linear-gradient(180deg, oklch(0.215 0.01 80), oklch(0.175 0.004 80)); padding: 24px 22px; display: flex; flex-direction: column; gap: 7px; color: inherit; transition: box-shadow 0.2s ease, background 0.2s ease" style-hover="box-shadow: inset 0 2px 0 oklch(0.82 0.15 80); background: linear-gradient(180deg, oklch(0.24 0.014 80), oklch(0.19 0.006 80))">
-          <span style="font-size: 17.5px; font-weight: 600">{{ s.name }}</span>
-          <span style="font-size: 11px; letter-spacing: 0.04em; color: oklch(0.68 0 0); word-break: break-all">{{ s.handle }}</span>
-        </a>
-      </sc-for>
+      <a data-reveal="" href="https://www.instagram.com/uwa_aerospace/" target="_blank" rel="noreferrer" style="border: 1px solid oklch(0.32 0.012 80); border-radius: 6px; overflow: hidden; flex: 1 1 200px; min-width: 0; background: linear-gradient(180deg, oklch(0.215 0.01 80), oklch(0.175 0.004 80)); padding: 24px 22px; display: flex; flex-direction: column; gap: 7px; color: inherit; transition: box-shadow 0.2s ease, background 0.2s ease" style-hover="box-shadow: inset 0 2px 0 oklch(0.82 0.15 80); background: linear-gradient(180deg, oklch(0.24 0.014 80), oklch(0.19 0.006 80))">
+        <span style="display: flex; align-items: center; gap: 10px; font-size: 17.5px; font-weight: 600"><img src="assets/images/site/social-instagram.svg" alt="" width="22" height="22" style="width: 22px; height: 22px; flex: none; display: block" />Instagram</span>
+        <span style="font-size: 11px; letter-spacing: 0.04em; color: oklch(0.68 0 0); word-break: break-all">@uwa_aerospace</span>
+      </a>
+      <a data-reveal="" href="https://au.linkedin.com/company/uwa-aerospace" target="_blank" rel="noreferrer" style="border: 1px solid oklch(0.32 0.012 80); border-radius: 6px; overflow: hidden; flex: 1 1 200px; min-width: 0; background: linear-gradient(180deg, oklch(0.215 0.01 80), oklch(0.175 0.004 80)); padding: 24px 22px; display: flex; flex-direction: column; gap: 7px; color: inherit; transition: box-shadow 0.2s ease, background 0.2s ease" style-hover="box-shadow: inset 0 2px 0 oklch(0.82 0.15 80); background: linear-gradient(180deg, oklch(0.24 0.014 80), oklch(0.19 0.006 80))">
+        <span style="display: flex; align-items: center; gap: 10px; font-size: 17.5px; font-weight: 600"><img src="assets/images/site/social-linkedin.svg" alt="" width="22" height="22" style="width: 22px; height: 22px; flex: none; display: block" />LinkedIn</span>
+        <span style="font-size: 11px; letter-spacing: 0.04em; color: oklch(0.68 0 0); word-break: break-all">uwa-aerospace</span>
+      </a>
+      <a data-reveal="" href="https://www.facebook.com/UWAAerospace" target="_blank" rel="noreferrer" style="border: 1px solid oklch(0.32 0.012 80); border-radius: 6px; overflow: hidden; flex: 1 1 200px; min-width: 0; background: linear-gradient(180deg, oklch(0.215 0.01 80), oklch(0.175 0.004 80)); padding: 24px 22px; display: flex; flex-direction: column; gap: 7px; color: inherit; transition: box-shadow 0.2s ease, background 0.2s ease" style-hover="box-shadow: inset 0 2px 0 oklch(0.82 0.15 80); background: linear-gradient(180deg, oklch(0.24 0.014 80), oklch(0.19 0.006 80))">
+        <span style="display: flex; align-items: center; gap: 10px; font-size: 17.5px; font-weight: 600"><img src="assets/images/site/social-facebook.svg" alt="" width="22" height="22" style="width: 22px; height: 22px; flex: none; display: block" />Facebook</span>
+        <span style="font-size: 11px; letter-spacing: 0.04em; color: oklch(0.68 0 0); word-break: break-all">UWAAerospace</span>
+      </a>
+      <a data-reveal="" href="https://www.youtube.com/channel/UCclC8khZgZnaeF4LLJj9KKg" target="_blank" rel="noreferrer" style="border: 1px solid oklch(0.32 0.012 80); border-radius: 6px; overflow: hidden; flex: 1 1 200px; min-width: 0; background: linear-gradient(180deg, oklch(0.215 0.01 80), oklch(0.175 0.004 80)); padding: 24px 22px; display: flex; flex-direction: column; gap: 7px; color: inherit; transition: box-shadow 0.2s ease, background 0.2s ease" style-hover="box-shadow: inset 0 2px 0 oklch(0.82 0.15 80); background: linear-gradient(180deg, oklch(0.24 0.014 80), oklch(0.19 0.006 80))">
+        <span style="display: flex; align-items: center; gap: 10px; font-size: 17.5px; font-weight: 600"><img src="assets/images/site/social-youtube.svg" alt="" width="22" height="22" style="width: 22px; height: 22px; flex: none; display: block" />YouTube</span>
+        <span style="font-size: 11px; letter-spacing: 0.04em; color: oklch(0.68 0 0); word-break: break-all">UWA Aerospace</span>
+      </a>
     </div>
   </section>
 
@@ -125,8 +135,8 @@
         <p style="margin: 0; font-size: 15.5px; line-height: 1.6; color: oklch(0.78 0 0); max-width: 46ch">We recruit across all six sub-teams at the start of each semester, and take any UWA student in any degree. No experience required.</p>
       </div>
       <div style="flex: 0 1 auto; display: flex; flex-wrap: wrap; gap: 12px">
-        <a href="join.html" style="padding: 14px 24px; background: oklch(0.8 0.16 78); color: oklch(0.12 0 0); border-radius: 999px; font-weight: 600; font-size: 15px" style-hover="background: oklch(0.88 0.13 82); color: oklch(0.12 0 0)">Apply to join</a>
-        <a href="team.html" style="padding: 14px 24px; border: 1px solid oklch(0.34 0 0); color: oklch(0.97 0 0); border-radius: 999px; font-weight: 600; font-size: 15px" style-hover="border-color: oklch(0.8 0.16 78); color: oklch(0.97 0 0)">See the sub-teams</a>
+        <a href="join" style="padding: 14px 24px; background: oklch(0.8 0.16 78); color: oklch(0.12 0 0); border-radius: 999px; font-weight: 600; font-size: 15px" style-hover="background: oklch(0.88 0.13 82); color: oklch(0.12 0 0)">Apply to join</a>
+        <a href="team" style="padding: 14px 24px; border: 1px solid oklch(0.34 0 0); color: oklch(0.97 0 0); border-radius: 999px; font-weight: 600; font-size: 15px" style-hover="border-color: oklch(0.8 0.16 78); color: oklch(0.97 0 0)">See the sub-teams</a>
       </div>
     </div>
   </section>
@@ -140,19 +150,19 @@
       </div>
       <div style="flex: 1 1 180px; min-width: 0; display: flex; flex-direction: column; gap: 9px; font-size: 14px">
         <p style="margin: 0 0 4px; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(0.66 0 0)">Club</p>
-        <a href="index.html" style="color: oklch(0.72 0 0)" style-hover="color: oklch(0.97 0 0)">Home</a>
-        <a href="missions.html" style="color: oklch(0.72 0 0)" style-hover="color: oklch(0.97 0 0)">Missions</a>
-        <a href="engines.html" style="color: oklch(0.72 0 0)" style-hover="color: oklch(0.97 0 0)">Engines</a>
-        <a href="team.html" style="color: oklch(0.72 0 0)" style-hover="color: oklch(0.97 0 0)">Team</a>
+        <a href="./" style="color: oklch(0.72 0 0)" style-hover="color: oklch(0.97 0 0)">Home</a>
+        <a href="missions" style="color: oklch(0.72 0 0)" style-hover="color: oklch(0.97 0 0)">Missions</a>
+        <a href="engines" style="color: oklch(0.72 0 0)" style-hover="color: oklch(0.97 0 0)">Engines</a>
+        <a href="team" style="color: oklch(0.72 0 0)" style-hover="color: oklch(0.97 0 0)">Team</a>
       </div>
       <div style="flex: 1 1 180px; min-width: 0; display: flex; flex-direction: column; gap: 9px; font-size: 14px">
         <p style="margin: 0 0 4px; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(0.66 0 0)">Get involved</p>
-        <a href="join.html" style="color: oklch(0.72 0 0)" style-hover="color: oklch(0.97 0 0)">Join</a>
-        <a href="certifications.html" style="color: oklch(0.72 0 0)" style-hover="color: oklch(0.97 0 0)">Certifications</a>
-        <a href="calendar.html" style="color: oklch(0.72 0 0)" style-hover="color: oklch(0.97 0 0)">Calendar</a>
-        <a href="outreach.html" style="color: oklch(0.72 0 0)" style-hover="color: oklch(0.97 0 0)">Outreach</a>
-        <a href="sponsors.html" style="color: oklch(0.72 0 0)" style-hover="color: oklch(0.97 0 0)">Sponsors</a>
-        <a href="contact.html" style="color: oklch(0.72 0 0)" style-hover="color: oklch(0.97 0 0)">Contact</a>
+        <a href="join" style="color: oklch(0.72 0 0)" style-hover="color: oklch(0.97 0 0)">Join</a>
+        <a href="certifications" style="color: oklch(0.72 0 0)" style-hover="color: oklch(0.97 0 0)">Certifications</a>
+        <a href="calendar" style="color: oklch(0.72 0 0)" style-hover="color: oklch(0.97 0 0)">Calendar</a>
+        <a href="outreach" style="color: oklch(0.72 0 0)" style-hover="color: oklch(0.97 0 0)">Outreach</a>
+        <a href="sponsors" style="color: oklch(0.72 0 0)" style-hover="color: oklch(0.97 0 0)">Sponsors</a>
+        <a href="contact" style="color: oklch(0.72 0 0)" style-hover="color: oklch(0.97 0 0)">Contact</a>
       </div>
       <div style="flex: 1 1 180px; min-width: 0; display: flex; flex-direction: column; gap: 9px; font-size: 14px">
         <p style="margin: 0 0 4px; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(0.66 0 0)">Follow</p>
@@ -261,10 +271,10 @@ class Component extends DCLogic {
         }
       ],
       socials: [
-        { name: "Instagram", handle: "@uwa_aerospace", href: "https://www.instagram.com/uwa_aerospace/" },
-        { name: "LinkedIn", handle: "uwa-aerospace", href: "https://au.linkedin.com/company/uwa-aerospace" },
-        { name: "Facebook", handle: "UWAAerospace", href: "https://www.facebook.com/UWAAerospace" },
-        { name: "YouTube", handle: "UWA Aerospace", href: "https://www.youtube.com/channel/UCclC8khZgZnaeF4LLJj9KKg" }
+        { name: "Instagram", icon: "assets/images/site/social-instagram.svg", handle: "@uwa_aerospace", href: "https://www.instagram.com/uwa_aerospace/" },
+        { name: "LinkedIn", icon: "assets/images/site/social-linkedin.svg", handle: "uwa-aerospace", href: "https://au.linkedin.com/company/uwa-aerospace" },
+        { name: "Facebook", icon: "assets/images/site/social-facebook.svg", handle: "UWAAerospace", href: "https://www.facebook.com/UWAAerospace" },
+        { name: "YouTube", icon: "assets/images/site/social-youtube.svg", handle: "UWA Aerospace", href: "https://www.youtube.com/channel/UCclC8khZgZnaeF4LLJj9KKg" }
       ],
       details: [
         { k: "Address", v: "The University of Western Australia, 35 Stirling Highway, Perth WA 6009" },
