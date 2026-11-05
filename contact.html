@@ -10,6 +10,7 @@
 <body>
 <x-dc>
 <helmet>
+<style>@media (max-width: 899px){header{gap:8px !important}header > a:first-child img{width:40px !important;height:40px !important}header > a:first-child span{font-size:15px !important}[data-nav-join]{margin-left:auto;padding:7px 12px !important;font-size:12.5px !important}}@media (max-width: 359px){header > a:first-child span{display:none}}</style>
 <title>Contact | UWA Aerospace</title>
 <meta name="description" content="Get in touch with UWA Aerospace, follow our launches, or find us on campus in Perth." />
 <link rel="canonical" href="https://uwaaerospace.org/contact" />
@@ -53,7 +54,7 @@
       <img src="assets/images/site/logo-uwaa-mark.png" alt="UWA Aerospace" style="width: 54px; height: 54px; object-fit: contain" />
       <span style="font-weight: 700; font-size: 18px; letter-spacing: 0.02em; text-transform: uppercase">UWA Aerospace</span>
     </a>
-    <nav style="display: flex; align-items: center; gap: clamp(10px, 1.5vw, 22px); font-size: 13.5px; font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; flex-wrap: wrap">
+    <nav data-nav-links="" style="display: flex; align-items: center; gap: clamp(10px, 1.5vw, 22px); font-size: 13.5px; font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; flex-wrap: wrap; margin-left: auto">
       <a href="missions" style="color: oklch(0.86 0 0)" style-hover="color: oklch(1 0 0)">Missions</a>
       <a href="engines" style="color: oklch(0.86 0 0)" style-hover="color: oklch(1 0 0)">Engines</a>
       <a href="certifications" style="color: oklch(0.86 0 0)" style-hover="color: oklch(1 0 0)">Certifications</a>
@@ -62,8 +63,8 @@
       <a href="calendar" style="color: oklch(0.86 0 0)" style-hover="color: oklch(1 0 0)">Calendar</a>
       <a href="sponsors" style="color: oklch(0.86 0 0)" style-hover="color: oklch(1 0 0)">Sponsors</a>
       <a href="contact" style="color: oklch(0.82 0.15 80)" style-hover="color: oklch(0.9 0.11 84)">Contact</a>
-      <a href="join" style="padding: 8px 15px; white-space: nowrap; flex-shrink: 0; line-height: 1.2; background: oklch(0.8 0.16 78); color: oklch(0.12 0 0); border-radius: 999px; font-weight: 600" style-hover="background: oklch(0.88 0.13 82); color: oklch(0.12 0 0)">Join</a>
     </nav>
+    <a data-nav-join="" href="join" style="padding: 8px 15px; white-space: nowrap; flex-shrink: 0; line-height: 1.2; font-size: 13.5px; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; background: oklch(0.8 0.16 78); color: oklch(0.12 0 0); border-radius: 999px; font-weight: 600" style-hover="background: oklch(0.88 0.13 82); color: oklch(0.12 0 0)">Join</a>
   </header>
 
   <section style="padding: clamp(48px, 7vw, 104px) clamp(18px, 4vw, 64px) clamp(36px, 4vw, 60px); max-width: 1440px; margin: 0 auto">
