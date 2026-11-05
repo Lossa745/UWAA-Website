@@ -276,7 +276,10 @@ class Component extends DCLogic {
       ["PIFF", "L1", "cert-l1-piff-web.jpg"],
       ["Deezus", "L1", "cert-l1-deezus-web.jpg"],
       ["Gargantua", "L1", "cert-l1-gargantua-web.jpg"],
-      ["Sally", "L1", "cert-l1-sally-web.jpg"]
+      ["Sally", "L1", "cert-l1-sally-web.jpg"],
+      ["Elphaba", "L1", "cert-l1-elphaba-web.jpg"],
+      ["Maximin", "L1", "cert-l1-maximin-web.jpg"],
+      ["Lipstick", "L1", "cert-l1-lipstick-web.jpg"]
     ];
     return {
       facts: [
@@ -285,7 +288,7 @@ class Component extends DCLogic {
         { value: "Apr–Sep", label: "Launch season" },
         { value: String(rockets.length), label: "Rockets certified" }
       ],
-      gallery: rockets.filter(r => ["Phoenix", "STRAF", "Lancelot"].includes(r[0])).map(([name, level, path], i) => ({
+      gallery: rockets.filter(r => ["Phoenix", "STRAF", "Lancelot", "Elphaba", "Maximin", "Lipstick"].includes(r[0])).map(([name, level, path], i) => ({
         name,
         level,
         imgEl: this.img(base + path, name + " " + level + " certification rocket", { width: "100%", aspectRatio: "4 / 5", objectFit: "cover", display: "block" })
