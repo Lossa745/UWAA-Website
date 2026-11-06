@@ -70,7 +70,7 @@
   <section style="padding: clamp(48px, 7vw, 104px) clamp(18px, 4vw, 64px) clamp(36px, 4vw, 60px); max-width: 1440px; margin: 0 auto">
     <p data-reveal="" style="margin: 0 0 20px; font-size: 14px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: oklch(0.84 0.14 80)">Certification Program</p>
     <h1 data-reveal="" style="margin: 0; font-size: clamp(36px, 7vw, 82px); line-height: 0.98; letter-spacing: -0.035em; font-weight: 800; max-width: 18ch; text-wrap: balance">Build a rocket, earn your certification</h1>
-    <p data-reveal="" style="margin: 24px 0 0; font-size: clamp(16px, 1.4vw, 19px); line-height: 1.6; color: oklch(0.8 0 0); max-width: 62ch">The UWA Aerospace Certification Program is designed to help members achieve their Level 1 and/or Level 2 Tripoli Rocketry Certification. With this certification, you are licensed to launch high-powered rockets with motors up to a specified size. The program centres on building your own rocket and successfully launching and recovering it on one of our scheduled launch days.</p>
+    <p data-reveal="" style="margin: 24px 0 0; font-size: clamp(16px, 1.4vw, 19px); line-height: 1.6; color: oklch(0.8 0 0); max-width: 62ch">The UWA Aerospace Certification Program helps members earn their Level 1 or Level 2 certification with the Tripoli Rocketry Association. Once certified, you can buy and fly high-powered rocket motors up to your certification level. The program centres on building your own rocket and successfully launching and recovering it at a scheduled WARS launch day.</p>
     <p data-reveal="" style="margin: 16px 0 0; font-size: 15px; line-height: 1.6; color: oklch(0.8 0 0); max-width: 62ch">Certification is open to UWA Aerospace members only. <a href="join" style="color: oklch(0.84 0.14 80); font-weight: 600" style-hover="color: oklch(0.92 0.1 85)">Become a member</a> to get started.</p>
     <div data-reveal="" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 150px), 1fr)); gap: 1px; background: oklch(0.32 0.012 80); border: 1px solid oklch(0.32 0.012 80); border-radius: 6px; overflow: hidden; margin-top: clamp(28px, 4vw, 48px)">
       <sc-for list="{{ facts }}" as="f" hint-placeholder-count="4">
@@ -82,28 +82,75 @@
     </div>
   </section>
 
-  <section id="how" style="padding: clamp(48px, 7vw, 104px) clamp(18px, 4vw, 64px); max-width: 1440px; margin: 0 auto; border-top: 1px solid oklch(0.24 0 0)">
-    <p data-reveal="" style="margin: 0 0 18px; font-size: 14px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: oklch(0.84 0.14 80)">01 · How it works</p>
-    <h2 data-reveal="" style="margin: 0 0 clamp(26px, 4vw, 44px); font-size: clamp(28px, 3.4vw, 44px); line-height: 1.08; letter-spacing: -0.025em; font-weight: 700; max-width: 24ch">From first build to flight</h2>
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, max(280px, 30%)), 1fr)); gap: 1px; background: oklch(0.32 0.012 80); border: 1px solid oklch(0.32 0.012 80); border-radius: 6px; overflow: hidden">
-      <sc-for list="{{ steps }}" as="s" hint-placeholder-count="6">
-        <div data-reveal="" style="background: linear-gradient(180deg, oklch(0.215 0.01 80), oklch(0.175 0.004 80)); padding: clamp(22px, 2.4vw, 32px); display: flex; flex-direction: column; gap: 12px; transition: box-shadow 0.2s ease, background 0.2s ease" style-hover="box-shadow: inset 0 2px 0 oklch(0.82 0.15 80); background: linear-gradient(180deg, oklch(0.24 0.014 80), oklch(0.19 0.006 80))">
-          <p style="margin: 0; font-size: 11px; color: oklch(0.82 0.15 80)">{{ s.no }}</p>
-          <h3 style="margin: 0; font-size: 19px; font-weight: 600; letter-spacing: -0.01em">{{ s.title }}</h3>
-          <p style="margin: 0; font-size: 14.5px; line-height: 1.6; color: oklch(0.74 0 0)">{{ s.body }}</p>
-        </div>
+  <section id="timeline" style="padding: clamp(48px, 7vw, 104px) clamp(18px, 4vw, 64px); max-width: 1440px; margin: 0 auto; border-top: 1px solid oklch(0.24 0 0)">
+    <p data-reveal="" style="margin: 0 0 18px; font-size: 14px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: oklch(0.84 0.14 80)">01 · Step by step</p>
+    <h2 data-reveal="" style="margin: 0 0 clamp(26px, 4vw, 44px); font-size: clamp(28px, 3.4vw, 44px); line-height: 1.08; letter-spacing: -0.025em; font-weight: 700; max-width: 24ch">From joining to certified</h2>
+    <ol style="margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 210px), 1fr)); gap: clamp(18px, 2vw, 28px)">
+      <sc-for list="{{ timeline }}" as="t" hint-placeholder-count="6">
+        <li data-reveal="" style="border-top: 2px solid oklch(0.82 0.15 80); padding-top: 16px; display: flex; flex-direction: column; gap: 8px">
+          <p style="margin: 0; font-size: 11px; letter-spacing: 0.08em; color: oklch(0.82 0.15 80)">{{ t.no }}</p>
+          <h3 style="margin: 0; font-size: 18px; font-weight: 600; letter-spacing: -0.01em">{{ t.title }}</h3>
+          <p style="margin: 0; font-size: 14.5px; line-height: 1.6; color: oklch(0.74 0 0); text-wrap: pretty">{{ t.body }}</p>
+        </li>
       </sc-for>
+    </ol>
+  </section>
+
+  <section id="cost" style="padding: clamp(48px, 7vw, 104px) clamp(18px, 4vw, 64px); max-width: 1440px; margin: 0 auto; border-top: 1px solid oklch(0.24 0 0)">
+    <p data-reveal="" style="margin: 0 0 18px; font-size: 14px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: oklch(0.84 0.14 80)">02 · Cost</p>
+    <h2 data-reveal="" style="margin: 0 0 16px; font-size: clamp(28px, 3.4vw, 44px); line-height: 1.08; letter-spacing: -0.025em; font-weight: 700; max-width: 22ch">What it costs</h2>
+    <p data-reveal="" style="margin: 0 0 clamp(26px, 4vw, 44px); font-size: 16px; line-height: 1.6; color: oklch(0.78 0 0); max-width: 56ch">Motor prices and membership fees change each year, so ask us for this year's figures before you start.</p>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: clamp(14px, 1.6vw, 22px)">
+      <div data-reveal="" style="border: 1px solid oklch(0.32 0.012 80); border-radius: 6px; padding: clamp(22px, 2.4vw, 32px); background: linear-gradient(180deg, oklch(0.215 0.01 80), oklch(0.175 0.004 80)); box-shadow: inset 0 1px 0 oklch(1 0 0 / 0.05)">
+        <h3 style="margin: 0 0 14px; font-size: 17px; font-weight: 600">You pay for</h3>
+        <ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 13px">
+          <sc-for list="{{ costPay }}" as="c" hint-placeholder-count="4">
+            <li style="display: flex; gap: 12px; font-size: 14.5px; line-height: 1.55; color: oklch(0.76 0 0)">
+              <span style="color: oklch(0.82 0.15 80); font-size: 12px; padding-top: 2px">→</span>
+              <span>{{ c }}</span>
+            </li>
+          </sc-for>
+        </ul>
+      </div>
+      <div data-reveal="" style="border: 1px solid oklch(0.32 0.012 80); border-radius: 6px; padding: clamp(22px, 2.4vw, 32px); background: linear-gradient(180deg, oklch(0.215 0.01 80), oklch(0.175 0.004 80)); box-shadow: inset 0 1px 0 oklch(1 0 0 / 0.05)">
+        <h3 style="margin: 0 0 14px; font-size: 17px; font-weight: 600">The club provides</h3>
+        <ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 13px">
+          <sc-for list="{{ costClub }}" as="c" hint-placeholder-count="4">
+            <li style="display: flex; gap: 12px; font-size: 14.5px; line-height: 1.55; color: oklch(0.76 0 0)">
+              <span style="color: oklch(0.82 0.15 80); font-size: 12px; padding-top: 2px">→</span>
+              <span>{{ c }}</span>
+            </li>
+          </sc-for>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" style="padding: clamp(48px, 7vw, 104px) clamp(18px, 4vw, 64px); max-width: 1440px; margin: 0 auto; border-top: 1px solid oklch(0.24 0 0)">
+    <div style="display: flex; flex-wrap: wrap; gap: clamp(28px, 5vw, 72px); align-items: start">
+      <div style="flex: 1 1 260px; min-width: 0">
+        <p data-reveal="" style="margin: 0 0 18px; font-size: 14px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: oklch(0.84 0.14 80)">03 · FAQ</p>
+        <h2 data-reveal="" style="margin: 0; font-size: clamp(28px, 3.4vw, 44px); line-height: 1.08; letter-spacing: -0.025em; font-weight: 700; max-width: 16ch">Common questions</h2>
+      </div>
+      <div style="flex: 2 1 480px; min-width: 0; display: flex; flex-direction: column; border-top: 1px solid oklch(0.3 0 0)">
+        <sc-for list="{{ faq }}" as="q" hint-placeholder-count="6">
+          <details data-reveal="" style="border-bottom: 1px solid oklch(0.3 0 0)">
+            <summary style="list-style: none; cursor: pointer; padding: 20px 0; display: flex; gap: 16px; justify-content: space-between; align-items: baseline; font-size: 17px; font-weight: 600" style-hover="color: oklch(0.84 0.14 80)"><span>{{ q.q }}</span><span style="color: oklch(0.82 0.15 80); font-weight: 400">+</span></summary>
+            <p style="margin: 0 0 22px; font-size: 15px; line-height: 1.65; color: oklch(0.76 0 0); max-width: 64ch; text-wrap: pretty">{{ q.a }}</p>
+          </details>
+        </sc-for>
+      </div>
     </div>
   </section>
 
   <section id="rockets" style="padding: clamp(48px, 7vw, 104px) clamp(18px, 4vw, 64px); max-width: 1440px; margin: 0 auto; border-top: 1px solid oklch(0.24 0 0)">
     <div style="display: flex; flex-wrap: wrap; gap: 16px; align-items: baseline; justify-content: space-between; margin-bottom: clamp(24px, 3vw, 40px)">
       <div>
-        <p data-reveal="" style="margin: 0 0 18px; font-size: 14px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: oklch(0.84 0.14 80)">02 · Certified rockets</p>
+        <p data-reveal="" style="margin: 0 0 18px; font-size: 14px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: oklch(0.84 0.14 80)">04 · Certified rockets</p>
         <h2 data-reveal="" style="margin: 0; font-size: clamp(28px, 3.4vw, 44px); line-height: 1.08; letter-spacing: -0.025em; font-weight: 700; max-width: 22ch">Built by our members</h2>
       </div>
     </div>
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: clamp(14px, 1.6vw, 22px)">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, max(260px, 30%)), 1fr)); gap: clamp(14px, 1.6vw, 22px)">
       <sc-for list="{{ gallery }}" as="g" hint-placeholder-count="3">
         <figure data-reveal="" style="margin: 0; display: flex; flex-direction: column; gap: 12px">
           <div style="border-radius: 6px; overflow: hidden; background: oklch(0.175 0 0)">{{ g.imgEl }}</div>
@@ -119,7 +166,7 @@
   <section id="start" style="padding: clamp(48px, 7vw, 104px) clamp(18px, 4vw, 64px); max-width: 1440px; margin: 0 auto; border-top: 1px solid oklch(0.24 0 0)">
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: clamp(28px, 5vw, 72px); align-items: start">
       <div>
-        <p data-reveal="" style="margin: 0 0 18px; font-size: 14px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: oklch(0.84 0.14 80)">03 · Get started</p>
+        <p data-reveal="" style="margin: 0 0 18px; font-size: 14px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: oklch(0.84 0.14 80)">05 · Get started</p>
         <h2 data-reveal="" style="margin: 0 0 18px; font-size: clamp(26px, 3vw, 40px); line-height: 1.1; letter-spacing: -0.025em; font-weight: 700; max-width: 20ch">Start your Level 1</h2>
         <p data-reveal="" style="margin: 0 0 24px; font-size: 16px; line-height: 1.6; color: oklch(0.78 0 0); max-width: 46ch">Launch days run April to September, so builds start in the preceding months. Get in touch and we will put you in the next cohort. <a href="calendar">See launch dates →</a></p>
         <a data-reveal="" href="mailto:executive@uwaaerospace.org" style="display: inline-block; padding: 14px 24px; background: oklch(0.8 0.16 78); color: oklch(0.12 0 0); border-radius: 999px; font-weight: 600; font-size: 15px" style-hover="background: oklch(0.88 0.13 82); color: oklch(0.12 0 0)">Ask about certification</a>
@@ -293,19 +340,39 @@ class Component extends DCLogic {
         level,
         imgEl: this.img(base + path, name + " " + level + " certification rocket", { width: "100%", aspectRatio: "4 / 5", objectFit: "cover", display: "block" })
       })),
-      steps: [
-        { no: "01", title: "Launch Days", body: "Run by the Western Australian Rocketry Society (WARS), there are approximately 10 launch days a year during the launch season (April to September). These launch days provide the only opportunity to launch rockets in WA. Participants take their rockets to these events and launch them under the guidance of our highly skilled and knowledgeable rocketry community." },
-        { no: "02", title: "Certification Process", body: "To obtain certification, you must construct your own rocket and ensure it performs a successful launch and recovery during one of our launch days." },
-        { no: "03", title: "Craftsmanship", body: "The highlight of our program is the hands-on experience. Participants get to create every aspect of their rockets, from rolling their fibreglass body tubes to using CAD for designing and laser cutting fins. You have control over the dimensions and specifications of your rocket." },
-        { no: "04", title: "Building and Painting", body: "Experience the satisfaction of sanding and spray painting your rocket to perfection. Every step of the construction process contributes to your understanding of rocketry principles." },
-        { no: "05", title: "Community Engagement", body: "By attending launch days, participants are immersed in the expertise and knowledge of the rocketry community. You'll gain insights into the intricacies of launching rockets and learn from experienced enthusiasts." },
-        { no: "06", title: "Rewarding Experience", body: "Building and launching your own rocket is an immensely rewarding experience. Completing the certification program not only equips you with the necessary skills but also instils a sense of accomplishment and pride." }
+      timeline: [
+        { no: "01", title: "Join the club", body: "Certification is open to UWA Aerospace members. Join, then tell us you want to certify so we can add you to the next cohort." },
+        { no: "02", title: "Join Tripoli", body: "Become a member of the Tripoli Rocketry Association. Certification is issued by Tripoli, so you need to be a member before you fly." },
+        { no: "03", title: "Design", body: "Design your rocket in CAD and simulate its flight to check it is stable and suits your chosen motor." },
+        { no: "04", title: "Build", body: "Roll the fibreglass body tube, laser cut the fins, assemble the recovery system, then sand and paint, with certified members mentoring you." },
+        { no: "05", title: "Fly", body: "Bring your rocket to a WARS launch day. It is inspected before flight, then launched and recovered under the eyes of a certifying member." },
+        { no: "06", title: "Get certified", body: "After a successful flight and recovery, your paperwork goes to Tripoli and you are certified at that level." }
+      ],
+      costPay: [
+        "Tripoli Rocketry Association membership",
+        "Your certification motor",
+        "Materials",
+        "Any WARS launch day fees"
+      ],
+      costClub: [
+        "Mentoring from members who have already certified",
+        "Help designing and simulating your rocket",
+        "Guidance on the build, from body tube to recovery",
+        "Some flight hardware, such as flight computers and GPS trackers",
+        "A place in a cohort building alongside other members"
+      ],
+      faq: [
+        { q: "Do I need any experience?", a: "No. Most members certify with no rocketry background. Members who have already certified mentor you through the design and build." },
+        { q: "Who issues the certification?", a: "The Tripoli Rocketry Association, not the club. The club runs the program that gets you ready, and WARS runs the launch days where you fly." },
+        { q: "What is the difference between Level 1 and Level 2?", a: "Level 1 lets you fly H and I impulse motors. Level 2 covers J, K and L motors and adds a written exam. You need to hold Level 1 before you go for Level 2." },
+        { q: "How long does it take?", a: "It depends on your build and the launch calendar. Launch days run April to September, so most members build in the months before the season starts." },
+        { q: "What happens if my flight fails?", a: "You can fix the problem and try again at a later launch day. Certification needs one successful flight and recovery." }
       ],
       notes: [
         "No prior experience is needed. You are mentored through the build by members who have already certified.",
         "Certification is issued by Tripoli Rocketry Association, not by the club.",
         "Launch days are run by WARS and are the only opportunity to launch in WA.",
-        "Build timeline, cost and motor class vary by cohort, so ask us."
+        "Build timeline and motor class vary by cohort, so ask us."
       ]
     };
   }
