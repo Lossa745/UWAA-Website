@@ -157,7 +157,7 @@
     header.appendChild(btn);
     let open = false;
     const apply = () => {
-      const narrow = innerWidth < 900;
+      const narrow = innerWidth < 1150;
       btn.style.display = narrow ? "flex" : "none";
       btn.textContent = open ? "Close" : "Menu";
       btn.setAttribute("aria-expanded", String(open));

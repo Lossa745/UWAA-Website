@@ -10,7 +10,7 @@
 <body>
 <x-dc>
 <helmet>
-<style>@media (max-width: 1099px){#work-grid{grid-template-columns:repeat(2,minmax(0,1fr)) !important}}@media (max-width: 599px){#work-grid{grid-template-columns:minmax(0,1fr) !important}}@media (max-width: 899px){header{gap:8px !important}header > a:first-child img{width:40px !important;height:40px !important}header > a:first-child span{font-size:15px !important}[data-nav-join]{margin-left:auto;padding:7px 12px !important;font-size:12.5px !important}}@media (max-width: 359px){header > a:first-child span{display:none}}</style>
+<style>@media (max-width: 1099px){#work-grid,#parts-grid,#campaign-grid{grid-template-columns:repeat(2,minmax(0,1fr)) !important}}@media (max-width: 599px){#work-grid,#parts-grid,#campaign-grid{grid-template-columns:minmax(0,1fr) !important}}@media (max-width: 1149px){header{gap:10px !important}header > a:first-child img{width:40px !important;height:40px !important}header > a:first-child span{font-size:15px !important}[data-nav-join]{margin-left:auto;padding:7px 12px !important;font-size:12.5px !important}}@media (max-width: 359px){header > a:first-child span{display:none}}</style>
 <title>Hybrid Engines | UWA Aerospace</title>
 <meta name="description" content="UWA Aerospace is developing its own hybrid rocket engines, from injector design to static fire testing." />
 <link rel="canonical" href="https://uwaaerospace.org/engines" />
@@ -54,42 +54,48 @@
       <img src="assets/images/site/logo-uwaa-mark.png" alt="UWA Aerospace" style="width: 54px; height: 54px; object-fit: contain" />
       <span style="font-weight: 700; font-size: 18px; letter-spacing: 0.02em; text-transform: uppercase">UWA Aerospace</span>
     </a>
-    <nav data-nav-links="" style="display: flex; align-items: center; gap: clamp(10px, 1.5vw, 22px); font-size: 13.5px; font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; flex-wrap: wrap; margin-left: auto">
+    <nav aria-label="Main" data-nav-links="" style="display: flex; align-items: center; gap: clamp(10px, 1.5vw, 22px); font-size: 13.5px; font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; flex-wrap: wrap; margin-left: auto">
+      <a href="team" style="color: oklch(0.86 0 0)" style-hover="color: oklch(1 0 0)">Team</a>
       <a href="missions" style="color: oklch(0.86 0 0)" style-hover="color: oklch(1 0 0)">Missions</a>
       <a href="engines" style="color: oklch(0.82 0.15 80)" style-hover="color: oklch(0.9 0.11 84)">Engines</a>
       <a href="certifications" style="color: oklch(0.86 0 0)" style-hover="color: oklch(1 0 0)">Certifications</a>
-      <a href="team" style="color: oklch(0.86 0 0)" style-hover="color: oklch(1 0 0)">Team</a>
-      <a href="outreach" style="color: oklch(0.86 0 0)" style-hover="color: oklch(1 0 0)">Outreach</a>
       <a href="calendar" style="color: oklch(0.86 0 0)" style-hover="color: oklch(1 0 0)">Calendar</a>
+      <a href="outreach" style="color: oklch(0.86 0 0)" style-hover="color: oklch(1 0 0)">Outreach</a>
       <a href="sponsors" style="color: oklch(0.86 0 0)" style-hover="color: oklch(1 0 0)">Sponsors</a>
       <a href="contact" style="color: oklch(0.86 0 0)" style-hover="color: oklch(1 0 0)">Contact</a>
     </nav>
-    <a data-nav-join="" href="join" style="padding: 8px 15px; white-space: nowrap; flex-shrink: 0; line-height: 1.2; font-size: 13.5px; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; background: oklch(0.8 0.16 78); color: oklch(0.12 0 0); border-radius: 999px; font-weight: 600" style-hover="background: oklch(0.88 0.13 82); color: oklch(0.12 0 0)">Join</a>
+    <a data-nav-join="" href="join" style="display: inline-flex; align-items: center; gap: 8px; padding: 10px 18px; white-space: nowrap; flex-shrink: 0; line-height: 1.2; font-size: 13.5px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; background: oklch(0.8 0.16 78); color: oklch(0.12 0 0); border-radius: 999px; box-shadow: 0 0 0 0 oklch(0.8 0.16 78 / 0); transition: background 0.2s ease, box-shadow 0.2s ease" style-hover="background: oklch(0.88 0.13 82); color: oklch(0.12 0 0); box-shadow: 0 0 0 4px oklch(0.8 0.16 78 / 0.22)">Join</a>
   </header>
 
   <section style="padding: clamp(48px, 7vw, 104px) clamp(18px, 4vw, 64px) clamp(36px, 4vw, 56px); max-width: 1440px; margin: 0 auto">
     <p data-reveal="" style="margin: 0 0 20px; font-size: 14px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: oklch(0.84 0.14 80)">Hybrid engine program</p>
     <h1 data-reveal="" style="margin: 0; font-size: clamp(36px, 7vw, 82px); line-height: 0.98; letter-spacing: -0.035em; font-weight: 800; max-width: 19ch; text-wrap: balance">Building our own engines</h1>
-    <p data-reveal="" style="margin: 24px 0 0; font-size: clamp(16px, 1.4vw, 19px); line-height: 1.6; color: oklch(0.8 0 0); max-width: 60ch">Most student teams fly commercially made motors. We are designing our own hybrid rocket engines, and members do the engineering themselves: injector and combustion chamber design, the oxidiser feed system and the test stand.</p>
+    <p data-reveal="" style="margin: 24px 0 0; font-size: clamp(16px, 1.4vw, 19px); line-height: 1.6; color: oklch(0.8 0 0); max-width: 60ch">Most student rocketry teams fly motors bought off the shelf. We are designing our own hybrid rocket engine instead, and members do the engineering: they design the injector and combustion chamber, build the oxidiser feed system and set up the test stand.</p>
     <p data-reveal="" style="margin: 20px 0 0; padding: 14px 18px; border: 1px solid oklch(0.34 0 0); border-radius: 6px; background: oklch(0.17 0 0); font-size: 11.5px; letter-spacing: 0.06em; text-transform: uppercase; color: oklch(0.84 0.14 80); max-width: 60ch">Status: in development, working towards our first static fire.</p>
   </section>
 
   <section id="what" style="padding: clamp(40px, 6vw, 88px) clamp(18px, 4vw, 64px); max-width: 1440px; margin: 0 auto; border-top: 1px solid oklch(0.24 0 0)">
-    <div style="display: flex; flex-wrap: wrap; gap: clamp(28px, 5vw, 72px)">
+    <div style="display: flex; flex-wrap: wrap; gap: clamp(20px, 5vw, 72px); margin: 0 0 clamp(28px, 3.5vw, 48px)">
       <div data-reveal="" style="flex: 1 1 300px; min-width: 0">
         <p style="margin: 0 0 16px; font-size: 14px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: oklch(0.84 0.14 80)">01 · What a hybrid is</p>
-        <h2 style="margin: 0 0 20px; font-size: clamp(26px, 3.2vw, 42px); line-height: 1.08; letter-spacing: -0.025em; font-weight: 700; max-width: 20ch">How a hybrid engine works</h2>
-        <p style="margin: 0 0 18px; font-size: 16px; line-height: 1.65; color: oklch(0.8 0 0); max-width: 48ch">A solid motor holds its fuel and oxidiser pre-mixed in one casting: light it and it burns to completion. A liquid engine feeds both propellants in as liquids, which adds significant plumbing complexity.</p>
-        <p style="margin: 0; font-size: 16px; line-height: 1.65; color: oklch(0.8 0 0); max-width: 48ch">A hybrid sits between them. The fuel is a solid grain cast into the chamber; the oxidiser is stored separately as a liquid or gas and fed in through an injector. Because the two are never mixed until they meet in the chamber, the motor cannot sustain combustion on its own.</p>
+        <h2 style="margin: 0; font-size: clamp(26px, 3.2vw, 42px); line-height: 1.08; letter-spacing: -0.025em; font-weight: 700; max-width: 20ch">How a hybrid engine works</h2>
       </div>
-      <div data-reveal="" style="flex: 1 1 280px; min-width: 0; display: flex; flex-direction: column; gap: clamp(10px, 1.2vw, 14px); align-self: flex-start">
-        <sc-for list="{{ anatomy }}" as="a" hint-placeholder-count="4">
-          <div style="border: 1px solid oklch(0.32 0.012 80); border-radius: 6px; overflow: hidden; background: linear-gradient(180deg, oklch(0.215 0.01 80), oklch(0.175 0.004 80)); padding: 20px 22px; transition: box-shadow 0.2s ease, background 0.2s ease" style-hover="box-shadow: inset 0 2px 0 oklch(0.82 0.15 80); background: linear-gradient(180deg, oklch(0.24 0.014 80), oklch(0.19 0.006 80))">
-            <p style="margin: 0 0 7px; font-size: 10.5px; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(0.82 0.15 80)">{{ a.part }}</p>
-            <p style="margin: 0; font-size: 14.5px; line-height: 1.6; color: oklch(0.78 0 0)">{{ a.body }}</p>
+      <div data-reveal="" style="flex: 1.2 1 340px; min-width: 0">
+        <p style="margin: 0 0 18px; font-size: 16px; line-height: 1.65; color: oklch(0.8 0 0); max-width: 56ch">A solid motor holds its fuel and oxidiser pre-mixed in one casting: light it and it burns to completion. A liquid engine feeds both propellants in as liquids, which adds significant plumbing complexity.</p>
+        <p style="margin: 0; font-size: 16px; line-height: 1.65; color: oklch(0.8 0 0); max-width: 56ch">A hybrid sits between them. The fuel is a solid grain cast into the chamber; the oxidiser is stored separately as a liquid or gas and fed in through an injector. Because the two are never mixed until they meet in the chamber, the motor cannot sustain combustion on its own.</p>
+      </div>
+    </div>
+    <div id="parts-grid" style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(10px, 1.2vw, 14px)">
+      <sc-for list="{{ anatomy }}" as="a" hint-placeholder-count="4">
+        <div data-reveal="" style="border: 1px solid oklch(0.32 0.012 80); border-radius: 6px; background: linear-gradient(180deg, oklch(0.215 0.01 80), oklch(0.175 0.004 80)); padding: clamp(22px, 2.4vw, 30px); min-width: 0; display: flex; flex-direction: column; gap: 10px; transition: box-shadow 0.2s ease, background 0.2s ease" style-hover="box-shadow: inset 0 2px 0 oklch(0.82 0.15 80); background: linear-gradient(180deg, oklch(0.24 0.014 80), oklch(0.19 0.006 80))">
+          <div style="display: flex; align-items: center; gap: 12px; margin: 0 0 8px">
+            <span style="font-size: 34px; font-weight: 700; letter-spacing: -0.03em; line-height: 1; color: oklch(0.82 0.15 80)">{{ a.no }}</span>
+            <span style="flex: 1; height: 1px; background: linear-gradient(90deg, oklch(0.82 0.15 80 / 0.6), oklch(0.32 0.012 80))"></span>
           </div>
-        </sc-for>
-      </div>
+          <h3 style="margin: 0; font-size: 18.5px; font-weight: 700; letter-spacing: -0.015em">{{ a.part }}</h3>
+          <p style="margin: 0; font-size: 14.5px; line-height: 1.6; color: oklch(0.76 0 0)">{{ a.body }}</p>
+        </div>
+      </sc-for>
     </div>
   </section>
 
@@ -110,7 +116,7 @@
   <section id="work" style="padding: clamp(40px, 6vw, 88px) clamp(18px, 4vw, 64px); max-width: 1440px; margin: 0 auto; border-top: 1px solid oklch(0.24 0 0)">
     <p data-reveal="" style="margin: 0 0 16px; font-size: 14px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: oklch(0.84 0.14 80)">03 · The work</p>
     <h2 data-reveal="" style="margin: 0 0 16px; font-size: clamp(26px, 3.2vw, 42px); line-height: 1.08; letter-spacing: -0.025em; font-weight: 700; max-width: 24ch">What we're working on</h2>
-    <p data-reveal="" style="margin: 0 0 clamp(24px, 3vw, 40px); font-size: 15.5px; line-height: 1.6; color: oklch(0.76 0 0); max-width: 54ch">Most members join with no propulsion background. The work splits into four areas, and because the program is new, members work across all of them and help set how the engine is designed and tested.</p>
+    <p data-reveal="" style="margin: 0 0 clamp(24px, 3vw, 40px); font-size: 15.5px; line-height: 1.6; color: oklch(0.76 0 0); max-width: 54ch">Most members join with no propulsion background. The work splits into four areas. Each member takes on a part of the engine and carries it from first calculations through to testing, and because the program is new, members also help set how the engine is designed and tested.</p>
     <div id="work-grid" style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(10px, 1.2vw, 14px)">
       <sc-for list="{{ work }}" as="w" hint-placeholder-count="4">
         <div data-reveal="" style="border: 1px solid oklch(0.32 0.012 80); border-radius: 6px; overflow: hidden; background: linear-gradient(180deg, oklch(0.215 0.01 80), oklch(0.175 0.004 80)); padding: clamp(22px, 2.4vw, 30px); min-width: 0; display: flex; flex-direction: column; gap: 10px; transition: box-shadow 0.2s ease, background 0.2s ease" style-hover="box-shadow: inset 0 2px 0 oklch(0.82 0.15 80); background: linear-gradient(180deg, oklch(0.24 0.014 80), oklch(0.19 0.006 80))">
@@ -129,7 +135,7 @@
   </section>
 
   <section id="stand" style="padding: clamp(40px, 6vw, 88px) clamp(18px, 4vw, 64px); max-width: 1440px; margin: 0 auto; border-top: 1px solid oklch(0.24 0 0)">
-    <div style="display: flex; flex-wrap: wrap; gap: clamp(24px, 4vw, 56px); align-items: center">
+    <div style="display: flex; flex-wrap: wrap; gap: clamp(24px, 4vw, 56px); align-items: flex-start">
       <div data-reveal="" style="flex: 1 1 300px; min-width: 0">
         <p style="margin: 0 0 16px; font-size: 14px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: oklch(0.84 0.14 80)">04 · Test campaigns</p>
         <h2 style="margin: 0 0 18px; font-size: clamp(26px, 3.2vw, 40px); line-height: 1.1; letter-spacing: -0.025em; font-weight: 700; max-width: 20ch">Tested before it flies</h2>
@@ -139,7 +145,54 @@
           <a href="join" style="padding: 14px 24px; background: oklch(0.8 0.16 78); color: oklch(0.12 0 0); border-radius: 999px; font-weight: 600; font-size: 15px" style-hover="background: oklch(0.88 0.13 82); color: oklch(0.12 0 0)">Join propulsion</a>
         </div>
       </div>
-      <sc-if value="{{ standSlot }}" hint-placeholder-val="{{ false }}"><div data-reveal="" style="flex: 1 1 320px; min-width: 0">{{ standSlot }}</div></sc-if>
+      <div data-reveal="" style="flex: 1 1 320px; min-width: 0; border: 1px solid oklch(0.32 0.012 80); border-radius: 6px; background: linear-gradient(180deg, oklch(0.215 0.01 80), oklch(0.175 0.004 80)); overflow: hidden">
+        <p style="margin: 0; padding: 18px 22px; font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(0.82 0.15 80)">Logged on every fire</p>
+        <sc-for list="{{ measures }}" as="m" hint-placeholder-count="3">
+          <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 6px 16px; padding: 18px 22px; border-top: 1px solid oklch(0.28 0.01 80)">
+            <div style="flex: 1 1 220px; min-width: 0">
+              <p style="margin: 0 0 5px; font-size: 16.5px; font-weight: 700; letter-spacing: -0.01em">{{ m.name }}</p>
+              <p style="margin: 0; font-size: 14.5px; line-height: 1.55; color: oklch(0.76 0 0)">{{ m.body }}</p>
+            </div>
+            <span style="font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(0.7 0 0)">{{ m.sensor }}</span>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+
+    <h3 data-reveal="" style="margin: clamp(40px, 5vw, 64px) 0 clamp(18px, 2vw, 26px); font-size: clamp(20px, 2vw, 26px); font-weight: 700; letter-spacing: -0.02em">How a campaign runs</h3>
+    <div id="campaign-grid" style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(10px, 1.2vw, 14px)">
+      <div data-reveal="" style="border: 1px solid oklch(0.32 0.012 80); border-radius: 6px; overflow: hidden; background: linear-gradient(180deg, oklch(0.215 0.01 80), oklch(0.175 0.004 80)); padding: clamp(22px, 2.4vw, 30px); min-width: 0; display: flex; flex-direction: column; gap: 10px; transition: box-shadow 0.2s ease, background 0.2s ease" style-hover="box-shadow: inset 0 2px 0 oklch(0.82 0.15 80); background: linear-gradient(180deg, oklch(0.24 0.014 80), oklch(0.19 0.006 80))">
+        <div style="display: flex; align-items: center; gap: 12px; margin: 0 0 8px">
+          <span style="font-size: 34px; font-weight: 700; letter-spacing: -0.03em; line-height: 1; color: oklch(0.82 0.15 80)">01</span>
+          <span style="flex: 1; height: 1px; background: linear-gradient(90deg, oklch(0.82 0.15 80 / 0.6), oklch(0.32 0.012 80))"></span>
+        </div>
+        <h4 style="margin: 0; font-size: 18.5px; font-weight: 700; letter-spacing: -0.015em">Cold flow</h4>
+        <p style="margin: 0; font-size: 14.5px; line-height: 1.6; color: oklch(0.76 0 0)">Oxidiser is run through the feed system and injector with no fuel grain loaded, to check flow rates and valve sequencing.</p>
+      </div>
+      <div data-reveal="" style="border: 1px solid oklch(0.32 0.012 80); border-radius: 6px; overflow: hidden; background: linear-gradient(180deg, oklch(0.215 0.01 80), oklch(0.175 0.004 80)); padding: clamp(22px, 2.4vw, 30px); min-width: 0; display: flex; flex-direction: column; gap: 10px; transition: box-shadow 0.2s ease, background 0.2s ease" style-hover="box-shadow: inset 0 2px 0 oklch(0.82 0.15 80); background: linear-gradient(180deg, oklch(0.24 0.014 80), oklch(0.19 0.006 80))">
+        <div style="display: flex; align-items: center; gap: 12px; margin: 0 0 8px">
+          <span style="font-size: 34px; font-weight: 700; letter-spacing: -0.03em; line-height: 1; color: oklch(0.82 0.15 80)">02</span>
+          <span style="flex: 1; height: 1px; background: linear-gradient(90deg, oklch(0.82 0.15 80 / 0.6), oklch(0.32 0.012 80))"></span>
+        </div>
+        <h4 style="margin: 0; font-size: 18.5px; font-weight: 700; letter-spacing: -0.015em">Short fires</h4>
+        <p style="margin: 0; font-size: 14.5px; line-height: 1.6; color: oklch(0.76 0 0)">Brief burns confirm ignition and the instrumentation, and chamber pressure is compared with predictions.</p>
+      </div>
+      <div data-reveal="" style="border: 1px solid oklch(0.32 0.012 80); border-radius: 6px; overflow: hidden; background: linear-gradient(180deg, oklch(0.215 0.01 80), oklch(0.175 0.004 80)); padding: clamp(22px, 2.4vw, 30px); min-width: 0; display: flex; flex-direction: column; gap: 10px; transition: box-shadow 0.2s ease, background 0.2s ease" style-hover="box-shadow: inset 0 2px 0 oklch(0.82 0.15 80); background: linear-gradient(180deg, oklch(0.24 0.014 80), oklch(0.19 0.006 80))">
+        <div style="display: flex; align-items: center; gap: 12px; margin: 0 0 8px">
+          <span style="font-size: 34px; font-weight: 700; letter-spacing: -0.03em; line-height: 1; color: oklch(0.82 0.15 80)">03</span>
+          <span style="flex: 1; height: 1px; background: linear-gradient(90deg, oklch(0.82 0.15 80 / 0.6), oklch(0.32 0.012 80))"></span>
+        </div>
+        <h4 style="margin: 0; font-size: 18.5px; font-weight: 700; letter-spacing: -0.015em">Full-duration fires</h4>
+        <p style="margin: 0; font-size: 14.5px; line-height: 1.6; color: oklch(0.76 0 0)">Full burns are repeated until the thrust curve is consistent from one fire to the next.</p>
+      </div>
+      <div data-reveal="" style="border: 1px solid oklch(0.32 0.012 80); border-radius: 6px; overflow: hidden; background: linear-gradient(180deg, oklch(0.215 0.01 80), oklch(0.175 0.004 80)); padding: clamp(22px, 2.4vw, 30px); min-width: 0; display: flex; flex-direction: column; gap: 10px; transition: box-shadow 0.2s ease, background 0.2s ease" style-hover="box-shadow: inset 0 2px 0 oklch(0.82 0.15 80); background: linear-gradient(180deg, oklch(0.24 0.014 80), oklch(0.19 0.006 80))">
+        <div style="display: flex; align-items: center; gap: 12px; margin: 0 0 8px">
+          <span style="font-size: 34px; font-weight: 700; letter-spacing: -0.03em; line-height: 1; color: oklch(0.82 0.15 80)">04</span>
+          <span style="flex: 1; height: 1px; background: linear-gradient(90deg, oklch(0.82 0.15 80 / 0.6), oklch(0.32 0.012 80))"></span>
+        </div>
+        <h4 style="margin: 0; font-size: 18.5px; font-weight: 700; letter-spacing: -0.015em">Review</h4>
+        <p style="margin: 0; font-size: 14.5px; line-height: 1.6; color: oklch(0.76 0 0)">Results are written up and checked against the design before the engine is considered for a vehicle.</p>
+      </div>
     </div>
   </section>
 
@@ -165,9 +218,9 @@
       <div style="flex: 1 1 180px; min-width: 0; display: flex; flex-direction: column; gap: 9px; font-size: 14px">
         <p style="margin: 0 0 4px; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(0.66 0 0)">Club</p>
         <a href="./" style="color: oklch(0.72 0 0)" style-hover="color: oklch(0.97 0 0)">Home</a>
+        <a href="team" style="color: oklch(0.72 0 0)" style-hover="color: oklch(0.97 0 0)">Team</a>
         <a href="missions" style="color: oklch(0.72 0 0)" style-hover="color: oklch(0.97 0 0)">Missions</a>
         <a href="engines" style="color: oklch(0.72 0 0)" style-hover="color: oklch(0.97 0 0)">Engines</a>
-        <a href="team" style="color: oklch(0.72 0 0)" style-hover="color: oklch(0.97 0 0)">Team</a>
       </div>
       <div style="flex: 1 1 180px; min-width: 0; display: flex; flex-direction: column; gap: 9px; font-size: 14px">
         <p style="margin: 0 0 4px; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(0.66 0 0)">Get involved</p>
@@ -293,13 +346,18 @@ class Component extends DCLogic {
     );
   }
   renderVals() {
-    return {
-      standSlot: null,
-      anatomy: [
+    const anatomy = [
         { part: "Oxidiser tank", body: "Stores the liquid or gaseous oxidiser, held separately from the fuel until the moment of firing." },
         { part: "Injector", body: "Meters the oxidiser into the chamber and sets how well it mixes with the fuel surface. The part that most determines whether the engine performs." },
         { part: "Combustion chamber", body: "Holds the cast solid fuel grain. The oxidiser flows down the port and burns at the grain surface." },
         { part: "Nozzle", body: "Converts chamber pressure into exhaust velocity. Its throat area sets the chamber pressure the whole design is built around." }
+    ].map((x, i) => ({ ...x, no: "0" + (i + 1) }));
+    return {
+      anatomy,
+      measures: [
+        { name: "Thrust", body: "How hard the engine pushes across the burn, measured under the stand.", sensor: "Load cell" },
+        { name: "Chamber pressure", body: "Shows whether the injector and fuel grain behave as predicted.", sensor: "Pressure transducer" },
+        { name: "Feed pressures", body: "Tank and line pressures, showing how the oxidiser feed holds up during the burn.", sensor: "Pressure transducers" }
       ],
       reasons: [
         {
