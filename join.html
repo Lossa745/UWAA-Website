@@ -412,7 +412,7 @@ class Component extends DCLogic {
       form,
       error,
       sent,
-      intro: direct ? "Fill this in and it goes straight to the executive. We reply by email, usually within a week." : "Fill this in and it opens an email to the executive with your answers ready to send. Nothing is submitted until you press send in your mail app.",
+      intro: direct ? "Fill this in and it goes straight to the executive. We reply by email within two weeks." : "Fill this in and it opens an email to the executive with your answers ready to send. Nothing is submitted until you press send in your mail app.",
       submitLabel: direct ? (sending ? "Sending…" : sent ? "Sent" : "Send application") : "Open my application email",
       years: ["Select…", "1st year", "2nd year", "3rd year", "4th year or later", "Postgraduate"],
       hint: teams.length ? teams.length + " sub-team(s) selected" : "Pick at least one sub-team",
