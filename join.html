@@ -10,14 +10,14 @@
 <body>
 <x-dc>
 <helmet>
-<style>@media (max-width: 899px){header{gap:8px !important}header > a:first-child img{width:40px !important;height:40px !important}header > a:first-child span{font-size:15px !important}[data-nav-join]{margin-left:auto;padding:7px 12px !important;font-size:12.5px !important}}@media (max-width: 359px){header > a:first-child span{display:none}}</style>
+<style>@media (max-width: 1099px){#steps-grid{grid-template-columns:repeat(2,minmax(0,1fr)) !important}}@media (max-width: 599px){#steps-grid{grid-template-columns:minmax(0,1fr) !important}}@media (max-width: 899px){header{gap:8px !important}header > a:first-child img{width:40px !important;height:40px !important}header > a:first-child span{font-size:15px !important}[data-nav-join]{margin-left:auto;padding:7px 12px !important;font-size:12.5px !important}}@media (max-width: 359px){header > a:first-child span{display:none}}</style>
 <title>Join | UWA Aerospace</title>
-<meta name="description" content="Join UWA Aerospace. Open to any UWA student, no experience needed." />
+<meta name="description" content="Join UWA Aerospace. Free, open to any UWA student, no experience needed. Apply at the start of each semester." />
 <link rel="canonical" href="https://uwaaerospace.org/join" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="UWA Aerospace" />
 <meta property="og:title" content="Join | UWA Aerospace" />
-<meta property="og:description" content="Join UWA Aerospace. Open to any UWA student, no experience needed." />
+<meta property="og:description" content="Join UWA Aerospace. Free, open to any UWA student, no experience needed. Apply at the start of each semester." />
 <meta property="og:url" content="https://uwaaerospace.org/join" />
 <meta property="og:image" content="https://uwaaerospace.org/assets/images/site/discover.jpg" />
 <meta name="twitter:card" content="summary_large_image" />
@@ -72,14 +72,17 @@
   <section style="padding: clamp(48px, 7vw, 104px) clamp(18px, 4vw, 64px) clamp(32px, 4vw, 52px); max-width: 1440px; margin: 0 auto">
     <p data-reveal="" style="margin: 0 0 20px; font-size: 14px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: oklch(0.84 0.14 80)">Join us</p>
     <h1 data-reveal="" style="margin: 0; font-size: clamp(36px, 7vw, 82px); line-height: 0.98; letter-spacing: -0.035em; font-weight: 800; max-width: 17ch; text-wrap: balance">No experience needed</h1>
-    <p data-reveal="" style="margin: 24px 0 0; font-size: clamp(16px, 1.4vw, 19px); line-height: 1.6; color: oklch(0.8 0 0); max-width: 58ch">We recruit across all six sub-teams at the start of each semester and take any UWA student in any degree, including engineering, science, commerce and design. You get a real task on a real vehicle in your first month.</p>
+    <p data-reveal="" style="margin: 24px 0 0; font-size: clamp(16px, 1.4vw, 19px); line-height: 1.6; color: oklch(0.8 0 0); max-width: 58ch">We recruit across all six sub-teams at the start of each semester and take any UWA student in any degree, including engineering, science, commerce and design. New members design and build real flight hardware alongside experienced members.</p>
   </section>
 
   <section style="padding: 0 clamp(18px, 4vw, 64px) clamp(44px, 6vw, 80px); max-width: 1440px; margin: 0 auto">
-    <div style="display: flex; flex-wrap: wrap; gap: clamp(10px, 1.2vw, 14px)">
-      <sc-for list="{{ steps }}" as="st" hint-placeholder-count="3">
-        <div data-reveal="" style="border: 1px solid oklch(0.32 0.012 80); border-radius: 6px; overflow: hidden; flex: 1 1 240px; min-width: 0; background: linear-gradient(180deg, oklch(0.215 0.01 80), oklch(0.175 0.004 80)); padding: clamp(22px, 2.4vw, 30px); transition: box-shadow 0.2s ease, background 0.2s ease" style-hover="box-shadow: inset 0 2px 0 oklch(0.82 0.15 80); background: linear-gradient(180deg, oklch(0.24 0.014 80), oklch(0.19 0.006 80))">
-          <p style="margin: 0 0 12px; font-size: 11px; color: oklch(0.82 0.15 80)">{{ st.no }}</p>
+    <div id="steps-grid" style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(10px, 1.2vw, 14px)">
+      <sc-for list="{{ steps }}" as="st" hint-placeholder-count="4">
+        <div data-reveal="" style="border: 1px solid oklch(0.32 0.012 80); border-radius: 6px; overflow: hidden; min-width: 0; background: linear-gradient(180deg, oklch(0.215 0.01 80), oklch(0.175 0.004 80)); padding: clamp(22px, 2.4vw, 30px); transition: box-shadow 0.2s ease, background 0.2s ease" style-hover="box-shadow: inset 0 2px 0 oklch(0.82 0.15 80); background: linear-gradient(180deg, oklch(0.24 0.014 80), oklch(0.19 0.006 80))">
+          <div style="display: flex; align-items: center; gap: 12px; margin: 0 0 18px">
+            <span style="font-size: 34px; font-weight: 700; letter-spacing: -0.03em; line-height: 1; color: oklch(0.82 0.15 80)">{{ st.no }}</span>
+            <span style="flex: 1; height: 1px; background: linear-gradient(90deg, oklch(0.82 0.15 80 / 0.6), oklch(0.32 0.012 80))"></span>
+          </div>
           <h2 style="margin: 0 0 8px; font-size: 18px; font-weight: 600; letter-spacing: -0.01em">{{ st.title }}</h2>
           <p style="margin: 0; font-size: 14.5px; line-height: 1.6; color: oklch(0.74 0 0)">{{ st.desc }}</p>
         </div>
@@ -188,6 +191,45 @@
     </div>
   </section>
 
+  <section id="faq" style="padding: clamp(40px, 6vw, 88px) clamp(18px, 4vw, 64px); max-width: 1440px; margin: 0 auto; border-top: 1px solid oklch(0.24 0 0)">
+    <div style="display: flex; flex-wrap: wrap; gap: clamp(28px, 5vw, 72px); align-items: start">
+      <div style="flex: 1 1 260px; min-width: 0">
+        <p data-reveal="" style="margin: 0 0 16px; font-size: 14px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: oklch(0.84 0.14 80)">FAQ</p>
+        <h2 data-reveal="" style="margin: 0; font-size: clamp(26px, 3.2vw, 42px); line-height: 1.08; letter-spacing: -0.025em; font-weight: 700; max-width: 16ch">Common questions</h2>
+      </div>
+      <div style="flex: 2 1 480px; min-width: 0; display: flex; flex-direction: column; border-top: 1px solid oklch(0.3 0 0)">
+          <details data-reveal="" style="border-bottom: 1px solid oklch(0.3 0 0)">
+            <summary style="list-style: none; cursor: pointer; padding: 20px 0; display: flex; gap: 16px; justify-content: space-between; align-items: baseline; font-size: 17px; font-weight: 600" style-hover="color: oklch(0.84 0.14 80)"><span>Do I need any experience?</span><span aria-hidden="true" style="color: oklch(0.82 0.15 80); font-weight: 400">+</span></summary>
+            <p style="margin: 0 0 22px; font-size: 15px; line-height: 1.65; color: oklch(0.76 0 0); max-width: 64ch; text-wrap: pretty">No. Most members join with no rocketry background, and we teach the tools you need.</p>
+          </details>
+          <details data-reveal="" style="border-bottom: 1px solid oklch(0.3 0 0)">
+            <summary style="list-style: none; cursor: pointer; padding: 20px 0; display: flex; gap: 16px; justify-content: space-between; align-items: baseline; font-size: 17px; font-weight: 600" style-hover="color: oklch(0.84 0.14 80)"><span>Is there a membership fee?</span><span aria-hidden="true" style="color: oklch(0.82 0.15 80); font-weight: 400">+</span></summary>
+            <p style="margin: 0 0 22px; font-size: 15px; line-height: 1.65; color: oklch(0.76 0 0); max-width: 64ch; text-wrap: pretty">No. Joining UWA Aerospace is free.</p>
+          </details>
+          <details data-reveal="" style="border-bottom: 1px solid oklch(0.3 0 0)">
+            <summary style="list-style: none; cursor: pointer; padding: 20px 0; display: flex; gap: 16px; justify-content: space-between; align-items: baseline; font-size: 17px; font-weight: 600" style-hover="color: oklch(0.84 0.14 80)"><span>How much time does it take?</span><span aria-hidden="true" style="color: oklch(0.82 0.15 80); font-weight: 400">+</span></summary>
+            <p style="margin: 0 0 22px; font-size: 15px; line-height: 1.65; color: oklch(0.76 0 0); max-width: 64ch; text-wrap: pretty">Most members give 4 to 8 hours a week.</p>
+          </details>
+          <details data-reveal="" style="border-bottom: 1px solid oklch(0.3 0 0)">
+            <summary style="list-style: none; cursor: pointer; padding: 20px 0; display: flex; gap: 16px; justify-content: space-between; align-items: baseline; font-size: 17px; font-weight: 600" style-hover="color: oklch(0.84 0.14 80)"><span>Where and when do members work?</span><span aria-hidden="true" style="color: oklch(0.82 0.15 80); font-weight: 400">+</span></summary>
+            <p style="margin: 0 0 22px; font-size: 15px; line-height: 1.65; color: oklch(0.76 0 0); max-width: 64ch; text-wrap: pretty">We hold weekly meetings on campus, plus workshop sessions at our workshop where members build hardware.</p>
+          </details>
+          <details data-reveal="" style="border-bottom: 1px solid oklch(0.3 0 0)">
+            <summary style="list-style: none; cursor: pointer; padding: 20px 0; display: flex; gap: 16px; justify-content: space-between; align-items: baseline; font-size: 17px; font-weight: 600" style-hover="color: oklch(0.84 0.14 80)"><span>Can I join more than one sub-team?</span><span aria-hidden="true" style="color: oklch(0.82 0.15 80); font-weight: 400">+</span></summary>
+            <p style="margin: 0 0 22px; font-size: 15px; line-height: 1.65; color: oklch(0.76 0 0); max-width: 64ch; text-wrap: pretty">You join one sub-team to start with, and you can switch later if another one suits you better.</p>
+          </details>
+          <details data-reveal="" style="border-bottom: 1px solid oklch(0.3 0 0)">
+            <summary style="list-style: none; cursor: pointer; padding: 20px 0; display: flex; gap: 16px; justify-content: space-between; align-items: baseline; font-size: 17px; font-weight: 600" style-hover="color: oklch(0.84 0.14 80)"><span>When will I hear back?</span><span aria-hidden="true" style="color: oklch(0.82 0.15 80); font-weight: 400">+</span></summary>
+            <p style="margin: 0 0 22px; font-size: 15px; line-height: 1.65; color: oklch(0.76 0 0); max-width: 64ch; text-wrap: pretty">We reply to every application within two weeks.</p>
+          </details>
+          <details data-reveal="" style="border-bottom: 1px solid oklch(0.3 0 0)">
+            <summary style="list-style: none; cursor: pointer; padding: 20px 0; display: flex; gap: 16px; justify-content: space-between; align-items: baseline; font-size: 17px; font-weight: 600" style-hover="color: oklch(0.84 0.14 80)"><span>Can I join mid-semester?</span><span aria-hidden="true" style="color: oklch(0.82 0.15 80); font-weight: 400">+</span></summary>
+            <p style="margin: 0 0 22px; font-size: 15px; line-height: 1.65; color: oklch(0.76 0 0); max-width: 64ch; text-wrap: pretty">No. Recruitment runs at the start of each semester, so apply then. Dates for info nights are on the Calendar page.</p>
+          </details>
+      </div>
+    </div>
+  </section>
+
   <section style="padding: clamp(44px, 6vw, 92px) clamp(18px, 4vw, 64px); max-width: 1440px; margin: 0 auto; border-top: 1px solid oklch(0.24 0 0)">
     <div data-reveal="" style="border: 1px solid oklch(0.32 0.012 80); border-radius: 6px; padding: clamp(24px, 3vw, 40px); background: linear-gradient(180deg, oklch(0.215 0.01 80), oklch(0.175 0.004 80)); box-shadow: inset 0 1px 0 oklch(1 0 0 / 0.05); display: flex; flex-wrap: wrap; gap: clamp(20px, 3vw, 44px); align-items: center">
       <div style="flex: 1 1 280px; min-width: 0">
@@ -246,6 +288,20 @@ const HOURS = ["Under 3", "3–6", "6–10", "10+"];
 const EXPERIENCE = ["None", "Some", "Lots"];
 const SKILLS = ["CAD / SolidWorks", "Coding", "Electronics / PCB", "Machining / fabrication", "Composites", "CFD / simulation", "Design / media", "Finance / sponsorship"];
 
+const __glide = (getTop) => {
+  const de = document.documentElement;
+  const start = window.scrollY, t0 = performance.now(), dur = 800;
+  const step = (now) => {
+    const p = Math.min(1, (now - t0) / dur), e = p < 0.5 ? 4 * p * p * p : 1 - Math.pow(-2 * p + 2, 3) / 2;
+    const top = getTop();
+    if (top == null) return;
+    de.style.scrollBehavior = "auto";
+    window.scrollTo(0, start + (top - start) * e);
+    de.style.scrollBehavior = "";
+    if (p < 1) requestAnimationFrame(step);
+  };
+  requestAnimationFrame(step);
+};
 class Component extends DCLogic {
   state = {
     form: { name: "", email: "", degree: "", year: "", studentNo: "", hours: "", skillsOther: "", about: "", website: "" },
@@ -267,6 +323,17 @@ class Component extends DCLogic {
     return moved;
   }
   componentDidMount() {
+    this.jumpToHash = () => {
+      const h = decodeURIComponent((location.hash || "").slice(1));
+      if (!h) return;
+      let tries = 0;
+      const go = () => {
+        if (!document.getElementById(h)) { if (++tries < 10) setTimeout(go, 200); return; }
+        __glide(() => { const el = document.getElementById(h); return el ? Math.max(0, el.getBoundingClientRect().top + window.scrollY - 80) : null; });
+      };
+      setTimeout(go, 450);
+    };
+    this.jumpToHash();
     this.root = document.querySelector("[data-reveal]")?.closest("body > *") || document.body;
     this.arm = () => {
       if (this.armed || !this.canScroll()) return;
@@ -362,9 +429,10 @@ class Component extends DCLogic {
       },
       teamChips: TEAMS.map((name) => ({ name, pressed: String(teams.includes(name)), style: this.chipStyle(teams.includes(name)) })),
       steps: [
-        { no: "01", title: "Come to an info night", desc: "We run one in the first two weeks of semester. Dates are on the Calendar page. Meet the sub-team leads and see the current airframe." },
-        { no: "02", title: "Send this form", desc: "Tell us which sub-teams interest you. No experience is needed; we teach the tools." },
-        { no: "03", title: "Start building", desc: "You get a real task on a real vehicle in your first month, mentored by a senior member." }
+        { no: "01", title: "Come to an info night", desc: "We run one in the first two weeks of semester. Dates are on the Calendar page. Meet the sub-team leads and see our rockets." },
+        { no: "02", title: "Apply", desc: "Fill in the form below and tell us which sub-teams interest you. No experience is needed; we teach the tools." },
+        { no: "03", title: "Interview", desc: "Have a short interview with the lead of the sub-team you applied for, so we can find the right fit for you." },
+        { no: "04", title: "Start building", desc: "Take on your own part of this year's rocket, with a senior member to help you get started." }
       ],
       onChange: (e) => {
         const { name, value } = e.target;

@@ -84,7 +84,7 @@
 
   <section id="timeline" style="padding: clamp(48px, 7vw, 104px) clamp(18px, 4vw, 64px); max-width: 1440px; margin: 0 auto; border-top: 1px solid oklch(0.24 0 0)">
     <p data-reveal="" style="margin: 0 0 18px; font-size: 14px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: oklch(0.84 0.14 80)">01 · Step by step</p>
-    <h2 data-reveal="" style="margin: 0 0 clamp(26px, 4vw, 44px); font-size: clamp(28px, 3.4vw, 44px); line-height: 1.08; letter-spacing: -0.025em; font-weight: 700; max-width: 24ch">From joining to certified</h2>
+    <h2 data-reveal="" style="margin: 0 0 clamp(26px, 4vw, 44px); font-size: clamp(28px, 3.4vw, 44px); line-height: 1.08; letter-spacing: -0.025em; font-weight: 700; max-width: 24ch">Your rocket, start to finish</h2>
     <ol style="margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 210px), 1fr)); gap: clamp(18px, 2vw, 28px)">
       <sc-for list="{{ timeline }}" as="t" hint-placeholder-count="6">
         <li data-reveal="" style="border-top: 2px solid oklch(0.82 0.15 80); padding-top: 16px; display: flex; flex-direction: column; gap: 8px">
@@ -135,7 +135,7 @@
       <div style="flex: 2 1 480px; min-width: 0; display: flex; flex-direction: column; border-top: 1px solid oklch(0.3 0 0)">
         <sc-for list="{{ faq }}" as="q" hint-placeholder-count="6">
           <details data-reveal="" style="border-bottom: 1px solid oklch(0.3 0 0)">
-            <summary style="list-style: none; cursor: pointer; padding: 20px 0; display: flex; gap: 16px; justify-content: space-between; align-items: baseline; font-size: 17px; font-weight: 600" style-hover="color: oklch(0.84 0.14 80)"><span>{{ q.q }}</span><span style="color: oklch(0.82 0.15 80); font-weight: 400">+</span></summary>
+            <summary style="list-style: none; cursor: pointer; padding: 20px 0; display: flex; gap: 16px; justify-content: space-between; align-items: baseline; font-size: 17px; font-weight: 600" style-hover="color: oklch(0.84 0.14 80)"><span>{{ q.q }}</span><span aria-hidden="true" style="color: oklch(0.82 0.15 80); font-weight: 400">+</span></summary>
             <p style="margin: 0 0 22px; font-size: 15px; line-height: 1.65; color: oklch(0.76 0 0); max-width: 64ch; text-wrap: pretty">{{ q.a }}</p>
           </details>
         </sc-for>
@@ -168,7 +168,7 @@
       <div>
         <p data-reveal="" style="margin: 0 0 18px; font-size: 14px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: oklch(0.84 0.14 80)">05 · Get started</p>
         <h2 data-reveal="" style="margin: 0 0 18px; font-size: clamp(26px, 3vw, 40px); line-height: 1.1; letter-spacing: -0.025em; font-weight: 700; max-width: 20ch">Start your Level 1</h2>
-        <p data-reveal="" style="margin: 0 0 24px; font-size: 16px; line-height: 1.6; color: oklch(0.78 0 0); max-width: 46ch">Launch days run April to September, so builds start in the preceding months. Get in touch and we will put you in the next cohort. <a href="calendar">See launch dates →</a></p>
+        <p data-reveal="" style="margin: 0 0 24px; font-size: 16px; line-height: 1.6; color: oklch(0.78 0 0); max-width: 46ch">Launch days run April to September, so builds start in the preceding months. Get in touch and we will add you to the next group. <a href="calendar">See launch dates →</a></p>
         <a data-reveal="" href="mailto:executive@uwaaerospace.org" style="display: inline-block; padding: 14px 24px; background: oklch(0.8 0.16 78); color: oklch(0.12 0 0); border-radius: 999px; font-weight: 600; font-size: 15px" style-hover="background: oklch(0.88 0.13 82); color: oklch(0.12 0 0)">Ask about certification</a>
       </div>
       <div data-reveal="" style="border: 1px solid oklch(0.32 0.012 80); border-radius: 6px; padding: clamp(22px, 2.4vw, 32px); background: linear-gradient(180deg, oklch(0.215 0.01 80), oklch(0.175 0.004 80)); box-shadow: inset 0 1px 0 oklch(1 0 0 / 0.05)">
@@ -331,7 +331,7 @@ class Component extends DCLogic {
     return {
       facts: [
         { value: "L1 / L2", label: "Tripoli levels" },
-        { value: "8–12", label: "Launch days a year" },
+        { value: "6–8", label: "Launch days a year" },
         { value: "Apr–Sep", label: "Launch season" },
         { value: String(rockets.length), label: "Rockets certified" }
       ],
@@ -341,12 +341,12 @@ class Component extends DCLogic {
         imgEl: this.img(base + path, name + " " + level + " certification rocket", { width: "100%", aspectRatio: "4 / 5", objectFit: "cover", display: "block" })
       })),
       timeline: [
-        { no: "01", title: "Join the club", body: "Certification is open to UWA Aerospace members. Join, then tell us you want to certify so we can add you to the next cohort." },
-        { no: "02", title: "Join Tripoli", body: "Become a member of the Tripoli Rocketry Association. Certification is issued by Tripoli, so you need to be a member before you fly." },
-        { no: "03", title: "Design", body: "Design your rocket in CAD and simulate its flight to check it is stable and suits your chosen motor." },
-        { no: "04", title: "Build", body: "Roll the fibreglass body tube, laser cut the fins, assemble the recovery system, then sand and paint, with certified members mentoring you." },
-        { no: "05", title: "Fly", body: "Bring your rocket to a WARS launch day. It is inspected before flight, then launched and recovered under the eyes of a certifying member." },
-        { no: "06", title: "Get certified", body: "After a successful flight and recovery, your paperwork goes to Tripoli and you are certified at that level." }
+        { no: "01", title: "Join the club", body: "Certification is open to UWA Aerospace members. Join, then tell us you want to certify and we'll add you to the next group." },
+        { no: "02", title: "Join Tripoli", body: "Become a member of the Tripoli Rocketry Association. Tripoli issues the certification, so you need to be a member before you fly." },
+        { no: "03", title: "Design", body: "You own the design. Model the rocket in CAD and run flight simulations to prove it is stable on the certification motor before you build." },
+        { no: "04", title: "Build", body: "You build it yourself: 3D print the nose cone and fins, fit them to a cardboard body tube, assemble the recovery system, then sand and paint. Certified members are there to advise, but the decisions are yours." },
+        { no: "05", title: "Fly", body: "Take your rocket to a WARS launch day. You present it for safety inspection, prep it on the pad, launch it and recover it, with a certifying member observing." },
+        { no: "06", title: "Get certified", body: "After a successful flight and recovery, your paperwork goes to Tripoli and you are certified, with a complete engineering project behind you, from concept to flight." }
       ],
       costPay: [
         "Tripoli Rocketry Association membership",
@@ -358,8 +358,7 @@ class Component extends DCLogic {
         "Mentoring from members who have already certified",
         "Help designing and simulating your rocket",
         "Guidance on the build, from body tube to recovery",
-        "Some flight hardware, such as flight computers and GPS trackers",
-        "A place in a cohort building alongside other members"
+        "Some flight hardware, such as flight computers and GPS trackers"
       ],
       faq: [
         { q: "Do I need any experience?", a: "No. Most members certify with no rocketry background. Members who have already certified mentor you through the design and build." },
@@ -372,7 +371,7 @@ class Component extends DCLogic {
         "No prior experience is needed. You are mentored through the build by members who have already certified.",
         "Certification is issued by Tripoli Rocketry Association, not by the club.",
         "Launch days are run by WARS and are the only opportunity to launch in WA.",
-        "Build timeline and motor class vary by cohort, so ask us."
+        "Build timeline and motor class vary each year, so ask us."
       ]
     };
   }

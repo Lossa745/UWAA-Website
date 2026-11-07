@@ -10,14 +10,14 @@
 <body>
 <x-dc>
 <helmet>
-<style>@media (max-width: 899px){header{gap:8px !important}header > a:first-child img{width:40px !important;height:40px !important}header > a:first-child span{font-size:15px !important}[data-nav-join]{margin-left:auto;padding:7px 12px !important;font-size:12.5px !important}}@media (max-width: 359px){header > a:first-child span{display:none}}</style>
+<style>@media (max-width: 1099px){#season-grid{grid-template-columns:repeat(2,minmax(0,1fr)) !important}}@media (max-width: 599px){#season-grid{grid-template-columns:minmax(0,1fr) !important}}@media (max-width: 899px){header{gap:8px !important}header > a:first-child img{width:40px !important;height:40px !important}header > a:first-child span{font-size:15px !important}[data-nav-join]{margin-left:auto;padding:7px 12px !important;font-size:12.5px !important}}@media (max-width: 359px){header > a:first-child span{display:none}}</style>
 <title>Team | UWA Aerospace</title>
-<meta name="description" content="How UWA Aerospace is organised: the executive, operations and six sub-teams." />
+<meta name="description" content="How UWA Aerospace is organised: the executive and six sub-teams, and how a year in the club works." />
 <link rel="canonical" href="https://uwaaerospace.org/team" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="UWA Aerospace" />
 <meta property="og:title" content="Team | UWA Aerospace" />
-<meta property="og:description" content="How UWA Aerospace is organised: the executive, operations and six sub-teams." />
+<meta property="og:description" content="How UWA Aerospace is organised: the executive and six sub-teams, and how a year in the club works." />
 <meta property="og:url" content="https://uwaaerospace.org/team" />
 <meta property="og:image" content="https://uwaaerospace.org/assets/images/site/discover.jpg" />
 <meta name="twitter:card" content="summary_large_image" />
@@ -85,12 +85,15 @@
 
   <section id="season" style="padding: clamp(44px, 6vw, 92px) clamp(18px, 4vw, 64px); max-width: 1440px; margin: 0 auto; border-top: 1px solid oklch(0.24 0 0)">
     <p data-reveal="" style="margin: 0 0 16px; font-size: 14px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: oklch(0.84 0.14 80)">01 · How a season runs</p>
-    <h2 data-reveal="" style="margin: 0 0 16px; font-size: clamp(26px, 3.2vw, 42px); line-height: 1.08; letter-spacing: -0.025em; font-weight: 700; max-width: 22ch">One rocket a year</h2>
-    <p data-reveal="" style="margin: 0 0 clamp(24px, 3vw, 40px); font-size: 15.5px; line-height: 1.6; color: oklch(0.76 0 0); max-width: 54ch">Every role in the club turns over annually, so each cohort takes a vehicle from a blank sheet to a launch rail within a year.</p>
-    <div style="display: flex; flex-wrap: wrap; gap: clamp(10px, 1.2vw, 14px)">
+    <h2 data-reveal="" style="margin: 0 0 16px; font-size: clamp(26px, 3.2vw, 42px); line-height: 1.08; letter-spacing: -0.025em; font-weight: 700; max-width: 22ch">How a year in the club works</h2>
+    <p data-reveal="" style="margin: 0 0 clamp(24px, 3vw, 40px); font-size: 15.5px; line-height: 1.6; color: oklch(0.76 0 0); max-width: 54ch">Each year a new team designs, builds and flies a rocket of their own. New members work on real flight hardware, with experienced members on hand to help.</p>
+    <div id="season-grid" style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(10px, 1.2vw, 14px)">
       <sc-for list="{{ season }}" as="p" hint-placeholder-count="4">
-        <div data-reveal="" style="border: 1px solid oklch(0.32 0.012 80); border-radius: 6px; overflow: hidden; flex: 1 1 240px; min-width: 0; background: linear-gradient(180deg, oklch(0.215 0.01 80), oklch(0.175 0.004 80)); padding: clamp(22px, 2.4vw, 30px); transition: box-shadow 0.2s ease, background 0.2s ease" style-hover="box-shadow: inset 0 2px 0 oklch(0.82 0.15 80); background: linear-gradient(180deg, oklch(0.24 0.014 80), oklch(0.19 0.006 80))">
-          <p style="margin: 0 0 12px; font-size: 10.5px; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(0.82 0.15 80)">{{ p.when }}</p>
+        <div data-reveal="" style="border: 1px solid oklch(0.32 0.012 80); border-radius: 6px; overflow: hidden; min-width: 0; background: linear-gradient(180deg, oklch(0.215 0.01 80), oklch(0.175 0.004 80)); padding: clamp(22px, 2.4vw, 30px); transition: box-shadow 0.2s ease, background 0.2s ease" style-hover="box-shadow: inset 0 2px 0 oklch(0.82 0.15 80); background: linear-gradient(180deg, oklch(0.24 0.014 80), oklch(0.19 0.006 80))">
+          <div style="display: flex; align-items: center; gap: 12px; margin: 0 0 18px">
+            <span style="font-size: 34px; font-weight: 700; letter-spacing: -0.03em; line-height: 1; color: oklch(0.82 0.15 80)">{{ p.no }}</span>
+            <span style="flex: 1; height: 1px; background: linear-gradient(90deg, oklch(0.82 0.15 80 / 0.6), oklch(0.32 0.012 80))"></span>
+          </div>
           <h3 style="margin: 0 0 9px; font-size: 18.5px; font-weight: 600; letter-spacing: -0.01em">{{ p.title }}</h3>
           <p style="margin: 0; font-size: 14.5px; line-height: 1.6; color: oklch(0.76 0 0)">{{ p.body }}</p>
         </div>
@@ -113,7 +116,7 @@
           </div></div></div>
       </div>
       <div aria-live="polite" style="margin-top: clamp(20px, 2.6vw, 32px); border: 1px solid oklch(0.32 0.012 80); border-radius: 6px; background: linear-gradient(180deg, oklch(0.215 0.01 80), oklch(0.175 0.004 80)); padding: clamp(20px, 2.4vw, 30px); display: flex; flex-wrap: wrap; gap: clamp(16px, 2.4vw, 36px)">
-        <div style="flex: 1 1 320px; min-width: 0">
+        <div id="role-detail" style="flex: 1 1 320px; min-width: 0">
           <p style="margin: 0 0 8px; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: oklch(0.82 0.15 80)">{{ sel.kind }}</p>
           <h3 style="margin: 0 0 12px; font-size: clamp(20px, 2.2vw, 26px); font-weight: 700; letter-spacing: -0.02em">{{ sel.name }}</h3>
           <p style="margin: 0; font-size: 15.5px; line-height: 1.6; color: oklch(0.8 0 0); max-width: 60ch; text-wrap: pretty">{{ sel.desc }}</p>
@@ -136,7 +139,7 @@
     <div data-reveal="" style="border: 1px solid oklch(0.32 0.012 80); border-radius: 6px; padding: clamp(24px, 3vw, 40px); background: linear-gradient(180deg, oklch(0.215 0.01 80), oklch(0.175 0.004 80)); box-shadow: inset 0 1px 0 oklch(1 0 0 / 0.05); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: clamp(20px, 3vw, 44px); align-items: center">
       <div>
         <h2 style="margin: 0 0 12px; font-size: clamp(22px, 2.4vw, 30px); font-weight: 700; letter-spacing: -0.02em">Team members</h2>
-        <p style="margin: 0; font-size: 15.5px; line-height: 1.6; color: oklch(0.78 0 0); max-width: 46ch">Roles turn over annually and we recruit across all six sub-teams at the start of each semester. No experience required.</p>
+        <p style="margin: 0; font-size: 15.5px; line-height: 1.6; color: oklch(0.78 0 0); max-width: 46ch">We recruit across all six sub-teams at the start of each semester, with a short interview for each applicant. No experience required.</p>
       </div>
       <div style="display: flex; flex-wrap: wrap; gap: 12px">
         <a href="join#form" style="padding: 14px 24px; background: oklch(0.8 0.16 78); color: oklch(0.12 0 0); border-radius: 999px; font-weight: 600; font-size: 15px" style-hover="background: oklch(0.88 0.13 82); color: oklch(0.12 0 0)">Apply to join</a>
@@ -182,13 +185,27 @@
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280}}">
 const ROLES = {
-  pm: { kind: "Lead", name: "Project Manager", desc: "Runs the club day to day. Sets the season plan and competition schedule, chairs exec meetings, and is the main contact for the university, WARS and competition organisers.", listLabel: "Responsible for", list: ["Season plan", "Exec meetings", "Competition entries", "University liaison"] },
-  treasurer: { kind: "Executive · business side", name: "Treasurer", desc: "Keeps the budget and runs sponsorships. Tracks spending against each project, handles reimbursements and grant acquittals, and reports the club's finances to the exec and the university.", listLabel: "Responsible for", list: ["Budget", "Sponsorship", "Reimbursements", "Grant reporting"] },
-  marketing: { kind: "Executive · business side", name: "Marketing Director", desc: "Runs the club's public presence: social media, the website, launch-day photos and video, and the club's public image.", listLabel: "Responsible for", list: ["Social media", "Website", "Photos and video"] },
-  operations: { kind: "Sub-team · business side", name: "Operations", desc: "The club's marketing team. Supports the Marketing Director with social media, the website, launch-day photos and video, events and outreach.", listLabel: "Skills you will pick up", list: ["Social media", "Content creation", "Events"] },
-  td: { kind: "Executive · technical side", name: "Technical Director", desc: "Owns the vehicle. Leads design reviews, sets the technical requirements the sub-teams design to, and signs off that the rocket is ready to fly.", listLabel: "Oversees", list: ["Aerostructures", "Avionics", "Recovery", "Simulations", "Propulsion"] }
+  pm: { kind: "Lead", name: "Project Manager", desc: "Runs the club day to day. Sets the season plan and competition schedule, chairs exec meetings and keeps every project on track against its deadlines. Is the main contact for the university, WARS and competition organisers, and makes sure the business and technical sides are working towards the same goals.", listLabel: "Responsible for", list: ["Season plan", "Exec meetings", "Project deadlines", "Competition entries", "University liaison"] },
+  treasurer: { kind: "Executive · business side", name: "Treasurer", desc: "Keeps the budget and runs sponsorships. Sets each project's budget at the start of the season, tracks spending against it, and approves purchases and reimbursements. Finds and manages sponsors, applies for grants and reports the club's finances to the exec and the university.", listLabel: "Responsible for", list: ["Budget", "Purchasing", "Sponsorship", "Grants", "Financial reporting"] },
+  marketing: { kind: "Executive · business side", name: "Marketing Director", desc: "Runs the club's public presence. Plans social media content, looks after the website, and organises photos and video on launch days. Leads the Operations sub-team and works with the Treasurer on material for sponsors, so the club's work is seen by students, industry and the public.", listLabel: "Responsible for", list: ["Social media", "Website", "Photos and video", "Sponsor material", "Operations sub-team"] },
+  operations: { kind: "Sub-team · business side", name: "Operations", desc: "The club's marketing and events team. Works with the Marketing Director to plan and post social media content, keep the website up to date, and capture photos and video on launch days. Members also help run club events, stalls and school outreach, and put together material for sponsors.", listLabel: "Skills you will pick up", list: ["Social media", "Content creation", "Photography", "Event planning", "Outreach"] },
+  td: { kind: "Executive · technical side", name: "Technical Director", desc: "Leads the technical side of the club and is responsible for the rocket as a whole. Sets the technical requirements the sub-teams design to and makes sure their parts work together as one rocket. Runs design reviews at each stage, tracks build progress, and signs off that the rocket is safe and ready to fly.", listLabel: "Oversees", list: ["Aerostructures", "Avionics", "Recovery", "Simulations", "Propulsion"] }
 };
 
+const __glide = (getTop) => {
+  const de = document.documentElement;
+  const start = window.scrollY, t0 = performance.now(), dur = 800;
+  const step = (now) => {
+    const p = Math.min(1, (now - t0) / dur), e = p < 0.5 ? 4 * p * p * p : 1 - Math.pow(-2 * p + 2, 3) / 2;
+    const top = getTop();
+    if (top == null) return;
+    de.style.scrollBehavior = "auto";
+    window.scrollTo(0, start + (top - start) * e);
+    de.style.scrollBehavior = "";
+    if (p < 1) requestAnimationFrame(step);
+  };
+  requestAnimationFrame(step);
+};
 class Component extends DCLogic {
   // Scroll reveals are opt-in: content ships visible, and we only arm the
   // hidden start state once we've confirmed this document scrolls in its own
@@ -205,6 +222,22 @@ class Component extends DCLogic {
     return moved;
   }
   componentDidMount() {
+    this.applyHash = () => {
+      const h = decodeURIComponent((location.hash || "").slice(1)).toLowerCase();
+      const ok = h && (this.renderData().teams.some((t) => t.anchor === h) || ROLES[h]);
+      if (!ok) return;
+      this.setState({ role: h });
+      setTimeout(() => {
+        __glide(() => {
+          const el = document.getElementById("role-detail");
+          if (!el) return null;
+          const box = el.parentElement.getBoundingClientRect();
+          return Math.max(0, Math.min(box.bottom + window.scrollY - window.innerHeight + 40, box.top + window.scrollY - 100));
+        });
+      }, 450);
+    };
+    this.applyHash();
+    addEventListener("hashchange", this.applyHash);
     this.root = document.querySelector("[data-reveal]")?.closest("body > *") || document.body;
     this.arm = () => {
       if (this.armed || !this.canScroll()) return;
@@ -262,6 +295,7 @@ class Component extends DCLogic {
     clearInterval(this.poll);
     removeEventListener("scroll", this.onScroll);
     removeEventListener("resize", this.onScroll);
+    removeEventListener("hashchange", this.applyHash);
   }
   state = { role: "pm" };
   renderVals() {
@@ -284,18 +318,18 @@ class Component extends DCLogic {
   renderData() {
     return {
       season: [
-        { when: "Step 01", title: "Recruit", body: "Info nights, sub-team sign-up and the handover from last year's cohort." },
-        { when: "Step 02", title: "Design", body: "Requirements, mass budget and the design reviews that decide what the vehicle has to do." },
-        { when: "Step 03", title: "Build and test", body: "Layups, machining, board assembly and test flights at WARS launch days." },
-        { when: "Step 04", title: "Fly", body: "AURC in Australia, IREC in Midland, Texas, then the post-flight report that the next cohort inherits." }
+        { no: "01", title: "Join a sub-team", body: "Come to an info night, apply for the sub-team you want to work in and have a short interview with its lead. Once you're in, you pick up where last year's team left off." },
+        { no: "02", title: "Design", body: "Set the rocket's requirements as a team, then design your part of it and defend your choices at design reviews." },
+        { no: "03", title: "Build and test", body: "Make the parts you designed, put the rocket together and prove it works with ground tests and test flights at WARS launch days." },
+        { no: "04", title: "Fly and report", body: "Launch at competition, then write up what worked and what didn't so next year's team can build on it." }
       ],
       teams: [
-        { no: "01", name: "Aerostructures", anchor: "aerostructures", lead: "Aerostructures Lead", desc: "Composite layups, fin geometry, coupler and bulkhead design, structural load cases and machining.", skills: ["CAD", "FEA", "Composites", "Machining"] },
-        { no: "02", name: "Avionics", anchor: "avionics", lead: "Avionics Lead", desc: "Flight computers, telemetry links, sensor fusion and ground station software from schematic to soldered board.", skills: ["PCB design", "Embedded C", "RF", "Soldering"] },
-        { no: "03", name: "Recovery", anchor: "recovery", lead: "Recovery Lead", desc: "Dual-deploy parachute systems, ejection charge sizing, black powder testing and descent modelling.", skills: ["Pyrotechnics", "Sewing", "Descent sims"] },
-        { no: "04", name: "Simulations", anchor: "simulations", lead: "Simulations Lead", desc: "Flight dynamics, trajectory and apogee prediction, aerodynamic and thermal modelling that sets the design targets.", skills: ["CFD", "Python", "Flight dynamics"] },
-        { no: "05", name: "Propulsion", anchor: "propulsion", lead: "Propulsion Lead", desc: "Hybrid and solid motor design, injector and chamber development, static fire testing and propellant characterisation.", skills: ["CFD", "Test rigs", "Chemistry"] },
-        { no: "06", name: "Operations", anchor: "operations", lead: "Operations Lead", desc: "The club's marketing team. Supports the Marketing Director with social media, the website, launch-day photos and video, events and outreach.", skills: ["Social media", "Content creation", "Events"] }
+        { no: "01", name: "Aerostructures", anchor: "aerostructures", lead: "Aerostructures Lead", desc: "Designs and builds the airframe: body tubes, nose cone, fins, couplers and bulkheads. Members model parts in CAD, check them against flight loads, then make them through composite layups, 3D printing and machining. Works closely with every other sub-team, since all their hardware has to fit inside the airframe.", skills: ["CAD", "FEA", "Composites", "3D printing", "Machining"] },
+        { no: "02", name: "Avionics", anchor: "avionics", lead: "Avionics Lead", desc: "Builds the rocket's electronics: flight computers, GPS trackers, telemetry radios and the ground station that receives the data. Members take boards from schematic to PCB layout to soldered hardware, then write the firmware that logs sensor data and triggers recovery events in flight.", skills: ["PCB design", "Embedded C", "RF", "Soldering", "Sensor fusion"] },
+        { no: "03", name: "Recovery", anchor: "recovery", lead: "Recovery Lead", desc: "Gets the rocket back safely. Designs dual-deploy systems with a drogue at apogee and a main parachute closer to the ground, sizes the ejection charges and proves them in ground tests. Members also model descent rates and drift so the rocket lands intact and within the range.", skills: ["Parachute design", "Ejection testing", "Sewing", "Descent modelling"] },
+        { no: "04", name: "Simulations", anchor: "simulations", lead: "Simulations Lead", desc: "Predicts how the rocket will fly before it is built. Models trajectory, apogee, stability and aerodynamic loads, and feeds those numbers to the other sub-teams as design targets. After each flight, members compare the flight data to the predictions and refine the models.", skills: ["OpenRocket", "CFD", "Python", "Flight dynamics"] },
+        { no: "05", name: "Propulsion", anchor: "propulsion", lead: "Propulsion Lead", desc: "Develops the club's own rocket engines. Members design combustion chambers, injectors and nozzles, build the test stand and instrumentation, and work towards static fire tests that measure thrust and performance.", skills: ["Thermodynamics", "CAD", "Test rigs", "Instrumentation"] },
+        { no: "06", name: "Operations", anchor: "operations", lead: "Operations Lead", desc: "The club's marketing and events team. Works with the Marketing Director to plan and post social media content, keep the website up to date, and capture photos and video on launch days. Members also help run club events, stalls and school outreach, and put together material for sponsors.", skills: ["Social media", "Content creation", "Photography", "Event planning", "Outreach"] }
       ]
     };
   }
