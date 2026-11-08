@@ -22,6 +22,7 @@
   a { color: oklch(0.82 0.15 80); text-decoration: none; }
   a:hover { color: oklch(0.9 0.11 84); }
   img { display: block; max-width: 100%; }
+  a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px solid oklch(0.8 0.16 78); outline-offset: 3px; border-radius: 3px; }
   @media (max-width: 720px) {
     footer a, header > a, header button { min-height: 44px; display: inline-flex; align-items: center; }
     main a:not([style*="padding"]):not(p a):not(nav a), section a:not([style*="padding"]):not(p a):not(nav a) { min-height: 44px; display: inline-flex; align-items: center; }

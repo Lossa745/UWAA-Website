@@ -19,7 +19,7 @@
 <meta property="og:title" content="Missions | UWA Aerospace" />
 <meta property="og:description" content="Our competition history at IREC and AURC, published research and student theses, and the rockets we have built." />
 <meta property="og:url" content="https://uwaaerospace.org/missions" />
-<meta property="og:image" content="https://uwaaerospace.org/assets/images/site/discover.jpg" />
+<meta property="og:image" content="https://uwaaerospace.org/assets/images/missions/sac-2023-cooker-rail.jpg" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="theme-color" content="#111111" />
 <link rel="icon" type="image/png" href="assets/images/site/logo-uwaa-dark.png" />
@@ -130,7 +130,7 @@
     <h2 data-reveal="" style="margin: 0 0 12px; font-size: clamp(26px, 3.2vw, 42px); line-height: 1.08; letter-spacing: -0.025em; font-weight: 700; max-width: 24ch">Test and research rockets</h2>
     <p data-reveal="" style="margin: 0 0 clamp(24px, 3vw, 40px); font-size: 15.5px; line-height: 1.6; color: oklch(0.76 0 0); max-width: 54ch">Rockets built outside the competition campaigns above, named by the members who built them.</p>
     <div id="fleet-grid" style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(10px, 1.2vw, 14px)">
-      <sc-for list="{{ fleet }}" as="v" hint-placeholder-count="8">
+      <sc-for list="{{ fleet }}" as="v" hint-placeholder-count="6">
         <div data-reveal="" style="display: flex; flex-direction: column; border: 1px solid oklch(0.32 0.012 80); border-radius: 6px; overflow: hidden; min-width: 0; background: linear-gradient(180deg, oklch(0.215 0.01 80), oklch(0.175 0.004 80)); padding: 22px 20px; transition: box-shadow 0.2s ease, background 0.2s ease" style-hover="box-shadow: inset 0 2px 0 oklch(0.82 0.15 80); background: linear-gradient(180deg, oklch(0.24 0.014 80), oklch(0.19 0.006 80))">
           <div style="margin: -22px -20px 16px">{{ v.imgEl }}</div>
           <h3 style="margin: 0; font-size: 19px; font-weight: 700; letter-spacing: -0.015em">{{ v.name }}</h3>
@@ -321,7 +321,7 @@ class Component extends DCLogic {
         { label: "IREC / SAC", href: "#irec" },
         { label: "AURC", href: "#aurc" },
         { label: "Research", href: "#research" },
-        { label: "The fleet", href: "#fleet" }
+        { label: "Other vehicles", href: "#fleet" }
       ],
       groups: this.flag([
         {
@@ -335,7 +335,7 @@ class Component extends DCLogic {
               kind: "Upcoming",
               name: "IREC 2027",
               vehicle: "Vehicle: Cygnus",
-              body: "Our next campaign: Cygnus, a 30,000 ft vehicle for the 30K COTS category, three times the altitude of any rocket the club has flown.",
+              body: "Our next campaign, aiming roughly three times higher than our previous 10,000 ft competition rockets.",
               media: null,
               results: [
                 { k: "Category", v: "30K COTS" },
@@ -348,10 +348,11 @@ class Component extends DCLogic {
               kind: "Flown",
               name: "IREC 2025",
               vehicle: "Vehicle: SVEN",
-              body: "SVEN reached about 10,300 ft, but its COTS flight computer failed in flight, so the altitude couldn't be scored. Based on the other scores, the team would have placed 7th of 161 overall, 5th of 87 in 10K COTS and 2nd among Australian teams.",
+              body: "SVEN reached about 10,300 ft, but its COTS flight computer failed in flight, so the altitude couldn't be scored. Without the failure, the team would have been the second-best Australian entry.",
               media: this.photo("assets/images/fleet/sven-web.jpg", "The team with SVEN on the pad at IREC 2025"),
               results: [
-                { k: "Final rank", v: "68th overall, 45th 10K COTS" },
+                { k: "Overall", v: "68th of 161" },
+                { k: "10K COTS category", v: "45th of 87" },
                 { k: "Without the failure", v: "7th of 161, 5th of 87" },
                 { k: "Altitude", v: "~10,300 ft (not scored)" }
               ]
@@ -361,11 +362,15 @@ class Component extends DCLogic {
               kind: "Flown",
               name: "SAC 2023",
               vehicle: "Vehicle: Cooker",
-              body: "The team travelled to New Mexico with Cooker in June, placing in the top fifth of the field.",
+              body: "Constructed for SAC 2023, Cooker is by far the largest rocket our team has made to date, equipped with a fully student-researched and developed avionics system. The team took it to New Mexico in June and placed in the top fifth of the field.",
               media: this.photo("assets/images/missions/sac-2023-cooker-rail.jpg", "The team with Cooker on the rail at Spaceport America, 2023"),
               results: [
-                { k: "Overall rank", v: "16th of 119" },
-                { k: "10K COTS category", v: "8th of 62" }
+                { k: "Overall", v: "16th of 119" },
+                { k: "10K COTS category", v: "8th of 62" },
+                { k: "Apogee", v: "11,350 ft" },
+                { k: "Max speed", v: "289 m/s" },
+                { k: "Dry mass", v: "14.70 kg" },
+                { k: "Length", v: "265 cm" }
               ]
             },
             {
@@ -376,7 +381,7 @@ class Component extends DCLogic {
               body: "A 10,000 ft COTS-category rocket with two student-designed circuit boards and an air-brake system for apogee control. A 15-minute design presentation accompanied the entry.",
               media: this.photo("assets/images/missions/sac-2021-srad-board.jpg", "Render of a student-designed flight board", "contain"),
               results: [
-                { k: "Overall", v: "Top 3" },
+                { k: "10K COTS category", v: "17th" },
                 { k: "Technical report", v: "Top 3" }
               ]
             }
@@ -392,10 +397,10 @@ class Component extends DCLogic {
               year: "2024",
               kind: "Payload",
               name: "AURC 2024",
-              vehicle: "Camera payload with accelerometer instrumentation",
+              vehicle: "Payload: camera module",
               body: "A camera payload developed as a student thesis project and flown as the competition payload.",
               media: null,
-              results: [{ k: "Payload", v: "Camera, dual accelerometer" }]
+              results: [{ k: "Instrumentation", v: "Dual accelerometer" }]
             },
             {
               year: "2021",
@@ -414,11 +419,15 @@ class Component extends DCLogic {
               kind: "Flown",
               name: "AURC 2019",
               vehicle: "Vehicle: Finley",
-              body: "Finley flew twice to 10,000 ft, and the team placed 5th overall.",
+              body: "Finley was the result of all the lessons learnt over the 2018 launch season. Its first test launch at the competition failed due to a stability flaw and nearly destroyed the vehicle. The team rebuilt it in under 24 hours and flew it again as Finley Reborn.",
               media: this.photo("assets/images/missions/aurc-2019-finley-launch.jpg", "Finley leaving the pad at AURC 2019", "cover", null, "50% 8%"),
               results: [
-                { k: "Placing", v: "5th overall" },
-                { k: "Launches", v: "2, to 10,000 ft" }
+                { k: "Overall", v: "5th" },
+                { k: "Apogee", v: "9,650 ft" },
+                { k: "Max speed", v: "197 m/s" },
+                { k: "Dry mass", v: "8.79 kg" },
+                { k: "Length", v: "200 cm" },
+                { k: "Launches", v: "2" }
               ]
             }
           ]
@@ -433,7 +442,7 @@ class Component extends DCLogic {
               year: "2025",
               kind: "Thesis",
               name: "Rocket Range Testing for Aerodynamic Modelling",
-              vehicle: "Honours thesis: vehicle Lynx Africa",
+              vehicle: "Vehicle: Lynx Africa",
               body: "A purpose-built test rocket flown five times to measure drag from onboard flight data, then compared against OpenRocket simulations and Ansys CFD. The aim is a validated method the team can use to check its trajectory predictions.",
               media: this.photo("assets/images/missions/thesis-2025-lynx-africa.jpg", "Lynx Africa after painting", "contain"),
               results: [
@@ -447,15 +456,19 @@ class Component extends DCLogic {
               kind: "Publication",
               name: "IAC 2022: EMU II",
               vehicle: "Platform: EMU II",
-              body: "The second-generation Experimental Microgravity Unit, presented at the International Astronautical Congress.",
+              body: "EMU II is the second rendition of our high-altitude balloon science mission. We presented the rocket at the International Astronautical Congress in Paris in 2022.",
               media: this.photo("assets/images/fleet/emu-ii-web.jpg", "EMU II"),
-              results: [{ k: "Venue", v: "IAC 2022" }]
+              results: [
+                { k: "Altitude", v: "10 km" },
+                { k: "Dry mass", v: "8.4 kg" },
+                { k: "Length", v: "145.8 cm" }
+              ]
             },
             {
               year: "2021",
               kind: "Thesis",
               name: "Rocket Air-Brake Design for Apogee Control",
-              vehicle: "Honours thesis hosted by UWA Aerospace",
+              vehicle: "CFD study",
               body: "CFD research into air-brakes that control how high the rocket flies. It was the first honours thesis hosted by UWA Aerospace.",
               media: this.photo("assets/images/missions/thesis-2021-airbrakes.jpg", "Render of the air-brakes deployed from the airframe", "contain"),
               results: []
@@ -466,28 +479,28 @@ class Component extends DCLogic {
               name: "IAC 2020: EMU",
               video: "https://youtu.be/KzLo-sU8Uuk",
               vehicle: "Platform: EMU (Experimental Microgravity Unit)",
-              body: "An open-source, low-cost microgravity platform: a weather balloon lifts an inverted rocket to 30 km, the line is severed, and the payload experiences roughly 11 seconds of freefall microgravity. Tested at UWA Future Farm and presented in a 10-minute talk at the 71st International Astronautical Congress.",
+              body: "Our first high-altitude balloon science mission, built as an open-source, low-cost microgravity platform: a weather balloon lifts an inverted rocket to 10 km, the line is severed, and the payload experiences roughly 11 seconds of freefall microgravity. Tested at UWA Future Farm and presented in a 10-minute talk at the 71st International Astronautical Congress.",
               media: this.photo("assets/images/missions/iac-2020-emu-exploded.jpg", "Exploded CAD view of EMU", "contain"),
               results: [
                 { k: "Paper", v: "IAC-20-A2.3.1" },
                 { k: "Payload capacity", v: "2.0 kg, 2U CubeSat" },
-                { k: "Release altitude", v: "30 km" },
+                { k: "Release altitude", v: "10 km" },
                 { k: "Microgravity duration", v: "~11 s" },
-                { k: "Cost per flight", v: "Under $300 USD" }
+                { k: "Cost per flight", v: "Under $300 USD" },
+                { k: "Dry mass", v: "3 kg" },
+                { k: "Length", v: "50 cm" }
               ]
             }
           ]
         }
       ]),
       fleet: [
-        { name: "Korra", note: "EMU II test vehicle", story: "Built to test the payload and avionics for EMU II. The flight ended with the rocket stuck in a tree.", stats: [{ k: "Apogee", v: "0.70 km" }, { k: "Max speed", v: "132 m/s" }, { k: "Max accel.", v: "80.3 m/s²" }, { k: "Dry mass", v: "2 kg" }, { k: "Length", v: "125 cm" }, { k: "Launches", v: "1" }], imgEl: this.photo("assets/images/fleet/korra-web.jpg", "Korra", null, "320px", "50% 92%") },
-        { name: "EMU II", note: "IAC 2022", story: "The second high-altitude balloon science mission, presented at the International Astronautical Congress in Paris.", stats: [{ k: "Apogee", v: "10 km" }, { k: "Max speed", v: "Unknown" }, { k: "Max accel.", v: "Unknown" }, { k: "Dry mass", v: "8.4 kg" }, { k: "Length", v: "145.8 cm" }, { k: "Launches", v: "1" }], imgEl: this.photo("assets/images/fleet/emu-ii-web.jpg", "EMU II", null, "320px", "50% 40%") },
-        { name: "EMU", note: "IAC 2020", story: "The club's first high-altitude balloon science mission, with results shared at the 2020 International Astronautical Congress.", stats: [{ k: "Apogee", v: "10 km" }, { k: "Max speed", v: "Unknown" }, { k: "Max accel.", v: "Unknown" }, { k: "Dry mass", v: "3 kg" }, { k: "Length", v: "50 cm" }, { k: "Launches", v: "1" }], imgEl: this.photo("assets/images/fleet/emu-web.jpg", "EMU", null, "320px", "50% 50%") },
-        { name: "Echidna", note: "Launched 28 Sep 2019", story: "The club's first attempt to break the sound barrier. The GPS failed on the pad and the green-and-black rocket was never found.", stats: [{ k: "Apogee", v: "~7 km" }, { k: "Max speed", v: "~900 m/s" }, { k: "Max accel.", v: "~150 m/s²" }, { k: "Dry mass", v: "2.50 kg" }, { k: "Length", v: "100 cm" }, { k: "Launches", v: "1" }], imgEl: this.photo("assets/images/fleet/echidna-web.jpg", "Echidna", null, "320px", "50% 40%") },
-        { name: "Aang", note: "Launched 19 Jul 2020", story: "The first air-brake test vehicle, flown twice at Grass Valley with a single air-brake deployed one second after launch.", stats: [{ k: "Apogee", v: "200 m" }, { k: "Max speed", v: "110 m/s" }, { k: "Max accel.", v: "91.4 m/s²" }, { k: "Dry mass", v: "940 g" }, { k: "Length", v: "90 cm" }, { k: "Launches", v: "2" }], imgEl: this.photo("assets/images/fleet/aang-web.jpg", "Aang", null, "320px", "50% 30%") },
-        { name: "QAD", note: "Launched 4 Aug 2019", story: "A “Quick and Dirty” build to trial a new fuselage, system layout and simpler recovery design.", stats: [{ k: "Apogee", v: "2.94 km" }, { k: "Max speed", v: "178 m/s" }, { k: "Max accel.", v: "70 m/s²" }, { k: "Dry mass", v: "1.40 kg" }, { k: "Length", v: "89 cm" }, { k: "Launches", v: "1" }], imgEl: this.photo("assets/images/fleet/qad-web.jpg", "QAD", null, "320px", "50% 58%") },
-        { name: "Jeff", note: "Launched 25 Aug 2018", story: "The first prototype designed and built by the club, a forerunner of the AURC 2019 rocket.", stats: [{ k: "Apogee", v: "2.86 km" }, { k: "Max speed", v: "288 m/s" }, { k: "Max accel.", v: "230 m/s²" }, { k: "Dry mass", v: "6.16 kg" }, { k: "Length", v: "169 cm" }, { k: "Launches", v: "2" }], imgEl: this.photo("assets/images/fleet/jeff-web.jpg", "Jeff", null, "320px", "50% 55%") },
-        { name: "Cupid's Arrow", note: "Launched 28 Jul 2018", story: "The club's first rocket. Assembled from a kit and used for Level 1 and Level 2 certifications on the same day.", stats: [{ k: "Apogee", v: "1.31 km" }, { k: "Max speed", v: "184 m/s" }, { k: "Max accel.", v: "73 m/s²" }, { k: "Dry mass", v: "1.44 kg" }, { k: "Length", v: "148 cm" }, { k: "Launches", v: "3" }], imgEl: this.photo("assets/images/fleet/cupid-web.jpg", "Cupid's Arrow", null, "320px", "50% 50%") }
+        { name: "Korra", note: "EMU II test vehicle", story: "Paying homage to the Avatar series and its predecessors, Korra was built to test the payload and avionics for EMU II. Despite the challenges, it fell to a shortcoming of getting stuck in a tree.", stats: [{ k: "Apogee", v: "2,300 ft" }, { k: "Max speed", v: "132 m/s" }, { k: "Max accel.", v: "80.3 m/s²" }, { k: "Dry mass", v: "2 kg" }, { k: "Length", v: "125 cm" }, { k: "Launches", v: "1" }], imgEl: this.photo("assets/images/fleet/korra-web.jpg", "Korra", null, "320px", "50% 92%") },
+        { name: "Echidna", note: "Launched 28 Sep 2019", story: "Echidna was our first attempt to break the sound barrier, with an estimated maximum speed of Mach 3. The GPS malfunctioned on the launch pad, and since the rocket was painted green and black, we have been unable to find it. Last seen 28 September 2019 as a receding black streak and faint sonic boom.", stats: [{ k: "Apogee", v: "~23,000 ft" }, { k: "Max speed", v: "~900 m/s" }, { k: "Max accel.", v: "~150 m/s²" }, { k: "Dry mass", v: "2.50 kg" }, { k: "Length", v: "100 cm" }, { k: "Launches", v: "1" }], imgEl: this.photo("assets/images/fleet/echidna-web.jpg", "Echidna", null, "320px", "50% 40%") },
+        { name: "Aang", note: "Launched 19 Jul 2020", story: "Aang was our first attempt at air-brakes and control units for competitions with an altitude target, where going too high is as bad as not going high enough. It launched twice from Grass Valley on 19 July 2020, with a single air-brake activated one second after launch.", stats: [{ k: "Apogee", v: "660 ft" }, { k: "Max speed", v: "110 m/s" }, { k: "Max accel.", v: "91.4 m/s²" }, { k: "Dry mass", v: "940 g" }, { k: "Length", v: "90 cm" }, { k: "Launches", v: "2" }], imgEl: this.photo("assets/images/fleet/aang-web.jpg", "Aang", null, "320px", "50% 30%") },
+        { name: "QAD", note: "Launched 4 Aug 2019", story: "A “Quick and Dirty” launch to test our new team and experiment with an improved fuselage and system layout. It was built to simplify the recovery system design and flew successfully for the first time on 4 August 2019.", stats: [{ k: "Apogee", v: "9,650 ft" }, { k: "Max speed", v: "178 m/s" }, { k: "Max accel.", v: "70 m/s²" }, { k: "Dry mass", v: "1.40 kg" }, { k: "Length", v: "89 cm" }, { k: "Launches", v: "1" }], imgEl: this.photo("assets/images/fleet/qad-web.jpg", "QAD", null, "320px", "50% 58%") },
+        { name: "Jeff", note: "Launched 25 Aug 2018", story: "The first prototype designed and built by UWA Aerospace, resembling the rocket that would compete in the inaugural 2019 AURC. It debuted on 25 August 2018. A second launch on 6 October emulated the competition flight profile, but the recovery system malfunctioned and the rough landing weakened the fuselage.", stats: [{ k: "Apogee", v: "9,380 ft" }, { k: "Max speed", v: "288 m/s" }, { k: "Max accel.", v: "230 m/s²" }, { k: "Dry mass", v: "6.16 kg" }, { k: "Length", v: "169 cm" }, { k: "Launches", v: "2" }], imgEl: this.photo("assets/images/fleet/jeff-web.jpg", "Jeff", null, "320px", "50% 55%") },
+        { name: "Cupid's Arrow", note: "Launched 28 Jul 2018", story: "The first rocket launched by the team, on 28 July 2018. Assembled from a kit, it taught members the general principles of rocketry and was used to attain Level 1 and Level 2 certifications on the same day.", stats: [{ k: "Apogee", v: "4,300 ft" }, { k: "Max speed", v: "184 m/s" }, { k: "Max accel.", v: "73 m/s²" }, { k: "Dry mass", v: "1.44 kg" }, { k: "Length", v: "148 cm" }, { k: "Launches", v: "3" }], imgEl: this.photo("assets/images/fleet/cupid-web.jpg", "Cupid's Arrow", null, "320px", "50% 50%") }
       ]
     };
   }
