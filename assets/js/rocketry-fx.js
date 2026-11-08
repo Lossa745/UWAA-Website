@@ -79,11 +79,16 @@
     node.nodeValue = "\u00a0";
     el.__fxRun = () => {
       let i = 0;
+      const caret = document.createElement("span");
+      caret.setAttribute("aria-hidden", "true");
+      caret.textContent = "\u258C";
+      Object.assign(caret.style, { display: "inline-block", width: "0", overflow: "visible", whiteSpace: "nowrap" });
+      el.appendChild(caret);
       const step = () => {
         i += 1;
-        node.nodeValue = text.slice(0, i) + (i < text.length ? "\u258C" : "");
+        node.nodeValue = text.slice(0, i);
         if (i < text.length) setTimeout(step, 38);
-        else { el.style.minHeight = ""; let b = 0; const blink = setInterval(() => { node.nodeValue = text + (b % 2 ? "" : "\u258C"); if (++b > 5) { clearInterval(blink); node.nodeValue = text; } }, 260); }
+        else { el.style.minHeight = ""; let b = 0; const blink = setInterval(() => { caret.style.visibility = b % 2 ? "visible" : "hidden"; if (++b > 5) { clearInterval(blink); caret.remove(); } }, 260); }
       };
       setTimeout(step, 120);
     };

@@ -106,6 +106,9 @@
               <sc-if value="{{ e.paper }}" hint-placeholder-val="{{ false }}">
                 <a href="{{ e.paper }}" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 8px; margin-top: 16px; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(0.82 0.15 80); text-decoration: none; border-bottom: 1px solid oklch(0.82 0.15 80 / 0.4); padding-bottom: 2px" style-hover="border-bottom-color: oklch(0.82 0.15 80)">Read the paper (PDF) ↗</a>
               </sc-if>
+              <sc-if value="{{ e.video }}" hint-placeholder-val="{{ false }}">
+                <a href="{{ e.video }}" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 8px; margin-top: 16px; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(0.82 0.15 80); text-decoration: none; border-bottom: 1px solid oklch(0.82 0.15 80 / 0.4); padding-bottom: 2px" style-hover="border-bottom-color: oklch(0.82 0.15 80)">Watch the video seminar ↗</a>
+              </sc-if>
             </div>
             <sc-if value="{{ e.media }}" hint-placeholder-val="{{ true }}"><div style="flex: 1 1 220px; min-width: 0">{{ e.media }}</div></sc-if>
             <div style="flex: 1 1 260px; min-width: 0; display: flex; flex-direction: column; gap: 14px">
@@ -124,14 +127,23 @@
 
   <section id="fleet" style="padding: clamp(44px, 6vw, 92px) clamp(18px, 4vw, 64px); max-width: 1440px; margin: 0 auto; border-top: 1px solid oklch(0.24 0 0)">
     <p data-reveal="" style="margin: 0 0 16px; font-size: 14px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: oklch(0.84 0.14 80)">04 · Other vehicles</p>
-    <h2 data-reveal="" style="margin: 0 0 12px; font-size: clamp(26px, 3.2vw, 42px); line-height: 1.08; letter-spacing: -0.025em; font-weight: 700; max-width: 24ch">Test and certification rockets</h2>
+    <h2 data-reveal="" style="margin: 0 0 12px; font-size: clamp(26px, 3.2vw, 42px); line-height: 1.08; letter-spacing: -0.025em; font-weight: 700; max-width: 24ch">Test and research rockets</h2>
     <p data-reveal="" style="margin: 0 0 clamp(24px, 3vw, 40px); font-size: 15.5px; line-height: 1.6; color: oklch(0.76 0 0); max-width: 54ch">Rockets built outside the competition campaigns above, named by the members who built them.</p>
-    <div id="fleet-grid" style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(10px, 1.2vw, 14px)">
-      <sc-for list="{{ fleet }}" as="v" hint-placeholder-count="6">
-        <div data-reveal="" style="border: 1px solid oklch(0.32 0.012 80); border-radius: 6px; overflow: hidden; min-width: 0; background: linear-gradient(180deg, oklch(0.215 0.01 80), oklch(0.175 0.004 80)); padding: 22px 20px; transition: box-shadow 0.2s ease, background 0.2s ease" style-hover="box-shadow: inset 0 2px 0 oklch(0.82 0.15 80); background: linear-gradient(180deg, oklch(0.24 0.014 80), oklch(0.19 0.006 80))">
+    <div id="fleet-grid" style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(10px, 1.2vw, 14px)">
+      <sc-for list="{{ fleet }}" as="v" hint-placeholder-count="8">
+        <div data-reveal="" style="display: flex; flex-direction: column; border: 1px solid oklch(0.32 0.012 80); border-radius: 6px; overflow: hidden; min-width: 0; background: linear-gradient(180deg, oklch(0.215 0.01 80), oklch(0.175 0.004 80)); padding: 22px 20px; transition: box-shadow 0.2s ease, background 0.2s ease" style-hover="box-shadow: inset 0 2px 0 oklch(0.82 0.15 80); background: linear-gradient(180deg, oklch(0.24 0.014 80), oklch(0.19 0.006 80))">
           <div style="margin: -22px -20px 16px">{{ v.imgEl }}</div>
           <h3 style="margin: 0; font-size: 19px; font-weight: 700; letter-spacing: -0.015em">{{ v.name }}</h3>
           <sc-if value="{{ v.note }}" hint-placeholder-val="{{ false }}"><p style="margin: 7px 0 0; font-size: 10.5px; letter-spacing: 0.06em; text-transform: uppercase; color: oklch(0.62 0 0)">{{ v.note }}</p></sc-if>
+          <p style="margin: 12px 0 16px; font-size: 14px; line-height: 1.55; color: oklch(0.78 0 0); text-wrap: pretty">{{ v.story }}</p>
+          <div style="margin-top: auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); column-gap: 20px; border-top: 1px solid oklch(0.28 0 0)">
+            <sc-for list="{{ v.stats }}" as="s" hint-placeholder-count="6">
+              <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 8px; padding: 8px 0; border-bottom: 1px solid oklch(0.24 0 0)">
+                <span style="font-size: 10.5px; letter-spacing: 0.06em; text-transform: uppercase; color: oklch(0.62 0 0)">{{ s.k }}</span>
+                <span style="font-size: 14px; font-weight: 600; color: oklch(0.94 0 0); white-space: nowrap">{{ s.v }}</span>
+              </div>
+            </sc-for>
+          </div>
         </div>
       </sc-for>
     </div>
@@ -452,6 +464,7 @@ class Component extends DCLogic {
               year: "2020",
               kind: "Publication",
               name: "IAC 2020: EMU",
+              video: "https://youtu.be/KzLo-sU8Uuk",
               vehicle: "Platform: EMU (Experimental Microgravity Unit)",
               body: "An open-source, low-cost microgravity platform: a weather balloon lifts an inverted rocket to 30 km, the line is severed, and the payload experiences roughly 11 seconds of freefall microgravity. Tested at UWA Future Farm and presented in a 10-minute talk at the 71st International Astronautical Congress.",
               media: this.photo("assets/images/missions/iac-2020-emu-exploded.jpg", "Exploded CAD view of EMU", "contain"),
@@ -467,12 +480,14 @@ class Component extends DCLogic {
         }
       ]),
       fleet: [
-        { name: "Korra", note: "", imgEl: this.photo("assets/images/fleet/korra-web.jpg", "Korra", null, "240px") },
-        { name: "Echidna", note: "", imgEl: this.photo("assets/images/fleet/echidna-web.jpg", "Echidna", null, "240px") },
-        { name: "Aang", note: "", imgEl: this.photo("assets/images/fleet/aang-web.jpg", "Aang", null, "240px") },
-        { name: "QAD", note: "", imgEl: this.photo("assets/images/fleet/qad-web.jpg", "QAD", null, "240px") },
-        { name: "Jeff", note: "", imgEl: this.photo("assets/images/fleet/jeff-web.jpg", "Jeff", null, "240px") },
-        { name: "Cupid's Arrow", note: "", imgEl: this.photo("assets/images/fleet/cupid-web.jpg", "Cupid's Arrow", null, "240px") }
+        { name: "Korra", note: "EMU II test vehicle", story: "Built to test the payload and avionics for EMU II. The flight ended with the rocket stuck in a tree.", stats: [{ k: "Apogee", v: "0.70 km" }, { k: "Max speed", v: "132 m/s" }, { k: "Max accel.", v: "80.3 m/s²" }, { k: "Dry mass", v: "2 kg" }, { k: "Length", v: "125 cm" }, { k: "Launches", v: "1" }], imgEl: this.photo("assets/images/fleet/korra-web.jpg", "Korra", null, "320px", "50% 92%") },
+        { name: "EMU II", note: "IAC 2022", story: "The second high-altitude balloon science mission, presented at the International Astronautical Congress in Paris.", stats: [{ k: "Apogee", v: "10 km" }, { k: "Max speed", v: "Unknown" }, { k: "Max accel.", v: "Unknown" }, { k: "Dry mass", v: "8.4 kg" }, { k: "Length", v: "145.8 cm" }, { k: "Launches", v: "1" }], imgEl: this.photo("assets/images/fleet/emu-ii-web.jpg", "EMU II", null, "320px", "50% 40%") },
+        { name: "EMU", note: "IAC 2020", story: "The club's first high-altitude balloon science mission, with results shared at the 2020 International Astronautical Congress.", stats: [{ k: "Apogee", v: "10 km" }, { k: "Max speed", v: "Unknown" }, { k: "Max accel.", v: "Unknown" }, { k: "Dry mass", v: "3 kg" }, { k: "Length", v: "50 cm" }, { k: "Launches", v: "1" }], imgEl: this.photo("assets/images/fleet/emu-web.jpg", "EMU", null, "320px", "50% 50%") },
+        { name: "Echidna", note: "Launched 28 Sep 2019", story: "The club's first attempt to break the sound barrier. The GPS failed on the pad and the green-and-black rocket was never found.", stats: [{ k: "Apogee", v: "~7 km" }, { k: "Max speed", v: "~900 m/s" }, { k: "Max accel.", v: "~150 m/s²" }, { k: "Dry mass", v: "2.50 kg" }, { k: "Length", v: "100 cm" }, { k: "Launches", v: "1" }], imgEl: this.photo("assets/images/fleet/echidna-web.jpg", "Echidna", null, "320px", "50% 40%") },
+        { name: "Aang", note: "Launched 19 Jul 2020", story: "The first air-brake test vehicle, flown twice at Grass Valley with a single air-brake deployed one second after launch.", stats: [{ k: "Apogee", v: "200 m" }, { k: "Max speed", v: "110 m/s" }, { k: "Max accel.", v: "91.4 m/s²" }, { k: "Dry mass", v: "940 g" }, { k: "Length", v: "90 cm" }, { k: "Launches", v: "2" }], imgEl: this.photo("assets/images/fleet/aang-web.jpg", "Aang", null, "320px", "50% 30%") },
+        { name: "QAD", note: "Launched 4 Aug 2019", story: "A “Quick and Dirty” build to trial a new fuselage, system layout and simpler recovery design.", stats: [{ k: "Apogee", v: "2.94 km" }, { k: "Max speed", v: "178 m/s" }, { k: "Max accel.", v: "70 m/s²" }, { k: "Dry mass", v: "1.40 kg" }, { k: "Length", v: "89 cm" }, { k: "Launches", v: "1" }], imgEl: this.photo("assets/images/fleet/qad-web.jpg", "QAD", null, "320px", "50% 58%") },
+        { name: "Jeff", note: "Launched 25 Aug 2018", story: "The first prototype designed and built by the club, a forerunner of the AURC 2019 rocket.", stats: [{ k: "Apogee", v: "2.86 km" }, { k: "Max speed", v: "288 m/s" }, { k: "Max accel.", v: "230 m/s²" }, { k: "Dry mass", v: "6.16 kg" }, { k: "Length", v: "169 cm" }, { k: "Launches", v: "2" }], imgEl: this.photo("assets/images/fleet/jeff-web.jpg", "Jeff", null, "320px", "50% 55%") },
+        { name: "Cupid's Arrow", note: "Launched 28 Jul 2018", story: "The club's first rocket. Assembled from a kit and used for Level 1 and Level 2 certifications on the same day.", stats: [{ k: "Apogee", v: "1.31 km" }, { k: "Max speed", v: "184 m/s" }, { k: "Max accel.", v: "73 m/s²" }, { k: "Dry mass", v: "1.44 kg" }, { k: "Length", v: "148 cm" }, { k: "Launches", v: "3" }], imgEl: this.photo("assets/images/fleet/cupid-web.jpg", "Cupid's Arrow", null, "320px", "50% 50%") }
       ]
     };
   }
