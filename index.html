@@ -10,6 +10,7 @@
 <body>
 <x-dc>
 <helmet>
+<style>@keyframes uwa-marquee{from{transform:translate3d(0,0,0)}to{transform:translate3d(-50%,0,0)}}[data-marquee]:hover [data-marquee-track]{animation-play-state:paused}@media (prefers-reduced-motion: reduce){[data-marquee-track]{animation:none !important}}</style>
 <style>@media (max-width: 1099px){#home-teams-grid{grid-template-columns:repeat(2,minmax(0,1fr)) !important}}@media (max-width: 599px){#home-teams-grid{grid-template-columns:minmax(0,1fr) !important}}@media (max-width: 1149px){header{gap:10px !important}header > a:first-child img{width:40px !important;height:40px !important}header > a:first-child span{font-size:15px !important}[data-nav-join]{margin-left:auto;padding:7px 12px !important;font-size:12.5px !important}}@media (max-width: 359px){header > a:first-child span{display:none}}</style>
 <title>UWA Aerospace | Student rocketry at UWA</title>
 <meta name="description" content="Student-led rocketry club at The University of Western Australia. We design, build and launch high-powered rockets, compete at competitions such as IREC and AURC, and develop hybrid rocket engines." />
@@ -71,8 +72,14 @@
   <div style="position: relative; isolation: isolate; overflow: hidden">
   <div aria-hidden="true" style="position: absolute; inset: 0; z-index: -1; pointer-events: none; background: radial-gradient(ellipse 70% 60% at 72% 108%, oklch(0.62 0.16 62 / 0.45), oklch(0.45 0.12 50 / 0.12) 45%, transparent 75%), radial-gradient(ellipse 50% 45% at 6% 0%, oklch(0.32 0.05 250 / 0.4), transparent 70%)"></div>
   <div aria-hidden="true" style="position: absolute; left: 0; right: 0; bottom: 0; height: 1px; z-index: -1; background: linear-gradient(90deg, transparent, oklch(0.8 0.16 78 / 0.7), transparent)"></div>
-  <section id="top" style="padding: clamp(44px, 6vw, 92px) clamp(18px, 4vw, 64px) clamp(40px, 5vw, 72px); max-width: 1440px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: clamp(28px, 4vw, 64px); align-items: center">
-    <div style="flex: 1 1 400px; min-width: 0">
+  <div data-fx-countdown="" style="position: absolute; top: 0; right: 0; bottom: 0; width: clamp(340px, 64%, 100%); z-index: -1; overflow: hidden; pointer-events: none; -webkit-mask-image: linear-gradient(to right, transparent, black 42%); mask-image: linear-gradient(to right, transparent, black 42%)">
+    <video data-hero-video="" data-src="assets/images/site/hero-launch.mp4" data-src-mobile="assets/images/site/hero-launch-mobile.mp4" poster="assets/images/site/hero-video-poster-sm.jpg" muted="" loop="loop" playsinline="" preload="none" aria-label="UWA Aerospace rocket launching at IREC" style="position: absolute; inset: 0; width: 100%; height: 100%; max-width: none; object-fit: cover; object-position: 50% 45%; filter: brightness(0.75) contrast(1.05)"></video>
+    <span aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(to bottom, oklch(0.12 0 0 / 0.35), oklch(0.12 0 0 / 0) 25%, oklch(0.12 0 0 / 0) 70%, oklch(0.12 0 0 / 0.85))"></span>
+  </div>
+  <div aria-hidden="true" style="position: absolute; inset: 0; z-index: -1; pointer-events: none; background: linear-gradient(90deg, oklch(0.12 0 0 / 0.7), oklch(0.12 0 0 / 0.35) 45%, oklch(0.12 0 0 / 0) 75%)"></div>
+  <p style="position: absolute; right: clamp(18px, 4vw, 64px); bottom: 14px; margin: 0; font-size: 10.5px; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(0.9 0 0)">Launch at IREC</p>
+  <section id="top" style="padding: clamp(44px, 6vw, 92px) clamp(18px, 4vw, 64px) clamp(40px, 5vw, 72px); max-width: 1440px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: clamp(28px, 4vw, 64px); align-items: center; min-height: clamp(520px, 78vh, 820px)">
+    <div style="flex: 0 1 640px; min-width: 0">
       <p style="margin: 0 0 22px; font-size: 13px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: oklch(0.84 0.14 80)">Student-led rocketry · The University of Western Australia</p>
       <h1 style="margin: 0; font-size: clamp(38px, 7vw, 88px); line-height: 0.95; letter-spacing: -0.035em; font-weight: 800; text-transform: uppercase">UWA Aerospace</h1>
       <p style="margin: 14px 0 0; font-size: clamp(20px, 2.6vw, 32px); font-weight: 500; letter-spacing: -0.015em; color: oklch(0.92 0 0)">Exploring new frontiers</p>
@@ -82,11 +89,6 @@
         <a href="sponsors" style="padding: 14px 24px; border: 1px solid oklch(0.4 0 0); color: oklch(0.97 0 0); border-radius: 999px; font-weight: 600; font-size: 15px" style-hover="border-color: oklch(0.8 0.16 78); color: oklch(0.97 0 0)">Partner with us</a>
       </div>
     </div>
-    <figure data-fx-countdown="" style="flex: 1 1 320px; min-width: 0; margin: 0; position: relative; container-type: size; aspect-ratio: 1385 / 1939; max-height: 78vh; border: 1px solid oklch(0.26 0 0); border-radius: 6px; overflow: hidden; background: oklch(0.18 0 0)">
-      <video data-hero-video="" data-src="assets/images/site/hero-launch.mp4" data-src-mobile="assets/images/site/hero-launch-mobile.mp4" poster="assets/images/site/hero-video-poster-sm.jpg" muted="" loop="loop" playsinline="" preload="none" aria-label="UWA Aerospace rocket launching at IREC" style="position: absolute; top: 50%; left: 50%; height: 168%; width: auto; max-width: none; transform: translate(-50%, -50%); filter: brightness(0.9) contrast(1.05)"></video>
-      <span aria-hidden="true" style="position: absolute; inset: 0; pointer-events: none; background: linear-gradient(to bottom, oklch(0.1 0 0 / 0.25), oklch(0.1 0 0 / 0) 20%, oklch(0.1 0 0 / 0) 65%, oklch(0.1 0 0 / 0.6))"></span>
-      <figcaption style="position: absolute; inset: auto 0 0 0; padding: 40px 18px 14px; font-size: 10.5px; letter-spacing: 0.08em; text-transform: uppercase; color: oklch(0.9 0 0); background: linear-gradient(to top, oklch(0.1 0 0 / 0.9), oklch(0.1 0 0 / 0))">Launch at IREC</figcaption>
-    </figure>
   </section>
   </div>
 
@@ -111,7 +113,7 @@
           <img src="assets/images/site/discover.jpg" alt="UWA Aerospace team" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; display: block">
         </div>
         <div style="border: 1px solid oklch(0.26 0 0); border-radius: 6px; overflow: hidden">
-          <img src="assets/images/site/finley.jpg" alt="Launch at Finley" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; display: block">
+          <img src="assets/images/site/finley-upright.jpg" alt="Finley launching" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 12%; display: block">
         </div>
         <div style="border: 1px solid oklch(0.26 0 0); border-radius: 6px; overflow: hidden">
           <img src="assets/images/fleet/launch-web.jpg" alt="Rocket leaving the launch rail" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; display: block">
@@ -228,24 +230,18 @@
     </div>
   </section>
 
-  <section id="sponsors" style="padding: clamp(48px, 7vw, 104px) clamp(18px, 4vw, 64px); max-width: 1440px; margin: 0 auto">
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: clamp(28px, 5vw, 72px)">
-      <div>
+  <section id="sponsors" style="padding: clamp(48px, 7vw, 104px) 0; position: relative">
+    <div style="max-width: 1440px; margin: 0 auto; padding: 0 clamp(18px, 4vw, 64px) clamp(32px, 4vw, 56px); display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: clamp(20px, 4vw, 64px)">
+      <div style="flex: 1 1 320px; min-width: 0">
         <p data-reveal="" style="margin: 0 0 18px; font-size: 14px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: oklch(0.84 0.14 80)">07 · Sponsors</p>
-        <h2 data-reveal="" style="margin: 0 0 18px; font-size: clamp(28px, 3.4vw, 44px); line-height: 1.08; letter-spacing: -0.025em; font-weight: 700; max-width: 20ch">Backed by our partners</h2>
-        <p style="margin: 0 0 22px; font-size: 16px; line-height: 1.6; color: oklch(0.78 0 0); max-width: 46ch">Our partners make each rocket possible, from materials and software to travel for competition. Partners are seen on our rockets and meet engineering students before they graduate.</p>
+        <h2 data-reveal="" style="margin: 0; font-size: clamp(28px, 3.4vw, 44px); line-height: 1.08; letter-spacing: -0.025em; font-weight: 700; max-width: 20ch">Backed by our partners</h2>
+      </div>
+      <div style="flex: 0 1 46ch; min-width: 0">
+        <p style="margin: 0 0 22px; font-size: 16px; line-height: 1.6; color: oklch(0.78 0 0)">Our partners make each rocket possible, from materials and software to travel for competition. Partners are seen on our rockets and meet engineering students before they graduate.</p>
         <a href="sponsors" style="display: inline-block; padding: 13px 22px; border: 1px solid oklch(0.34 0 0); border-radius: 999px; color: oklch(0.95 0 0); font-weight: 600; font-size: 15px" style-hover="border-color: oklch(0.8 0.16 78); color: oklch(0.95 0 0)">Meet our partners</a>
       </div>
-      <div style="display: flex; flex-direction: column; gap: 13px">
-        <div data-reveal="" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 130px), 1fr)); gap: 10px">
-          <sc-for list="{{ sponsorLogos }}" as="s" hint-placeholder-count="8">
-            <div style="background: oklch(0.97 0 0); border-radius: 6px; height: 100px; display: flex; align-items: center; justify-content: center; padding: 18px 20px">
-              {{ s.imgEl }}
-            </div>
-          </sc-for>
-        </div>
-      </div>
     </div>
+    <div aria-label="Our partners" role="region" style="background: oklch(0.97 0 0); padding: clamp(22px, 2.6vw, 32px) 0">{{ sponsorBand }}</div>
   </section>
 
   <section id="join" style="padding: clamp(48px, 7vw, 104px) clamp(18px, 4vw, 64px); max-width: 1440px; margin: 0 auto; position: relative; isolation: isolate; background: oklch(0.15 0.006 80); box-shadow: 0 0 0 100vmax oklch(0.15 0.006 80); clip-path: inset(0 -100vmax)">
@@ -381,6 +377,14 @@ class Component extends DCLogic {
     removeEventListener("scroll", this.onScroll);
     removeEventListener("resize", this.onScroll);
   }
+  band(list) {
+    const e = React.createElement;
+    const item = (s, i, dup) => e("li", { key: (dup ? "d" : "") + i, "aria-hidden": dup ? "true" : undefined, style: { flex: "0 0 auto", display: "flex", alignItems: "center", padding: "0 clamp(28px, 4vw, 56px)" } },
+      e("img", { src: s.mono, alt: dup ? "" : s.name, loading: "eager", decoding: "async", width: Math.round(s.h * s.r), height: s.h, style: { height: s.h + "px", width: Math.round(s.h * s.r) + "px", maxWidth: "none", display: "block" } }));
+    return e("div", { "data-marquee": "", style: { overflow: "hidden", WebkitMaskImage: "linear-gradient(90deg, transparent, black 10%, black 90%, transparent)", maskImage: "linear-gradient(90deg, transparent, black 10%, black 90%, transparent)" } },
+      e("ul", { "data-marquee-track": "", style: { display: "flex", width: "max-content", margin: 0, padding: 0, listStyle: "none", animation: "uwa-marquee 36s linear infinite" } },
+        list.map((s, i) => item(s, i, false)), list.map((s, i) => item(s, i, true)), list.map((s, i) => item(s, "b" + i, true)), list.map((s, i) => item(s, "c" + i, true))));
+  }
   img(src, alt, style) {
     return React.createElement("img", {
       src,
@@ -475,6 +479,14 @@ class Component extends DCLogic {
         label,
         imgEl: this.img("assets/images/site/" + path, label, { width: "100%", aspectRatio: "4 / 5", objectFit: "cover" })
       })),
+      sponsorBand: this.band([
+        { name: "The University of Western Australia", mono: "assets/images/site/color/logo-uwa.png", h: 56, r: 0.902 },
+        { name: "International Space Centre", mono: "assets/images/site/color/logo-isc.png", h: 50, r: 1.08 },
+        { name: "LEAP Australia", mono: "assets/images/site/color/logo-leap.png", h: 50, r: 1.378 },
+        { name: "Altium", mono: "assets/images/site/color/logo-altium.png", h: 30, r: 4.1 },
+        { name: "Dassault Systèmes", mono: "assets/images/site/color/logo-dassault.png", h: 50, r: 1.025 },
+        { name: "Ansys", mono: "assets/images/site/color/logo-ansys.png", h: 34, r: 3.087 }
+      ]),
       sponsorLogos: [
         { name: "The University of Western Australia", imgEl: this.img("assets/images/site/logo-uwa.png", "The University of Western Australia", logo) },
         { name: "International Space Centre", imgEl: this.img("assets/images/site/logo-isc.png", "International Space Centre", logo) },
